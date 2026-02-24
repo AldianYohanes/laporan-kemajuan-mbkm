@@ -61,9 +61,11 @@
 }
 
 % Import package lainnya (gambar, tabel, daftar isi)
-\usepackage{tocloft}
-\usepackage{graphicx}
-\usepackage{enumitem}
+\usepackage{tocloft}            % Untuk daftar isi/referensi/gambar/tabel
+\usepackage{graphicx}           % Untuk gambar
+\usepackage{enumitem}           % Untuk numbering
+\usepackage{listings}           % Untuk memasukkan potongan kode program
+\usepackage{xcolor}             % Untuk warna pada kode listing
 \usepackage[indonesian]{babel}
 
 % Renaming
@@ -80,6 +82,20 @@
   \renewcommand{\bibname}{DAFTAR PUSTAKA}
 }
 
+% Textbox Code
+\lstset{
+    basicstyle=\ttfamily\small,
+    frame=single,
+    breaklines=true,
+    tabsize=2,
+    numbers=left,
+    numberstyle=\tiny,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red},
+    showstringspaces=false
+}
+
 %=====================================
 
 % DOCUMENT START
@@ -90,7 +106,6 @@
 
 % Preamble (Kata Pengantar, Daftar Isi, dll)
 % \addtocontents{toc}{\begingroup\protect\setlength{\protect\cftsecindent}{-\leftmargin}}
-\spacing{1}
 \include{headers/kata-pengantar}
 \include{headers/ringkasan}
 % \addtocontents{toc}{\endgroup}
@@ -98,19 +113,18 @@
 % Daftar Isi
 \include{headers/daftar-isi}
 
-\spacing{1.5}
-% Bab 1
+% Body
 \include{chapters/bab-1}
 \include{chapters/bab-2}
+\include{chapters/bab-3}
+% \include{chapters/bab-4} % Upcoming di Laporan Akhir
+% \include{chapters/bab-5} % Upcoming di Laporan Akhir
 
 % Daftar Pustaka
+\include{lists/daftar-pustaka}
 
 % Lampiran
-% \input{lampiran/lampiran-SPM}
-\input{lampiran/lampiran-KHS}
-% \input{lampiran/lampiran-FPP}
-% \input{lampiran/lampiran-LB}
-% \input{lampiran/lampiran-DHB}
+\input{lists/lampiran}
 
 
 
