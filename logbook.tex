@@ -1,0 +1,83 @@
+\documentclass[12pt, a4paper]{article}
+
+\title{
+    MAGANG SEBAGAI \textit{FRONT-END
+    DEVELOPER}\\DI PT INTI UTAMA
+    SOLUSINDO
+}
+\author{535230139 ALDIAN YOHANES}
+
+% Format Font Calibri
+\usepackage{fontspec}
+\setmainfont{Calibri}
+
+% Format Heading 1 (Bab)
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+    {\normalfont\bfseries\fontsize{14pt}{16pt}\centering} % Format Heading
+    {BAB \thechapter} % Label Heading
+    {0pt} % Spasi antara label dan judul
+    {\vspace{0.5ex}} % Agar judul di bawah nomor Bab
+
+    \titlespacing*{\chapter}
+    {0pt}   % indent kiri
+    {-20pt} % jarak dari atas halaman
+    {20pt}  % jarak setelah judul
+
+% Format Page Layout / Margin
+\usepackage[
+    a4paper, 
+    left=4cm, 
+    right=3cm, 
+    top=4cm, 
+    bottom=3cm,
+    showframe
+]{geometry}
+
+
+% Default spacing ke 1.5
+\usepackage{setspace}
+\singlespacing 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% Import package lainnya (gambar, tabel, daftar isi)
+\usepackage{graphicx}           % Untuk gambar
+\usepackage{enumitem}           % Untuk numbering
+\usepackage{tabularx}           % Untuk tabel dengan lebar otomatis
+\usepackage{longtable}          % Untuk tabel yang bisa memanjang ke halaman berikutnya
+\usepackage{tabto}              % Untuk mengatur indentasi
+
+\usepackage[indonesian]{babel}
+
+\begin{document}
+
+\input{logbook/cover.tex}
+\TabPositions{4.5cm}
+
+\newpage % Maret 2026
+
+\begin{center}
+    \textbf{LOG BOOK \\ MAGANG INDUSTRI}\\[12pt]
+\end{center}
+
+Program Studi           \tab : Teknik Informatika \\
+Semester/Th. Akademik   \tab : GENAP / 2025/2026 \\
+NIM/Nama Mahasiswa      \tab : 535230139 / ALDIAN YOHANES \\
+Perusahaan              \tab : PT Inti Utama Solusindo \\
+Mentor                  \tab : Dimas Aditya Nugroho \\
+Bulan                   \tab : Maret 2026 \\ 
+
+\begin{tabularx}{\textwidth}{|p{1cm}|p{3.5cm}|X|}
+\hline
+\textbf{No} & \textbf{Hari/Tanggal} & \textbf{Keterangan} \\ 
+\hline
+1. & Senin, 2 Maret 2026 & Hey \\ 
+\hline
+2. & Selasa, 3 Maret 2026 & Hey \\ 
+\hline
+3. & Rabu, 4 Maret 2026 & Hey \\ 
+\hline
+\end{tabularx}
+
+\end{document}
