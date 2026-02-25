@@ -1,13 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.2.23)  24 FEB 2026 19:07
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.2.23)  25 FEB 2026 13:00
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/aldia/Documents/GitHub/Laporan-Kemajuan-Magang-Aldian-Yohanes-535230
-139/logbook.tex
-
-(c:/Users/aldia/Documents/GitHub/Laporan-Kemajuan-Magang-Aldian-Yohanes-5352301
-39/logbook.tex
+**./logbook/logbook.tex
+(logbook/logbook.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Environment\MiKTeX\tex/latex/base\article.cls
@@ -202,6 +198,23 @@ Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
 \CurrentLineWidth=\dimen171
 \TabPrevPos=\dimen172
 )
+(C:\Environment\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip58
+\RaggedLeftLeftskip=\skip59
+\RaggedRightLeftskip=\skip60
+\CenteringRightskip=\skip61
+\RaggedLeftRightskip=\skip62
+\RaggedRightRightskip=\skip63
+\CenteringParfillskip=\skip64
+\RaggedLeftParfillskip=\skip65
+\RaggedRightParfillskip=\skip66
+\JustifyingParfillskip=\skip67
+\CenteringParindent=\skip68
+\RaggedLeftParindent=\skip69
+\RaggedRightParindent=\skip70
+\JustifyingParindent=\skip71
+)
 (C:\Environment\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
@@ -244,7 +257,8 @@ Package babel Info: Importing font and identification data for indonesian
 (C:\Environment\MiKTeX\tex/latex/babel-indonesian\indonesian.ldf
 Language: indonesian 2025/06/01 v1.0n Bahasa Indonesia support from the babel s
 ystem
-)) (logbook.aux)
+))
+No file logbook.aux.
 \openout1 = `logbook.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -323,7 +337,6 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 53.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 (C:\Environment\MiKTeX\tex/latex/base\atbegshi-ltx.sty
@@ -405,8 +418,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []|\TU/Calibri(0)/m/n/12 Jumat, 16 Januari
  []
 
-logbook/januari.tex:97: ignored error: Infinite glue shrinkage found in box bei
-ng split [1]) (logbook/februari.tex [2] (logbook/top.tex)
+ignored error: Infinite glue shrinkage found in box being split [1])
+(logbook/februari.tex [2] (logbook/top.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -423,12 +436,12 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5791 strings out of 402987
- 144507 string characters out of 5453285
- 614295 words of memory out of 5000000
- 34434 multiletter control sequences out of 15000+600000
+ 5874 strings out of 402987
+ 146032 string characters out of 5453285
+ 614920 words of memory out of 5000000
+ 34516 multiletter control sequences out of 15000+600000
  630609 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,9n,93p,344b,292s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,9n,93p,273b,292s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on logbook.pdf (4 pages).

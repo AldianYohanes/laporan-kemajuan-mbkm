@@ -1,13 +1,13 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.2.23)  24 FEB 2026 20:34
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.2.23)  25 FEB 2026 11:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **c:/Users/aldia/Documents/GitHub/Laporan-Kemajuan-Magang-Aldian-Yohanes-535230
-139/lists/lampiran/sinopsis.tex
+139/lists/lampiran/sinopsis/sinopsis.tex
 
 (c:/Users/aldia/Documents/GitHub/Laporan-Kemajuan-Magang-Aldian-Yohanes-5352301
-39/lists/lampiran/sinopsis.tex
+39/lists/lampiran/sinopsis/sinopsis.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Environment\MiKTeX\tex/latex/base\article.cls
@@ -174,22 +174,22 @@ ystem
 (sinopsis.aux)
 \openout1 = `sinopsis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -197,72 +197,68 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 34.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 34.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 34.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 34.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 34.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 34.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 34.
-LaTeX Font Info:    Redeclaring math accent \check on input line 34.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 34.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 34.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 34.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 34.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 34.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 41.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 41.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 41.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 41.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 41.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 41.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 41.
+LaTeX Font Info:    Redeclaring math accent \check on input line 41.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 41.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 41.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 41.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 41.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 34.
+(Font)              `operators' in the math version `normal' on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Calibri(0)/m/n on input line 34.
+(Font)                  OT1/cmr/m/n --> TU/Calibri(0)/m/n on input line 41.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 34.
+(Font)              `operators' in the math version `bold' on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Calibri(0)/m/n on input line 34.
+(Font)                  OT1/cmr/bx/n --> TU/Calibri(0)/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Calibri(0)/m/n --> TU/Calibri(0)/m/n on input line 3
-4.
+(Font)                  TU/Calibri(0)/m/n --> TU/Calibri(0)/m/n on input line 4
+1.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Calibri(0)/m/it on input line 34.
+(Font)                  OT1/cmr/m/it --> TU/Calibri(0)/m/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Calibri(0)/b/n on input line 34.
+(Font)                  OT1/cmr/bx/n --> TU/Calibri(0)/b/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 34.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 34.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Calibri(0)/m/n --> TU/Calibri(0)/b/n on input line 3
-4.
+(Font)                  TU/Calibri(0)/m/n --> TU/Calibri(0)/b/n on input line 4
+1.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Calibri(0)/b/it on input line 34.
+(Font)                  OT1/cmr/bx/it --> TU/Calibri(0)/b/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 34.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 34.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
-(C:\Environment\MiKTeX\tex/latex/base\atbegshi-ltx.sty
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
-)
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: showframe 
+* modes: 
 * h-part:(L,W,R)=(113.81102pt, 398.3386pt, 85.35826pt)
 * v-part:(T,H,B)=(113.81102pt, 645.87756pt, 85.35826pt)
 * \paperwidth=597.50787pt
@@ -290,31 +286,71 @@ package with kernel methods
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (3.98563pt too wide) in paragraph at lines 41--47
-\TU/Calibri(0)/m/n/12 untuk memberikan pengalaman profesional langsung kepada m
-ahasiswa dalam ling-
+Underfull \hbox (badness 2221) in paragraph at lines 48--55
+[]\TU/Calibri(0)/m/n/12 PT Inti Utama Solusindo (IUS) merupakan perusahaan yang
+ bergerak
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
+Underfull \hbox (badness 2088) in paragraph at lines 56--64
+[]\TU/Calibri(0)/m/n/12 Perusahaan ini mengembangkan berbagai \TU/Calibri(0)/m/
+it/12 platform \TU/Calibri(0)/m/n/12 berbasis \TU/Calibri(0)/m/it/12 web \TU/Ca
+libri(0)/m/n/12 dan
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--77
+[]\TU/Calibri(0)/m/n/12 Pelaksanaan kerja dilakukan secara penuh di kantor (\TU
+/Calibri(0)/m/it/12 Work From
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 71--77
+\TU/Calibri(0)/m/n/12 ke-5 yang dilanjutkan dengan konversi mata kuliah ke maga
+ng industri pada
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 78--93
+\TU/Calibri(0)/m/it/12 clean code\TU/Calibri(0)/m/n/12 , dan prinsip SOLID dala
+m proyek industri nyata, pengembangan
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 78--93
+\TU/Calibri(0)/m/n/12 Assurance, dan \TU/Calibri(0)/m/it/12 developer \TU/Calib
+ri(0)/m/n/12 lainnya, pemahaman \TU/Calibri(0)/m/it/12 project management syste
+m
  []
 
 [1
 
-] [2] (sinopsis.aux)
+]
+Underfull \hbox (badness 1142) in paragraph at lines 94--105
+\TU/Calibri(0)/m/it/12 sistem \TU/Calibri(0)/m/n/12 dan \TU/Calibri(0)/m/it/12 
+aplikasi \TU/Calibri(0)/m/n/12 berbasis teknologi informasi untuk mendukung \TU
+/Calibri(0)/m/it/12 ekosistem
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 94--105
+\TU/Calibri(0)/m/n/12 layanan kesehatan dan farmasi. Aktivitas tersebut meliput
+i pengembangan
+ []
+
+[2] (sinopsis.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4710 strings out of 402987
- 127984 string characters out of 5453285
- 596733 words of memory out of 5000000
- 33409 multiletter control sequences out of 15000+600000
- 627849 words of font info for 56 fonts, out of 8000000 for 9000
+ 4682 strings out of 402987
+ 127312 string characters out of 5453285
+ 588917 words of memory out of 5000000
+ 33383 multiletter control sequences out of 15000+600000
+ 627857 words of font info for 57 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,5n,93p,975b,247s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,5n,93p,356b,247s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on sinopsis.pdf (2 pages).
