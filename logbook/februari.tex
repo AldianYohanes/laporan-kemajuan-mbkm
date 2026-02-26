@@ -1,21 +1,42 @@
-\newpage
 \input{logbook/top.tex}
-Bulan                   \tab : Februari 2026 \\ 
+\noindent Bulan \tab : Februari 2026 \\[1ex] % Gunakan [1ex] untuk jarak, bukan \\ berulang
 
-\begin{tabularx}{\textwidth}{|p{1cm}|p{3.5cm}|X|}
+\begin{longtable}{| >{\centering\arraybackslash}m{1cm} | >{\centering\arraybackslash}m{3.5cm} | >{\raggedright\arraybackslash}m{8.1cm} | }\hline
+    \textbf{No} & 
+    \textbf{Hari/Tanggal} & 
+    \textbf{Keterangan} \\ 
 \hline
-\textbf{No} & \textbf{Hari/Tanggal} & \textbf{Keterangan} \\ 
+\endfirsthead
+
 \hline
-1. & Senin, 2 Maret 2026 & 
-Tujuan:
-\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=18pt]
+\textbf{No} & \textbf{Hari/Tanggal} & \textbf{Keterangan} \\
+\endhead
+
+% Minggu Ke-1
+1. & Senin, 12 Februari 2026 & 
+\textbf{Tujuan:}
+\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
     \item Tes 1
     \item Tes 2
-    \item Tes 3
-\end{enumerate} \\
-\hline
-2. & Selasa, 3 Maret 2026 & Hey \\ 
-\hline
-3. & Rabu, 4 Maret 2026 & Hey \\ 
-\hline
-\end{tabularx}
+\end{enumerate} 
+\textbf{Pelaksanaan:}
+\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+    \item Tes 1
+    \item Tes 2
+\end{enumerate} 
+\textbf{Penjelasan:} --- \\ \hline
+
+2. & Selasa, 13 Februari 2026 & 
+\textbf{Tujuan:}
+\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+    \item Tes 1
+    \item Tes 2
+\end{enumerate} 
+\textbf{Pelaksanaan:}
+\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+    \item Tes 1
+    \item Tes 2
+\end{enumerate} 
+\textbf{Penjelasan:} --- \\ \hline
+
+\end{longtable}

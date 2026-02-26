@@ -1,9 +1,16 @@
 \chapter*{Lampiran 4. \emph{Log Book}}
 
-% \includegraphics[
-%     width=\textwidth, 
-%     % fitpaper=true,
-%     % pagecommand={}
-% ]{assets/files/lampiran-LB.pdf}
+\includegraphics[
+        width=\textwidth,
+        % keepaspectratio
+]{logbook.pdf}
 
-\include{logbook.tex}
+\foreach \n in {2,...,3}{
+    \clearpage
+    \includegraphics[
+        page=\n,
+        width=\textwidth,
+        keepaspectratio
+    ]{logbook.pdf}
+}
+% \{../logbook/logbook.pdf}
