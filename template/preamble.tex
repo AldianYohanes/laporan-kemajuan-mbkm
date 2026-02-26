@@ -12,6 +12,7 @@
 % Format Font Calibri
 \usepackage{fontspec}
 \setmainfont{Calibri}
+\setmonofont{Consolas}
 
 % Format Page Layout / Margin
 \usepackage[
@@ -78,6 +79,7 @@
 \usepackage{xcolor}             % Untuk warna pada kode listing
 \usepackage{pdfpages}           % Untuk include pdf
 \usepackage{pgffor}             % Untuk looping
+\usepackage{fancyhdr}           % Untuk header dan footer
 \usepackage[indonesian]{babel}
 
 % Renaming
@@ -119,3 +121,7 @@
 % Global Variables
 
 %=====================================
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[R]{\thepage} % R for Right
