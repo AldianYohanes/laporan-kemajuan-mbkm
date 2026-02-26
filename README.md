@@ -37,6 +37,7 @@ Kenapa saya tidak menggunakan Overleaf?
 - Sering kena limit timeout (berbayar kalau mau extend timeout)
 - Compile yang cukup lama dan butuh banyak step tambahan
 
+TAPI template ini juga bisa digunakan di Overleaf dengan cara upload .zip project ini ke Overleaf Projects.
 ---
 
 ## 📂 Struktur Template
