@@ -38,11 +38,10 @@ Kenapa saya tidak menggunakan Overleaf?
 - Compile yang cukup lama dan butuh banyak step tambahan
 
 TAPI template ini juga bisa digunakan di Overleaf dengan cara upload .zip project ini ke Overleaf Projects.
+
 ---
 
 ## 📂 Struktur Template
-
-.
 ├── main.tex
 ├── logbook.tex
 ├── sinopsis.tex
