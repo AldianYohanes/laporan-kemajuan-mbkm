@@ -1,6 +1,4 @@
 \documentclass[12pt, a4paper, oneside]{report}
-
-\newcommand{\jenisdokumen}{LAPORAN KEMAJUAN }
 \input{template/preamble.tex}
 
 % DOCUMENT START
@@ -9,14 +7,17 @@
 % Halaman Cover 
 \include{template/cover}
 
-% Preamble (Kata Pengantar, Daftar Isi, dll)
+% Headers
 % \addtocontents{toc}{\begingroup\protect\setlength{\protect\cftsecindent}{-\leftmargin}}
 \include{headers/kata-pengantar}
 \include{headers/ringkasan}
 % \addtocontents{toc}{\endgroup}
 
-% Daftar Isi
+% Lists
 \include{headers/daftar-isi}
+\include{headers/daftar-gambar}
+\include{headers/daftar-kode}
+\include{headers/daftar-lampiran}
 
 % Body
 \include{chapters/bab-1}
@@ -29,8 +30,6 @@
 \include{lists/daftar-pustaka}
 
 % Lampiran
-% \input{lists/lampiran}
-
-
+\input{lists/lampiran}
 
 \end{document}

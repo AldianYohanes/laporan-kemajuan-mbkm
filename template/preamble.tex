@@ -1,56 +1,84 @@
-
-\title{
-    MAGANG INDUSTRI SEBAGAI \textit{FRONT-END
-    DEVELOPER} DI PT INTI UTAMA SOLUSINDO
-}
-\author{535230139 ALDIAN YOHANES}
+% Imports
+\usepackage{tocloft}            % Untuk daftar isi/referensi/gambar/tabel
+\usepackage{tabularx}           % Untuk tabel dengan lebar otomatis
+\usepackage{longtable}          % Untuk tabel yang bisa memanjang ke halaman berikutnya
+\usepackage{graphicx}           % Untuk gambar
+\usepackage{array}              % Untuk mengatur format tabel
+\usepackage{ragged2e}           % Untuk rata kiri pada tabel
+\usepackage{booktabs}           % Untuk centering
+\usepackage{tabto}              % Untuk mengatur indentasi
+\usepackage{enumitem}           % Untuk numbering
+\usepackage{listings}           % Untuk memasukkan potongan kode program
+\usepackage{xcolor}             % Untuk warna pada kode listing
+\usepackage{pdfpages}           % Untuk include pdf
+\usepackage{pgffor}             % Untuk looping
+\usepackage[indonesian]{babel}
 
 %=====================================
-% Formatting Dokumen
-% sesuai dengan ketentuan format laporan MBKM
+% Metadata
+\title{
+    MAGANG INDUSTRI SEBAGAI \textit{FRONT-END
+        DEVELOPER} DI PT INTI UTAMA SOLUSINDO
+}
 
-% Format Font Calibri
+\input{template/metadata.tex}
+
+%=====================================
+% Font Formatting 
 \usepackage{fontspec}
 \setmainfont{Calibri}
 \setmonofont{Consolas}[LetterSpace=-5.0]
 
-% Format Page Layout / Margin
+%=====================================
+% Page Layout Formatting
 \usepackage[
-    a4paper, 
-    left=4cm, 
-    right=3cm, 
-    top=4cm, 
+    a4paper,
+    left=4cm,
+    right=3cm,
+    top=4cm,
     bottom=3cm,
     % showframe % enable to show margin frames
 ]{geometry}
 
-% Default spacing ke 1.5
+\usepackage{fancyhdr} % Untuk header dan footer
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % Removes the header line
+\renewcommand{\footrulewidth}{0pt} % Removes the footer line
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[R]{\thepage} % R for Right
+
+%=====================================
+% Default spacing ke 1.5 dan first line indent ke 1.27
 \usepackage{setspace}
-\onehalfspacing 
+\onehalfspacing
 \setlength{\parindent}{1.27cm}
 
-% Format Heading 1 (Bab)
+%=====================================
+% Heading 1 (Bab) Style Formatting
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
-    {\normalfont\bfseries\fontsize{14pt}{16pt}\centering} % Format Heading
-    {BAB \thechapter} % Label Heading
-    {0pt} % Spasi antara label dan judul
-    {\vspace{0.5ex}} % Agar judul di bawah nomor Bab
+{\normalfont\bfseries\fontsize{14pt}{16pt}\centering} % Format Heading
+{BAB \thechapter} % Label Heading
+{0pt} % Spasi antara label dan judul
+{\vspace{0.5ex}} % Agar judul di bawah nomor Bab
 
-    \titlespacing*{\chapter}
-    {0pt}   % indent kiri
-    {-20pt} % jarak dari atas halaman
-    {20pt}  % jarak setelah judul
+\titlespacing*{\chapter}
+{0pt}   % indent kiri
+{-20pt} % jarak dari atas halaman
+{20pt}  % jarak setelah judul
 
-% Format Heaeding 2 (Subbab)
+% Heading 2 (Subbab) Style Formatting
 \titleformat{\section}
-    {\normalfont\bfseries\fontsize{12pt}{14pt}\selectfont}
-    {\thesection}
-    {10pt}
-    {}
+{\normalfont\bfseries\fontsize{12pt}{14pt}\selectfont}
+{\thesection}
+{10pt}
+{}
+
+%=====================================
+% Miscellanous Settings
 
 % Disable break word pakai "-"
-\hyphenpenalty=10000
+\hyphenpenalty=5000
 \exhyphenpenalty=10000
 \tolerance=9999
 \emergencystretch=10pt
@@ -65,35 +93,18 @@
     citecolor=black
 }
 
-% Import package lainnya (gambar, tabel, daftar isi)
-\usepackage{tocloft}            % Untuk daftar isi/referensi/gambar/tabel
-\usepackage{tabularx}           % Untuk tabel dengan lebar otomatis
-\usepackage{longtable}          % Untuk tabel yang bisa memanjang ke halaman berikutnya
-\usepackage{graphicx}           % Untuk gambar
-\usepackage{array}              % Untuk mengatur format tabel
-\usepackage{ragged2e}           % Untuk rata kiri pada tabel
-\usepackage{booktabs}           % Untuk centering
-\usepackage{tabto}              % Untuk mengatur indentasi
-\usepackage{enumitem}           % Untuk numbering
-\usepackage{listings}           % Untuk memasukkan potongan kode program
-\usepackage{xcolor}             % Untuk warna pada kode listing
-\usepackage{pdfpages}           % Untuk include pdf
-\usepackage{pgffor}             % Untuk looping
-\usepackage{fancyhdr}           % Untuk header dan footer
-\usepackage[indonesian]{babel}
-
 % Renaming
 \addto\captionsenglish{
-  \renewcommand{\contentsname}{DAFTAR ISI}
-  %\renewcommand{\abstractname}{\huge Abstrak}
-  \renewcommand{\refname}{Referensi}
-  \renewcommand{\listfigurename}{DAFTAR GAMBAR}
-  \renewcommand{\listtablename}{DAFTAR TABEL}
-  \renewcommand{\lstlistlistingname}{DAFTAR KODE}
-  \renewcommand{\figurename}{Gambar}
-  \renewcommand{\tablename}{Tabel}
-   \renewcommand{\lstlistingname}{Kode}
-  \renewcommand{\bibname}{DAFTAR PUSTAKA}
+    \renewcommand{\contentsname}{DAFTAR ISI}
+    %\renewcommand{\abstractname}{\huge Abstrak}
+    \renewcommand{\refname}{Referensi}
+    \renewcommand{\listfigurename}{DAFTAR GAMBAR}
+    \renewcommand{\listtablename}{DAFTAR TABEL}
+    \renewcommand{\lstlistlistingname}{DAFTAR KODE}
+    \renewcommand{\figurename}{Gambar}
+    \renewcommand{\tablename}{Tabel}
+    \renewcommand{\lstlistingname}{Kode}
+    \renewcommand{\bibname}{DAFTAR PUSTAKA}
 }
 
 % Textbox Code
@@ -104,26 +115,18 @@
     tabsize=2,
     numbers=left,
     numberstyle=\tiny,
-    keywordstyle=\color{blue},
-    commentstyle=\color{green!50!black},
-    stringstyle=\color{red},
+    keywordstyle=\color{blue!70!black},
+    commentstyle=\color{gray},
+    stringstyle=\color{red!70!black},
     showstringspaces=false
 }
 
 % Folder Assets
 \graphicspath{
     {assets/images/}
-    {assets/files/}
-    {assets/references/}  
-    % {logbook/}
+        {assets/files/}
+        {assets/references/}
+        {logbook/}
 }
 
-% Global Variables
-
 %=====================================
-
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt} % Removes the header line
-\renewcommand{\footrulewidth}{0pt} % Removes the footer line
-\fancyhf{} % Clear all header and footer fields
-\fancyfoot[R]{\thepage} % R for Right
