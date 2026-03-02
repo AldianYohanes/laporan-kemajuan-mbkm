@@ -12,7 +12,7 @@
 % Format Font Calibri
 \usepackage{fontspec}
 \setmainfont{Calibri}
-\setmonofont{Consolas}
+\setmonofont{Consolas}[LetterSpace=-5.0]
 
 % Format Page Layout / Margin
 \usepackage[
@@ -123,5 +123,7 @@
 %=====================================
 
 \pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % Removes the header line
+\renewcommand{\footrulewidth}{0pt} % Removes the footer line
 \fancyhf{} % Clear all header and footer fields
 \fancyfoot[R]{\thepage} % R for Right
