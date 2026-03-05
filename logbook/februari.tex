@@ -1,6 +1,10 @@
 \input{logbook/top.tex}
 \noindent Bulan \tab : Februari 2026 \\[1ex] % Gunakan [1ex] untuk jarak, bukan \\ berulang
 
+\newcommand{\logentry}[4]{%
+    #1 & #2 & \textbf{Tujuan} #3 \textbf{Pelaksanaan} #4 \\ \hline
+}
+
 % Build Table Header
 \begin{longtable}{| >{\centering\arraybackslash}m{1cm} | >{\centering\arraybackslash}m{3.5cm} | >{\raggedright\arraybackslash}m{8.1cm} | }\hline
     \textbf{No}           &
@@ -19,92 +23,117 @@
     % ===================================================================
     % Minggu Ke-4  (2 Februari - 7 Februari 2026)
 
-    1.                    & Senin, 2 Februari 2026 \linebreak 08:00 – 17:00  &
-    Tujuan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
-        \item Tes 1
-        \item Tes 2
-    \end{enumerate}
+    \logentry{1.}
+    {Senin, 2 Februari 2026 \linebreak 08:00 – 17:00}
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
+            \item Tes 1
+            \item Tes 2
+        \end{enumerate}
+    }
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+            \item Tes 1
+            \item Tes 2
+        \end{enumerate}
 
-    Pelaksanaan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
-        \item Tes 1
-        \item Tes 2
-    \end{enumerate}
+        Penjelasan: ---
+    }
 
-    Penjelasan: ---                                                            \\ \hline
+    \logentry{2.}
+    {Selasa, 3 Februari 2026 \linebreak 08:00 – 17:00}
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
+            \item Tes 1
+            \item Tes 2
+        \end{enumerate}
+    }
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+            \item Tes 1
+            \item Tes 2
+        \end{enumerate}
 
-    2.                    & Selasa, 3 Februari 2026 \linebreak 08:00 – 17:00 &
-    Tujuan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
-        \item Tes 1
-        \item Tes 2
-    \end{enumerate}
-
-    Pelaksanaan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
-        \item Tes 1
-        \item Tes 2
-    \end{enumerate}
-
-    Penjelasan: ---                                                            \\ \hline
+        Penjelasan: ---
+    }
 
     % ===================================================================
     % Minggu Ke-7  (23 Februari - 27 Februari 2026)
 
-    16.                   & Rabu, 25 Februari 2026 \linebreak 08:07 – 17:32  &
-    Tujuan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
-        \item Melanjutkan Task \#11XXX
-        \item Mendapatkan Task \#11797 (BUG): Untuk memperbaiki \textit{bug} dropdown dalam
-              Editable Table tidak bisa digunakan ketika filter \textit{search} aktif
-    \end{enumerate}
+    \logentry{15.}
+    {Selasa, 24 Februari 2026 \linebreak 08:00 – 17:00}
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
+            \item Melanjutkan Task \#12116 (NEW): Buat \textit{page} \texttt{Item Cabang} di HealthyOne React.
+        \end{enumerate}
+    }
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+            \item Lorem Ipsum
+        \end{enumerate}
 
-    Pelaksanaan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
-        \item (New \#11xxx) Membuat layout design dasar untuk tab Produk yang berisi
-              tab kecil [Semua, Obat Resep, Produk Kesehatan, Produk BMHP,
-                      Produk Lainnya, dan Obat Racik]
-              % \item Menggunakan Combobox dan ListBased Homemade, serta Mantine Tabs
-        \item (Fix \#11797) Memodifikasi file \texttt{table.dart}: melindungi indexing sebelum
-              digunakan agar tidak \textit{out of bound}.
-    \end{enumerate}
+        Penjelasan
+    }
 
-    Penjelasan                                                                 \\ \hline
+    \logentry{16.}
+    {Rabu, 25 Februari 2026 \linebreak 08:07 – 17:32}
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
+            \item Melanjutkan Task \#11XXX
+            \item Mendapatkan Task \#11797 (BUG): Untuk memperbaiki \textit{bug} dropdown dalam
+                  Editable Table tidak bisa digunakan ketika filter \textit{search} aktif
+        \end{enumerate}
+    }
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+            \item (New \#11xxx) Membuat layout design dasar untuk tab Produk yang berisi
+                  tab kecil [Semua, Obat Resep, Produk Kesehatan, Produk BMHP,
+                             Produk Lainnya, dan Obat Racik]
+                  % \item Menggunakan Combobox dan ListBased Homemade, serta Mantine Tabs
+            \item (Fix \#11797) Memodifikasi file \texttt{table.dart}: melindungi indexing sebelum
+                  digunakan agar tidak \textit{out of bound}.
+        \end{enumerate}
 
-    17.                   & Kamis, 26 Februari 2026 \linebreak 07:49 – 17:33 &
-    Tujuan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
-        \item Melanjutkan Task \#11XXX
-    \end{enumerate}
+        Penjelasan
+    }
 
-    Pelaksanaan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
-        \item Membuat layout design dasar untuk tab Layanan yang berisi tab kecil
+    \logentry{17.}
+    {Kamis, 26 Februari 2026 \linebreak 07:49 – 17:33}
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
+            \item Melanjutkan Task \#11XXX
+        \end{enumerate}
+    }
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+            \item Membuat layout design dasar untuk tab Layanan yang berisi tab kecil
                   [Konsultasi, Gigi, Lainnya, dan Belum Aktif]
-        \item Membuat layout design dasar untuk tab Paket
-        \item Membuat components footer button untuk digunakan di global (bisa dipakai semua
-              page)
-        \item Membuat hook useLayanan dan usePaket untuk digunakan sebagai disclosure
-    \end{enumerate}
+            \item Membuat layout design dasar untuk tab Paket
+            \item Membuat components footer button untuk digunakan di global (bisa dipakai semua
+                  page)
+            \item Membuat hook useLayanan dan usePaket untuk digunakan sebagai disclosure
+        \end{enumerate}
 
-    Penjelasan: ---                                                            \\ \hline
+        Penjelasan: ---
+    }
 
-    17.                   & Jumat, 27 Februari 2026 \linebreak 08:05 – 17:20 &
-    Tujuan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
-        \item Melanjutkan Task \#11XXX
-    \end{enumerate}
-
-    Pelaksanaan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
-        \item Menambahkan panel-panel Add-Edit-View untuk setiap tab besar di \texttt{Item
+    \logentry{18.}
+    {Jumat, 27 Februari 2026 \linebreak 08:05 – 17:20}
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
+            \item Melanjutkan Task \#11XXX
+        \end{enumerate}
+    }
+    {
+        \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
+            \item Menambahkan panel-panel Add-Edit-View untuk setiap tab besar di \texttt{Item
                   Cabang}
-        \item Membuat components footer button untuk digunakan di global (bisa dipakai semua
-              page)
-    \end{enumerate}
+            \item Membuat components footer button untuk digunakan di global (bisa dipakai semua
+                  page)
+        \end{enumerate}
 
-    Penjelasan: ---                                                            \\ \hline
+        Penjelasan: ---
+    }
 
 \end{longtable}
 
