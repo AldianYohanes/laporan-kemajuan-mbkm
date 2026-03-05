@@ -124,4 +124,32 @@
         {logbook/}
 }
 
+% For logbook table (log entry) -> insert new row
+\newcommand{\logentry}[4]{
+#1 & #2 &
+#3
+\vspace{4pt}
+#4
+\\ \hline
+}
+
+% For logbook table (log list & log detail) -> tujuan & pelaksanaan
+\newenvironment{loglist}
+{
+\textbf{Tujuan:}
+\begin{itemize}[noitemsep, topsep=2pt, leftmargin=15pt, label=\textbullet]
+}
+{
+\end{itemize}
+}
+
+\newenvironment{logdetail}
+{
+\textbf{Pelaksanaan:}
+\begin{enumerate}[noitemsep, topsep=2pt, leftmargin=15pt]
+}
+{
+\end{enumerate}
+}
+
 %=====================================
