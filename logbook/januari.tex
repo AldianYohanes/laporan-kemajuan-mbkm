@@ -1,47 +1,114 @@
-\input{logbook/top.tex}
-\noindent Bulan \tab : Januari 2026 \\[1ex] % Gunakan [1ex] untuk jarak, bukan \\ berulang
-
-\begin{longtable}{| >{\centering\arraybackslash}m{1cm} | >{\centering\arraybackslash}m{3.5cm} | >{\raggedright\arraybackslash}m{8.1cm} | }\hline
-    \textbf{No}           &
-    \textbf{Hari/Tanggal} &
-    \textbf{Keterangan}                                                                            \\
-    \hline
-    \endfirsthead
-
-    \hline
-    \textbf{No}           & \textbf{Hari/Tanggal}                            & \textbf{Keterangan} \\
-    \endhead
-
-    % Minggu Ke-1
-    1.                    & Senin, 12 Januari 2026 \linebreak 08:00 – 17:00  &
-    Tujuan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
-        \item Tes 1
-        \item Tes 2
-    \end{enumerate}
-    Pelaksanaan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
-        \item Tes 1
-        \item Tes 2
-    \end{enumerate}
-    Penjelasan: ---                                                                                \\ \hline
-
-    2.                    & Selasa, 13 Januari 2026 \linebreak 08:00 – 17:00 &
-    Tujuan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt, label=\textbullet]
-        \item Tes 1
-        \item Tes 2
-    \end{enumerate}
-    Pelaksanaan:
-    \begin{enumerate}[noitemsep, topsep=0pt, leftmargin=15pt]
-        \item Tes 1
-        \item Tes 2
-    \end{enumerate}
-    Penjelasan: ---                                                                                \\ \hline
-
-\end{longtable}
-
-\makeatletter
+\renewcommand{\reportmonth}{Januari}
 \renewcommand{\signaturedate}{1 Februari 2026}
+\input{logbook/top.tex}
+\begin{logtable}
+
+    % =============================================================
+    % Minggu Ke-1  (12 Januari - 18 Januari 2026)
+    % =============================================================
+     \logentry{1.}
+    {
+        Senin \linebreak 12 Jan 2026 \linebreak
+        08:00--17:00 \linebreak
+        WFO
+    }{
+        \begin{loglist}
+            \item Mengikuti Orientasi Karyawan Baru (OKB) di Head Office (HO).
+            \item Mempelajari arsitektur dan \textit{framework} yang digunakan 
+                  oleh perusahaan.
+        \end{loglist}
+    }{
+        \begin{logdetail}
+            \item OKB dilaksanakan di Ruang Meeting bersama beberapa karyawan 
+                  dan magang baru di HO.
+            \item Melakukan \textit{cloning repository} GitHub untuk 
+                  \texttt{healthcare-intelligence-app} yang merupakan 
+                  \textit{repository} khusus Front-End untuk beberapa proyek 
+                  sekaligus (HealthyOne, Canvasser). 
+        \end{logdetail}
+    }
+
+    \logentry{2.}
+    {
+        Selasa \linebreak 13 Jan 2026 \linebreak
+        08:00--17:00 \linebreak
+        WFO
+    }{
+        \begin{loglist}
+            \item Mempelajari \textit{workflow} dan cara menggunakan \textit{framework}.
+            \item Mendapat Task \#11858 (IMPROVEMENT): Migrasi beberapa \textit{widget} ke Flutter versi terbaru.
+        \end{loglist}
+    }{
+        \begin{logdetail}
+            \item Latihan membuat \textit{widget} seperti \textit{table, button, tabs, dan lain-lain} menggunakan \textit{local development environment}.
+            \item Menyalin kode dari Flutter versi sebelumnya ke Flutter versi terbaru dan \textit{resolve dependency issues} sambil mempelajari arsitektur MVC dalam Flutter.
+        \end{logdetail}
+    }
+
+    \logentry{3.}
+    {
+        Rabu \linebreak 14 Jan 2026 \linebreak
+        08:00--17:00 \linebreak
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#11858.
+        \end{loglist}
+    }{
+        \begin{logdetail}
+            \item Melakukan \textit{update} dan \textit{refactor code} untuk kode-kode \textit{widget} yang mengalami \textit{deprecated packages}.
+        \end{logdetail}
+    }
+
+    \logentry{4.}
+    {
+        Kamis \linebreak 15 Jan 2026 \linebreak
+        08:12--17:12 \linebreak
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#11858
+        \end{loglist}
+    }{
+        \begin{logdetail}
+            \item Melakukan perbaikan pada \textit{widgets} yang memiliki \textit{bug}.
+        \end{logdetail}
+    }
+
+     % =============================================================
+    % Minggu Ke-2  (19 Januari - 25 Januari 2026)
+    % =============================================================
+
+     \logentry{5.}
+    {
+        Senin \linebreak 19 Jan 2026 \linebreak
+        07:58--17:10 \linebreak
+        WFO
+    }{
+        \begin{loglist}
+            \item 
+        \end{loglist}
+    }{
+        \begin{logdetail}
+            \item -
+        \end{logdetail}
+    }
+
+    % TEMPLATE
+    \logentry{x.}
+    {
+        x, x Maret \linebreak
+        xx:xx--xx:xx \linebreak
+        WFO
+    }{
+        \begin{loglist}
+            \item 
+        \end{loglist}
+    }{
+        \begin{logdetail}
+            \item -
+        \end{logdetail}
+    }
+
+\end{logtable}
 \input{logbook/bottom.tex}
-\makeatother
