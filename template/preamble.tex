@@ -13,6 +13,8 @@
 \usepackage{pdfpages}           % Untuk include pdf
 \usepackage{pgffor}             % Untuk looping
 \usepackage[indonesian]{babel}
+\usepackage[export]{adjustbox}  % Styling includegraphics (show border)
+\usepackage{lipsum}             % Generate dummy text - is not mandatory
 
 %=====================================
 % Metadata
@@ -23,7 +25,7 @@
 \usepackage{fontspec}
 \setmainfont{Calibri}
 \setmonofont{Consolas}[LetterSpace=-5.0]
-
+\usepackage{microtype}         % allows LaTeX to "squeeze" or "stretch" letters slightly to fit the line
 %=====================================
 % Page Layout Formatting
 \usepackage[
@@ -35,18 +37,27 @@
     % showframe % enable to show margin frames
 ]{geometry}
 
+
 \usepackage{fancyhdr} % Untuk header dan footer
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt} % Removes the header line
 \renewcommand{\footrulewidth}{0pt} % Removes the footer line
-\fancyhf{} % Clear all header and footer fields
-\fancyfoot[R]{\thepage} % R for Right
+\fancyhf{} % Clear all headers and footers
+\fancyfoot[R]{\thepage} % Set number to the Right
+
+\fancypagestyle{plain}{
+    \renewcommand{\headrulewidth}{0pt} % Removes the header line
+    \renewcommand{\footrulewidth}{0pt} % Removes the footer line
+    \fancyhf{} % Clear all headers and footers
+    \fancyfoot[R]{\thepage} % Set number to the Right
+}
 
 %=====================================
 % Default spacing ke 1.5 dan first line indent ke 1.27
 \usepackage{setspace}
 \onehalfspacing
 \setlength{\parindent}{1.27cm}
+\usepackage{indentfirst}
 
 %=====================================
 % Heading 1 (Bab) Style Formatting
@@ -88,7 +99,17 @@
     citecolor=black
 }
 
-% Renaming
+% ToC styling
+\setlength{\cftbeforechapskip}{2pt}
+\renewcommand{\cftchappresnum}{BAB }            % Set agar chapter punya awalan "BAB"
+\renewcommand{\cftchapnumwidth}{3em}            % Tambah indentation agar tidak tabrakan
+\renewcommand{\cftsecindent}{3em}            % Tambah indentation agar tidak tabrakan
+\renewcommand{\cftchapfont}{\normalfont}        % Set agar chapter di daftar isi tidak bold
+\renewcommand{\cftchappagefont}{\normalfont}    % Set agar numbering chapter tidak bold
+\renewcommand{\cftdotsep}{0.75}                 % Set agar titik-titik tidak terlalu renggang
+\renewcommand{\cftchapdotsep}{\cftdotsep}       % Set agar chapter juga punya titik-titik
+
+% Renaming untuk dipakai tocloft
 \addto\captionsenglish{
     \renewcommand{\contentsname}{DAFTAR ISI}
     %\renewcommand{\abstractname}{\huge Abstrak}
