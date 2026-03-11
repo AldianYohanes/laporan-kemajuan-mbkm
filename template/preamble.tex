@@ -194,4 +194,34 @@
 \end{enumerate}
 }
 
+% Daftar Hadir Bimbingan Table
+\newenvironment{dhbtable}
+{
+    \begin{longtable}{| >{\centering\arraybackslash}p{1cm} | >{\justifying\arraybackslash}p{7cm} | >{\centering\arraybackslash}p{3cm} | >{\centering\arraybackslash}p{2cm} |} \hline
+        \textbf{No} &
+        \centering\textbf{Materi Bimbingan} &
+        \textbf{Tgl. Bimb.} &
+        \textbf{Paraf} \\ \hline
+        \endfirsthead
+
+        \hline
+        \textbf{No} &
+        \textbf{Materi Bimbingan} &
+        \textbf{Tgl. Bimb.} &
+        \textbf{Paraf} 
+        \endhead
+}
+{
+    \end{longtable}
+}
+
+% For dhbtable (dhbentry) -> insert new row
+\newcommand{\dhbentry}[4]{
+    #1 & 
+    \fontsize{11}{14}\selectfont{#2} & 
+    #3 & 
+    #4
+\\ \hline
+}
+
 %=====================================
