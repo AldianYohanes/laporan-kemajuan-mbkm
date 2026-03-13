@@ -1,0 +1,51 @@
+
+% ToC styling
+\setlength{\cftbeforechapskip}{2pt}
+\renewcommand{\cftchappresnum}{BAB }            % Set agar chapter punya awalan "BAB"
+\renewcommand{\cftchapnumwidth}{3em}            % Tambah indentation agar tidak tabrakan
+\renewcommand{\cftsecindent}{3em}               % Tambah indentation agar tidak tabrakan
+\renewcommand{\cftchapfont}{\normalfont}        % Set agar chapter di daftar isi tidak bold
+\renewcommand{\cftchappagefont}{\normalfont}    % Set agar numbering chapter tidak bold
+\renewcommand{\cftdotsep}{0.75}                 % Set agar titik-titik tidak terlalu renggang
+\renewcommand{\cftchapdotsep}{\cftdotsep}       % Set agar chapter juga punya titik-titik
+
+\renewcommand{\cftfigindent}{0em}               % Set lof indent
+\renewcommand{\cftfigpresnum}{Gambar }          % Set lof leading
+\renewcommand{\cftfignumwidth}{5.5em}           % Set leading width\
+
+
+% Daftar Hadir Bimbingan Table
+\newenvironment{dhbtable}
+{
+    \begin{longtable}{| >{\centering\arraybackslash}m{1cm} | >{\justifying\arraybackslash}m{7cm} | >{\centering\arraybackslash}m{3cm} | >{\centering\arraybackslash}m{2cm} |} \hline
+        \rule{0pt}{3ex} \textbf{No} &
+        \rule{0pt}{3ex}\centering\textbf{Materi Bimbingan} &
+        \rule{0pt}{3ex}\textbf{Tgl. Bimb.} &
+        \rule{0pt}{3ex}\textbf{Paraf} \\ \hline
+        \endfirsthead
+
+        \hline
+        \rule{0pt}{3ex}\textbf{No} &
+        \textbf{Materi Bimbingan} &
+        \textbf{Tgl. Bimb.} &
+        \textbf{Paraf} 
+        \endhead
+}
+{
+    \end{longtable}
+    \begin{flushright}
+    {\city}, \textcolor{red}{\signaturedate}\\
+    Mengetahui,\\
+    Pembimbing {\jenisMBKM},\\[2cm]
+    {\dosen}\\
+\end{flushright}
+}
+
+% For dhbtable (dhbentry) -> insert new row
+\newcommand{\dhbentry}[4]{
+    #1 & 
+    \fontsize{11}{14}\selectfont{#2} & 
+    #3 & 
+    #4
+\\ \hline
+}

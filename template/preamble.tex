@@ -15,7 +15,7 @@
 \usepackage[indonesian]{babel}
 \usepackage[export]{adjustbox}  % Styling includegraphics (show border)
 \usepackage{lipsum}             % Generate dummy text - is not mandatory
-
+\usepackage{float}              % Untuk memudahkan positioning figures
 %=====================================
 % Metadata
 \input{template/metadata.tex}
@@ -80,6 +80,14 @@
 {10pt}
 {}
 
+% Heading 3 (Subsubbab) Style Formatting
+\titleformat{\subsection}
+{\normalfont\fontsize{12pt}{14pt}\selectfont}
+{\thesubsection}
+{10pt}
+{}
+\titlespacing{\subsection}{0pt}{12pt}{0pt}
+
 %=====================================
 % Miscellanous Settings
 
@@ -99,18 +107,11 @@
     citecolor=black
 }
 
-% ToC styling
-\setlength{\cftbeforechapskip}{2pt}
-\renewcommand{\cftchappresnum}{BAB }            % Set agar chapter punya awalan "BAB"
-\renewcommand{\cftchapnumwidth}{3em}            % Tambah indentation agar tidak tabrakan
-\renewcommand{\cftsecindent}{3em}            % Tambah indentation agar tidak tabrakan
-\renewcommand{\cftchapfont}{\normalfont}        % Set agar chapter di daftar isi tidak bold
-\renewcommand{\cftchappagefont}{\normalfont}    % Set agar numbering chapter tidak bold
-\renewcommand{\cftdotsep}{0.75}                 % Set agar titik-titik tidak terlalu renggang
-\renewcommand{\cftchapdotsep}{\cftdotsep}       % Set agar chapter juga punya titik-titik
+\usepackage{caption}
+\captionsetup[figure]{labelsep=space, justification=centering}
 
 % Renaming untuk dipakai tocloft
-\addto\captionsenglish{
+\addto\captionsindonesian{
     \renewcommand{\contentsname}{DAFTAR ISI}
     %\renewcommand{\abstractname}{\huge Abstrak}
     \renewcommand{\refname}{Referensi}
@@ -194,34 +195,5 @@
 \end{enumerate}
 }
 
-% Daftar Hadir Bimbingan Table
-\newenvironment{dhbtable}
-{
-    \begin{longtable}{| >{\centering\arraybackslash}p{1cm} | >{\justifying\arraybackslash}p{7cm} | >{\centering\arraybackslash}p{3cm} | >{\centering\arraybackslash}p{2cm} |} \hline
-        \textbf{No} &
-        \centering\textbf{Materi Bimbingan} &
-        \textbf{Tgl. Bimb.} &
-        \textbf{Paraf} \\ \hline
-        \endfirsthead
-
-        \hline
-        \textbf{No} &
-        \textbf{Materi Bimbingan} &
-        \textbf{Tgl. Bimb.} &
-        \textbf{Paraf} 
-        \endhead
-}
-{
-    \end{longtable}
-}
-
-% For dhbtable (dhbentry) -> insert new row
-\newcommand{\dhbentry}[4]{
-    #1 & 
-    \fontsize{11}{14}\selectfont{#2} & 
-    #3 & 
-    #4
-\\ \hline
-}
 
 %=====================================
