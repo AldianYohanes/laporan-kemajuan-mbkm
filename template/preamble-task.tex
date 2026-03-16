@@ -1,0 +1,35 @@
+\footnotesize
+\noindent
+% For Task Details Table
+\newenvironment{tasktable}
+{
+    \begin{longtable}{
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{1cm} @{\hspace{0pt}}
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{3.5cm} @{\hspace{0pt}}
+        | >{\centering\arraybackslash}p{2.7cm}
+        | >{\centering\arraybackslash}p{3.35cm}
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.5cm} @{\hspace{0pt}} |
+    }\hline
+        \textbf{No} &
+        \textbf{ID \& Tipe} &
+        \textbf{Pemberi Tugas} &
+        \textbf{Waktu Pelaksanaan} &
+        \textbf{Durasi} \\
+        \hline
+        \endfirsthead
+
+        \hline
+        \textbf{No} &
+        \textbf{ID \& Tipe} &
+        \textbf{Pemberi Tugas} &
+        \textbf{Waktu Pelaksanaan} &
+        \textbf{Durasi} \\
+        \endhead
+}
+{ \end{longtable} }
+
+
+% For task table (task entry) -> insert new row
+\newcommand{\taskentry}[5]{
+#1 & #2 & #3 & #4 & #5 \\ \hline
+}
