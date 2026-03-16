@@ -11,12 +11,6 @@
         \textbf{Keterangan}                                                        \\
         \hline
         \endfirsthead
-
-        % Header Table untuk Page Selanjutnya
-        \hline
-        \textbf{No}           &
-        \textbf{Hari/Tanggal} &
-        \textbf{Keterangan}                                                        \\
         \endhead
 }
 {
@@ -50,4 +44,8 @@
 {
 \end{enumerate}
 }
-%=====================================
+
+\newcommand{\logevaluate}[2]
+{
+    \multicolumn{2}{| @{\hspace{0pt}} >{\centering\arraybackslash}m{4.564cm} @{\hspace{0pt}}|}{#1} & #2 \\ \hline
+}
