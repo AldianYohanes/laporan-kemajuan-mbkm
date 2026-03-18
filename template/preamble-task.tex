@@ -5,17 +5,24 @@
 {
     \begin{longtable}{
         | @{\hspace{0pt}} >{\centering\arraybackslash}p{1cm} @{\hspace{0pt}} 
-        | @{\hspace{0pt}} >{\centering\arraybackslash}p{3.1cm} @{\hspace{0pt}} 
-        | @{\hspace{0pt}} >{\centering\arraybackslash}p{3.1cm} @{\hspace{0pt}} 
-        | @{\hspace{0pt}} >{\centering\arraybackslash}p{3.1cm} @{\hspace{0pt}} 
-        | >{\raggedright\arraybackslash}p{3.1cm} |}
-        \hline
-        \textbf{No.} & \textbf{Jenis} & \textbf{Tanggal Pengerjaan} & \textbf{Requester} & \textbf{Detail} \\ \hline
-        \endfirsthead
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.7cm} @{\hspace{0pt}} 
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.7cm} @{\hspace{0pt}} 
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.3cm} @{\hspace{0pt}} 
+        | >{\raggedright\arraybackslash}p{4.7cm} |
+        }\hline
+            \textbf{No.} & 
+            \textbf{Jenis} & 
+            \textbf{Tanggal Pengerjaan} & 
+            \textbf{Requester/\linebreak Accountable} & 
+            \textbf{Detail} \\ \hline
+            \endfirsthead
         
-        \hline
-        \textbf{No.} & \textbf{Jenis} & \textbf{Tanggal Pengerjaan} & \textbf{Requester} & \textbf{Detail} \\ \hline
-        \endhead
+            \textbf{No.} & 
+            \textbf{Jenis} & 
+            \textbf{Tanggal Pengerjaan} & 
+            \textbf{Requester/\linebreak Accountable} & 
+            \textbf{Detail} \\ \hline
+            \endhead
 }
 { 
     \end{longtable} 
@@ -29,6 +36,6 @@
 % #5: Requester
 % #6: Detail (Lorem Ipsum)
 \newcommand{\taskentry}[6]{
-    \multirow{2}{*}{#1} & \multicolumn{4}{l|}{#2} \\ \cline{2-5}
+    \multirow{2}{*}{#1} & \multicolumn{4}{l|}{\textbf{#2}} \\ \cline{2-5}
     & #3 & #4 & #5 & #6 \\ \hline
 }
