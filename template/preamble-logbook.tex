@@ -1,51 +1,112 @@
-% Logbook Table
+%==================================================
+% LOGBOOK CONFIGURATION
+%==================================================
+
+\singlespacing%             % Logbook biasanya pakai spasi 1 agar lebih ringkas
+
+%==================================================
+% ENVIRONMENT: LOG TABLE
+% Digunakan untuk membuat tabel logbook utama (multi-halaman)
+%==================================================
+
 \newenvironment{logtable}
 {
-\begin{longtable}{
-    | @{\hspace{0pt}} >{\centering\arraybackslash}m{1cm} @{\hspace{0pt}}
-    | @{\hspace{0pt}} >{\centering\arraybackslash}m{3.5cm} @{\hspace{0pt}}
-    | >{\raggedright\arraybackslash}m{8.9cm} | 
-    }\hline
+    \begin{longtable}{
+        | @{\hspace{0pt}} >{\centering\arraybackslash}m{1cm} @{\hspace{0pt}}
+        | @{\hspace{0pt}} >{\centering\arraybackslash}m{3.5cm} @{\hspace{0pt}}
+        | >{\raggedright\arraybackslash}m{8.9cm} |
+        }
+        \hline
         \textbf{No}           &
         \textbf{Hari/Tanggal} &
-        \textbf{Keterangan}                                                        \\
+        \textbf{Keterangan}     \\
         \hline
-        \endfirsthead
-        \endhead
-}
-{
-\end{longtable}
+        \endfirsthead % Header hanya muncul di halaman pertama
+        \endhead      % Header untuk halaman selanjutnya
+        }
+        {
+    \end{longtable}
 }
 
-% For logbook table (log entry) -> insert new row
+%==================================================
+% COMMAND: LOG ENTRY
+% Menambahkan 1 baris data logbook
+% #1 = No
+% #2 = Hari/Tanggal
+% #3 = Konten utama (biasanya list kegiatan)
+% #4 = Detail tambahan (opsional, dipisah jarak)
+%==================================================
+
 \newcommand{\logentry}[4]{
-#1 & #2 &
-\fontsize{11}{14}\selectfont{#3
-\vspace{4pt}
-#4}
-\\ \hline
+    #1 & #2 &
+    \fontsize{11}{14}\selectfont{
+        #3
+        \vspace{4pt} % Jarak antar blok konten
+        #4
+    }
+    \\ \hline
 }
 
-% For logbook table (log list & log detail) -> tujuan & pelaksanaan
+%==================================================
+% ENVIRONMENT: LOG LIST (Tujuan)
+% Untuk menampilkan daftar tujuan kegiatan
+%==================================================
+
 \newenvironment{loglist}
 {
-\textbf{Tujuan:}
-\begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+    \textbf{Tujuan:}
+    \begin{itemize}[
+            noitemsep,
+            topsep=2pt,
+            leftmargin=12pt,
+            label=\textbullet
+        ]
+        }
+        {
+    \end{itemize}
 }
+
+%==================================================
+% ENVIRONMENT: LOG WORK (Pelaksanaan)
+% Untuk langkah-langkah pengerjaan (step-by-step)
+%==================================================
+
+\newenvironment{logwork}
 {
-\end{itemize}
+    \textbf{Pelaksanaan:}
+    \begin{enumerate}[
+            noitemsep,
+            topsep=2pt,
+            leftmargin=15pt
+        ]
+        }
+        {
+    \end{enumerate}
 }
+
+%==================================================
+% ENVIRONMENT: LOG DETAIL
+% Untuk paragraf penjelasan tambahan (non-list)
+%==================================================
 
 \newenvironment{logdetail}
 {
-\textbf{Pelaksanaan:}
-\begin{enumerate}[noitemsep, topsep=2pt, leftmargin=15pt]
+    \noindent
+    \justifying % Rata kiri-kanan agar lebih rapi
 }
 {
-\end{enumerate}
 }
+
+%==================================================
+% COMMAND: LOG EVALUATION
+% Baris khusus untuk evaluasi / catatan tambahan
+% Kolom pertama dan kedua digabung (multicolumn)
+% #1 = Label (misalnya: Evaluasi)
+% #2 = Isi evaluasi
+%==================================================
 
 \newcommand{\logevaluate}[2]
 {
-    \multicolumn{2}{| @{\hspace{0pt}} >{\centering\arraybackslash}m{4.564cm} @{\hspace{0pt}}|}{#1} & #2 \\ \hline
+\multicolumn{2}{| @{\hspace{0pt}} >{\centering\arraybackslash}m{4.564cm} @{\hspace{0pt}}|}{#1}
+& #2 \\ \hline
 }

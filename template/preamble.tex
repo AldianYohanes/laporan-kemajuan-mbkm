@@ -1,106 +1,148 @@
-% Imports
-\usepackage{tocloft}            % Untuk daftar isi/referensi/gambar/tabel
-\usepackage{tabularx}           % Untuk tabel dengan lebar otomatis
-\usepackage{longtable}          % Untuk tabel yang bisa memanjang ke halaman berikutnya
-\usepackage{multirow}           % Untuk multirow
-\usepackage{multicol}           % Untuk multicolumn
-\usepackage{graphicx}           % Untuk gambar
-\usepackage{array}              % Untuk mengatur format tabel
-\usepackage{ragged2e}           % Untuk rata kiri pada tabel
-\usepackage{booktabs}           % Untuk centering
-\usepackage{tabto}              % Untuk mengatur indentasi
-\usepackage{enumitem}           % Untuk numbering
-\usepackage{listings}           % Untuk memasukkan potongan kode program
-\usepackage{xcolor}             % Untuk warna pada kode listing
-\usepackage{pdfpages}           % Untuk include pdf
-\usepackage{pgffor}             % Untuk looping
-\usepackage[indonesian]{babel}
-\usepackage[export]{adjustbox}  % Styling includegraphics (show border)
-\usepackage{lipsum}             % Generate dummy text - is not mandatory
-\usepackage{float}              % Untuk memudahkan positioning figures
-%=====================================
-% Metadata
-\input{template/metadata.tex}
+%==================================================
+% IMPORTS
+% Package utama untuk layout, tabel, gambar, dan utilitas lainnya
+%==================================================
 
-%=====================================
-% Font Formatting 
+\usepackage{tocloft}            % Custom daftar isi, gambar, tabel, referensi
+\usepackage{tabularx}           % Tabel dengan lebar kolom fleksibel
+\usepackage{longtable}          % Tabel multi-halaman
+\usepackage{multirow}           % Merge baris dalam tabel
+\usepackage{multicol}           % Layout multi-kolom
+\usepackage{array}              % Kontrol format tabel lebih lanjut
+\usepackage{booktabs}           % Garis tabel lebih clean (toprule, midrule, bottomrule)
+
+\usepackage{graphicx}           % Insert gambar
+\usepackage[export]{adjustbox}  % Styling tambahan untuk gambar (misalnya border)
+
+\usepackage{ragged2e}           % Alignment teks (lebih fleksibel dari default)
+\usepackage{tabto}              % Kontrol indentasi manual
+
+\usepackage{enumitem}           % Custom bullet & numbering list
+
+\usepackage{listings}           % Menampilkan code
+\usepackage{xcolor}             % Warna (dipakai oleh listings)
+
+\usepackage{pdfpages}           % Include file PDF
+\usepackage{pgffor}             % Looping di LaTeX
+
+\usepackage{float}              % Kontrol posisi figure/table (H, h, dll)
+\usepackage{lipsum}             % Dummy text (opsional)
+
+\usepackage[indonesian]{babel}  % Bahasa dokumen
+
+%==================================================
+% METADATA
+%==================================================
+
+\input{template/metadata.tex}   % Data seperti judul, penulis, dll
+
+%==================================================
+% FONT CONFIGURATION (XeLaTeX)
+%==================================================
+
 \usepackage{fontspec}
-\setmainfont{Calibri}
-\setmonofont{Consolas}[LetterSpace=-5.0]
-\usepackage{microtype}         % allows LaTeX to "squeeze" or "stretch" letters slightly to fit the line
-%=====================================
-% Page Layout Formatting
+\setmainfont{Calibri}           % Font utama dokumen
+\setmonofont{Consolas}[LetterSpace=-5.0] % Font untuk code
+
+\usepackage{microtype}          % Optimasi spacing teks (lebih rapi saat justify)
+
+%==================================================
+% PAGE LAYOUT (MARGIN)
+%==================================================
+
 \usepackage[
     a4paper,
     left=4cm,
     right=3cm,
     top=4cm,
     bottom=3cm,
-    % showframe % enable to show margin frames
+    % showframe % Aktifkan jika ingin debug margin
 ]{geometry}
 
+%==================================================
+% HEADER & FOOTER
+%==================================================
 
-\usepackage{fancyhdr} % Untuk header dan footer
+\usepackage{fancyhdr}
+
 \pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt} % Removes the header line
-\renewcommand{\footrulewidth}{0pt} % Removes the footer line
-\fancyhf{} % Clear all headers and footers
-\fancyfoot[R]{\thepage} % Set number to the Right
+\fancyhf{}                      % Reset semua header & footer
 
+\renewcommand{\headrulewidth}{0pt} % Hilangkan garis header
+\renewcommand{\footrulewidth}{0pt} % Hilangkan garis footer
+
+\fancyfoot[R]{\thepage}         % Nomor halaman di kanan bawah
+
+% Style khusus untuk halaman "plain" (misalnya awal bab)
 \fancypagestyle{plain}{
-    \renewcommand{\headrulewidth}{0pt} % Removes the header line
-    \renewcommand{\footrulewidth}{0pt} % Removes the footer line
-    \fancyhf{} % Clear all headers and footers
-    \fancyfoot[R]{\thepage} % Set number to the Right
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \fancyfoot[R]{\thepage}
 }
 
-%=====================================
-% Default spacing ke 1.5 dan first line indent ke 1.27
-\usepackage{setspace}
-\onehalfspacing
-\setlength{\parindent}{1.27cm}
-\usepackage{indentfirst}
+%==================================================
+% SPACING & INDENTASI
+%==================================================
 
-%=====================================
-% Heading 1 (Bab) Style Formatting
+\usepackage{setspace}
+
+\onehalfspacing%               % Line spacing 1.5
+\setlength{\parindent}{1.27cm} % Indent paragraf pertama
+
+\usepackage{indentfirst}        % Paragraf pertama tetap indent
+
+%==================================================
+% HEADING FORMAT
+%==================================================
+
 \usepackage{titlesec}
+
+% ---------- BAB (Heading 1) ----------
 \titleformat{\chapter}[display]
-{\normalfont\bfseries\fontsize{14pt}{16pt}\centering} % Format Heading
-{BAB \thechapter} % Label Heading
-{0pt} % Spasi antara label dan judul
-{\vspace{0.5ex}} % Agar judul di bawah nomor Bab
+{\normalfont\bfseries\fontsize{14pt}{16pt}\centering}
+{BAB \thechapter}
+{0pt}
+{\vspace{0.5ex}}
 
 \titlespacing*{\chapter}
-{0pt}   % indent kiri
-{-20pt} % jarak dari atas halaman
-{20pt}  % jarak setelah judul
+{0pt}
+{-20pt}
+{20pt}
 
-% Heading 2 (Subbab) Style Formatting
+% ---------- Subbab (Heading 2) ----------
 \titleformat{\section}
 {\normalfont\bfseries\fontsize{12pt}{14pt}\selectfont}
 {\thesection}
 {10pt}
 {}
 
-% Heading 3 (Subsubbab) Style Formatting
+% ---------- Subsubbab (Heading 3) ----------
 \titleformat{\subsection}
 {\normalfont\fontsize{12pt}{14pt}\selectfont}
 {\thesubsection}
 {10pt}
 {}
+
 \titlespacing{\subsection}{0pt}{12pt}{0pt}
 
-%=====================================
-% Miscellanous Settings
+%==================================================
+% TEXT FORMATTING (ANTI HYPHEN)
+%==================================================
 
-% Disable break word pakai "-"
+% Mengurangi pemotongan kata di akhir baris
 \hyphenpenalty=5000
 \exhyphenpenalty=10000
 \tolerance=9999
 \emergencystretch=10pt
+\hbadness=99999
 
-% Hyperlink styling
+%==================================================
+% HYPERLINK
+%==================================================
+
 \usepackage{hyperref}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
@@ -109,13 +151,23 @@
     citecolor=black
 }
 
-\usepackage{caption}
-\captionsetup[figure]{labelsep=space, justification=centering}
+%==================================================
+% CAPTION (GAMBAR & TABEL)
+%==================================================
 
-% Renaming untuk dipakai tocloft
+\usepackage{caption}
+
+\captionsetup[figure]{
+    labelsep=space,
+    justification=centering
+}
+
+%==================================================
+% LABEL BAHASA INDONESIA
+%==================================================
+
 \addto\captionsindonesian{
     \renewcommand{\contentsname}{DAFTAR ISI}
-    %\renewcommand{\abstractname}{\huge Abstrak}
     \renewcommand{\refname}{Referensi}
     \renewcommand{\listfigurename}{DAFTAR GAMBAR}
     \renewcommand{\listtablename}{DAFTAR TABEL}
@@ -126,7 +178,10 @@
     \renewcommand{\bibname}{DAFTAR PUSTAKA}
 }
 
-% Textbox Code
+%==================================================
+% CODE LISTING STYLE
+%==================================================
+
 \lstset{
     basicstyle=\ttfamily\small,
     frame=single,
@@ -140,7 +195,10 @@
     showstringspaces=false
 }
 
-% Folder Assets
+%==================================================
+% ASSET PATH
+%==================================================
+
 \graphicspath{
     {assets/images/}
         {assets/files/}

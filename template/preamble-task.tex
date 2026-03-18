@@ -1,41 +1,65 @@
-\footnotesize
-\noindent
-% Definisi Environment Tabel
+%==================================================
+% TASK TABLE CONFIGURATION
+% Tabel untuk mencatat Task / pekerjaan selama magang
+%==================================================
+
+\footnotesize % Ukuran font tabel diperkecil agar lebih compact
+\noindent    % Hilangkan indent sebelum tabel
+
+%==================================================
+% ENVIRONMENT: TASK TABLE
+% Struktur tabel utama (multi-halaman)
+%==================================================
+
 \newenvironment{tasktable}
 {
     \begin{longtable}{
-        | @{\hspace{0pt}} >{\centering\arraybackslash}p{1cm} @{\hspace{0pt}} 
-        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.7cm} @{\hspace{0pt}} 
-        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.7cm} @{\hspace{0pt}} 
-        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.3cm} @{\hspace{0pt}} 
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{1cm} @{\hspace{0pt}}
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.7cm} @{\hspace{0pt}}
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.7cm} @{\hspace{0pt}}
+        | @{\hspace{0pt}} >{\centering\arraybackslash}p{2.3cm} @{\hspace{0pt}}
         | >{\raggedright\arraybackslash}p{4.7cm} |
-        }\hline
-            \textbf{No.} & 
-            \textbf{Jenis} & 
-            \textbf{Tanggal Pengerjaan} & 
-            \textbf{Requester/\linebreak Accountable} & 
-            \textbf{Detail} \\ \hline
-            \endfirsthead
-        
-            \textbf{No.} & 
-            \textbf{Jenis} & 
-            \textbf{Tanggal Pengerjaan} & 
-            \textbf{Requester/\linebreak Accountable} & 
-            \textbf{Detail} \\ \hline
-            \endhead
-}
-{ 
-    \end{longtable} 
+        } \hline
+
+        % ---------- Header (halaman pertama) ----------
+        \textbf{No.}                              &
+        \textbf{Jenis}                            &
+        \textbf{Tanggal Pengerjaan}               &
+        \textbf{Requester/\linebreak Accountable} &
+        \textbf{Detail}                             \\ \hline
+        \endfirsthead
+
+        % ---------- Header (halaman lanjutan) ----------
+        \textbf{No.}                              &
+        \textbf{Jenis}                            &
+        \textbf{Tanggal Pengerjaan}               &
+        \textbf{Requester/\linebreak Accountable} &
+        \textbf{Detail}                             \\ \hline
+        \endhead
+        }
+        {
+    \end{longtable}
 }
 
-% Command untuk input data sesuai gambar
-% #1: No
-% #2: Judul/ID Tugas (Baris panjang)
-% #3: Jenis (IMPROVE, dll)
-% #4: Tanggal
-% #5: Requester
-% #6: Detail (Lorem Ipsum)
+%==================================================
+% COMMAND: TASK ENTRY
+% Menambahkan 1 entri task (2 baris)
+% Baris 1 = Judul / ID Task (full width)
+% Baris 2 = Detail atribut task
+%
+% #1 = No
+% #2 = Judul / ID Task
+% #3 = Jenis (IMPROVE, BUGFIX, dll)
+% #4 = Tanggal Pengerjaan
+% #5 = Requester / PIC
+% #6 = Detail task
+%==================================================
+
 \newcommand{\taskentry}[6]{
-    \multirow{2}{*}{#1} & \multicolumn{4}{l|}{\textbf{#2}} \\ \cline{2-5}
+    % ---------- Baris 1: Judul Task ----------
+    \multirow{2}{*}{#1}
+    & \multicolumn{4}{l|}{\textbf{#2}} \\ \cline{2-5}
+
+    % ---------- Baris 2: Informasi Detail ----------
     & #3 & #4 & #5 & #6 \\ \hline
 }
