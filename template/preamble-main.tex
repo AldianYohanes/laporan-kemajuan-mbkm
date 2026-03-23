@@ -33,14 +33,14 @@
         | >{\justifying\arraybackslash}m{7cm}
         | >{\centering\arraybackslash}m{3cm}
         | >{\centering\arraybackslash}m{2cm} |
-        } \hline
+        } \hline % chktex-file 44
 
         % ---------- Header (halaman pertama) ----------
         \rule{0pt}{3ex} \textbf{No}                         &
         \rule{0pt}{3ex} \centering\textbf{Materi Bimbingan} &
         \rule{0pt}{3ex} \textbf{Tgl. Bimb.}                 &
         \rule{0pt}{3ex} \textbf{Paraf}                        \\ \hline
-        \endfirsthead
+        \endfirsthead%
 
         % ---------- Header (halaman lanjutan) ----------
         \hline
@@ -48,7 +48,7 @@
         \textbf{Materi Bimbingan}                           &
         \textbf{Tgl. Bimb.}                                 &
         \textbf{Paraf}
-        \endhead
+        \endhead%
         }
         {
     \end{longtable}
@@ -77,4 +77,20 @@
     #3 &
     #4
     \\ \hline
+}
+
+%==================================================
+% CAPTION (GAMBAR & TABEL)
+%==================================================
+
+\usepackage{caption}
+
+\captionsetup[figure]{
+    labelsep=space,
+    justification=centering
+}
+
+\captionsetup[table]{
+    labelsep=space,
+    justification=centering
 }

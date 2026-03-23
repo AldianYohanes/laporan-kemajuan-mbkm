@@ -1,3 +1,5 @@
+% chktex-file 44
+
 %==================================================
 % LOGBOOK CONFIGURATION
 %==================================================
@@ -21,8 +23,8 @@
         \textbf{Hari/Tanggal} &
         \textbf{Keterangan}     \\
         \hline
-        \endfirsthead % Header hanya muncul di halaman pertama
-        \endhead      % Header untuk halaman selanjutnya
+        \endfirsthead%
+        \endhead%
         }
         {
     \end{longtable}
@@ -59,7 +61,7 @@
             noitemsep,
             topsep=2pt,
             leftmargin=12pt,
-            label=\textbullet
+            label=\textbullet%
         ]
         }
         {
@@ -92,10 +94,9 @@
 \newenvironment{logdetail}
 {
     \noindent
-    \justifying % Rata kiri-kanan agar lebih rapi
+    \justifying%
 }
-{
-}
+{}
 
 %==================================================
 % COMMAND: LOG EVALUATION
@@ -107,6 +108,8 @@
 
 \newcommand{\logevaluate}[2]
 {
-\multicolumn{2}{| @{\hspace{0pt}} >{\centering\arraybackslash}m{4.564cm} @{\hspace{0pt}}|}{#1}
+\multicolumn{2}{
+| @{\hspace{0pt}} >{\centering\arraybackslash}m{4.564cm} @{\hspace{0pt}}|}
+{#1}
 & #2 \\ \hline
 }
