@@ -2,16 +2,11 @@
 \addcontentsline{loa}{chapter}{Lampiran 4. \textit{Log Book}}
 
 \includegraphics[
-    width=\textwidth, frame
-    % keepaspectratio
+    width=\textwidth-0.8pt,
 ]{logbook.pdf}
 
-\foreach\n in {2,...,8}{
-        \clearpage
-        \includegraphics[
-            page=\n,
-            width=\textwidth,
-            keepaspectratio,
-            frame
-        ]{logbook.pdf}
-}
+\includepdf[
+    pages={2-27}, % chktex 8
+    fitpaper=true,
+    pagecommand=\thispagestyle{plain}
+]{logbook.pdf}
