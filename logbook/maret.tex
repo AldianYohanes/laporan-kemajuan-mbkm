@@ -8,18 +8,33 @@
     % =============================================================
     \logentry{1.}
     {
-        Senin \linebreak 2 Mar 2026 \linebreak
-        08:23--17:26 \linebreak
-        WFO
+    Senin \linebreak 2 Mar 2026 \linebreak
+    08:23--17:26 \linebreak
+    WFO
     }{
-        \begin{loglist}
-            \item Melanjutkan Task \#11xxx
-        \end{loglist}
+    \begin{loglist}
+        \item Melanjutkan Task \#11xxx
+    \end{loglist}
     }{
-        \begin{logwork}
-            \item WOI
-        \end{logwork}
-    }
+    \begin{logwork}
+        \item \textit{Refactor structure} dan \textit{code} untuk page \texttt{Item Cabang}
+        untuk meningkatkan performa dan \textit{scalability} dengan menggunakan
+        \textit{modules mapping} (sebelumnya hanya \textit{hardcode/input} manual).
+        \item Merapikan fitur \texttt{Pilih Mode} pada Tab \texttt{Produk} agar bisa redirect
+        sesuai dengan dropdown yang dipilih.
+        \item Menambahkan \textit{page} \texttt{Stok Opname, Rekomendasi Belanja (Defecta),
+            Penjualan Terbesar, dan Tanggal Kedaluwarsa}
+    \end{logwork}
+
+    {\justifying Untuk meningkatkan performa dan \textit{scalability} page Item Cabang,
+    dilakukan refactor pada struktur dan kode yang sebelumnya menggunakan
+    pendekatan hardcode. Implementasi modules mapping diterapkan sebagai pengganti
+    agar pengelolaan halaman menjadi lebih dinamis dan mudah dikembangkan. Selain
+    itu, dilakukan perapian pada fitur Pilih Mode di Tab Produk sehingga redirect
+    dapat berjalan sesuai pilihan dropdown. Pengembangan dilanjutkan dengan
+    penambahan beberapa page baru, yaitu Stok Opname, Rekomendasi Belanja
+    (Defecta), Penjualan Terbesar, dan Tanggal Kedaluwarsa sebagai bagian dari
+    fitur manajemen inventaris.} }
 
     \logentry{2.}
     {
@@ -29,10 +44,17 @@
     }{
         \begin{loglist}
             \item Melanjutkan Task \#11xxx
+            \item Mendapatkan Task \#12071 (IMPROVEMENT): Merapikan \textit{extra button} dalam
+            \textit{card} yang tidak rata.
+            \item Menambahkan Task \#12063 (WIDGET): Import \texttt{ListBased} Widget dari
+            Canvasser (buatan Enardo) dan improvisasi fiturnya.
         \end{loglist}
     }{
         \begin{logwork}
-            \item WOI
+            \item (Task \#11xxx) Menambahkan panel menu \texttt{Riwayat Transaksi, Stok Opname}
+            \item (Task \#12071) Memodifikasi \texttt{raised\_button.dart} menambah \texttt{EdgeInsets.zero} \textit{padding} pada \textit{disabled button}.
+            \item (Task \#12071) Memodifikasi \texttt{card\_generator\_ext.dart} menambahkan \textit{screen width detector} agar penggunaan \texttt{IntrinsicWidth} -nya sesuai dengan ukuran \texttt{Container}
+            \item (Task \#12063) Memodifikasi ListBased widget agar bisa \textit{freeze column} dan memperbaiki \textit{scrollbar}.
         \end{logwork}
     }
 
@@ -43,13 +65,19 @@
         WFO
     }{
         \begin{loglist}
-            \item Mendapat Task \#12108 (IMPROVEMENT): Buat agar \textit{single dropdown} dalam
-            \textit{editable table} bisa \textit{update box height} langsung saat
-            \textit{Back-End} berhasil \textit{fetch data}.
+            \item Melanjutkan Task \#12116 (NEW): Buat \textit{page} \texttt{Item Cabang} di
+            HealthyOne React.
+            \item Mendapatkan Task \#12108 (IMPROVEMENT): Buat agar \textit{searchable single
+                dropdown} dalam \texttt{ListBased} Widget bisa langsung update size saat
+            dropdown berhasil \textit{search}.
+            \item Mengikuti Pertemuan \textit{Alignment Objective} Tim IT Pharos Group pukul
+            16:00 – 17:30 WIB di Auditorium, Lantai 4 Gedung Century.
         \end{loglist}
     }{
         \begin{logwork}
-            \item (12)
+            \item (Task \#12063) Memodifikasi \texttt{ListBased} Widget agar bisa \textit{sort rows} by \textit{ascending} dan \textit{descending}.
+            \item (Task \#12108) Memodifikasi \texttt{single\_dropdown.dart} agar \textit{update state height}nya benar dan \textit{rebuild widget} secara instan saat data dari \textit{Back-End} sudah terambil.
+            \item (Pertemuan \textit{Alignment Objective}) Diikuti oleh seluruh Tim IT, membahas project yang sedang dikerjakan dan kilas balik terkait visi misi utama dari masing-masing proyek (HealthyOne, Canvasser, Panacea Ecosystem).
         \end{logwork}
     }
 
@@ -334,14 +362,11 @@
             Inventaris Medis.
         \end{logwork}
     }
-    % =============================================================
-    % CURRENT DAY
-    % =============================================================
 
     \logentry{19.}
     {
         Jumat \linebreak 27 Mar \linebreak
-        07:53--17:xx \linebreak % chktex 8
+        07:53--17:10 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
@@ -356,15 +381,18 @@
     \logentry{20.}
     {
         Senin \linebreak 30 Mar \linebreak
-        xx:xx--xx:xx \linebreak % chktex 8
+        07:20--xx:xx \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item %
+            \item Melanjutkan Task \#12576
+            \item Mendapat Task \#12798 (NEW): Membuat Halaman Marketplace dan segala isinya
+            (Cart, Detail Produk) di HealthyOne React.
         \end{loglist}
     }{
         \begin{logwork}
-            \item % chktex 8
+            \item (\#12798) Membuat layar \texttt{Home Marketplace} dan \texttt{Product Detail}.
+            \item (\#12576) Merapikan routing antar halaman.
         \end{logwork}
     }
 
@@ -375,19 +403,104 @@
         WFO
     }{
         \begin{loglist}
-            \item
+            \item Melanjutkan Task \#12798
+            \item Mendapat Task \#12809 (BUG): Table customized font size ada beberapa widget
+            yang belum terikut pergantian sizenya
         \end{loglist}
     }{
         \begin{logwork}
-            \item - % chktex 8
+            \item (\#12798) Menambahkan layar \texttt{Cart}.
+            \item (\#12809) Memodifikasi \texttt{table.dart, blank\_widget.dart} dan \texttt{text.dart} agar teks bisa menerima parameter \texttt{isForEditTable} supaya font bisa deteksi ukuran font yang diperlukan.
         \end{logwork}
     }
 
-    \logevaluate{Analisis dan Pembahasan}{}
-    \logevaluate{Capaian yang Telah Diselesaikan}{}
-    \logevaluate{Capaian yang Belum Diselesaikan}{}
-    \logevaluate{Kendala}{}
-    \logevaluate{Solusi}{}
+    \logevaluate{Analisis dan Pembahasan}{
+        Kegiatan magang industri pada bulan Maret 2026 mencakup pengembangan pada dua domain utama, yaitu aplikasi berbasis \textit{Flutter} dan \textit{React}. Pada sisi \textit{Flutter}, pekerjaan difokuskan pada \textit{improvement} dan \textit{bug fixing} terhadap berbagai \textit{widget}. Task yang dikerjakan meliputi Task \#12063 untuk implementasi fitur \textit{freeze column} dan \textit{sorting} pada \textit{ListBased Widget}, Task \#12071 untuk perapian tampilan \textit{extra button} pada \textit{card}, Task \#12108 untuk perbaikan responsivitas \textit{height} pada \textit{searchable single dropdown}, serta Task \#12127 untuk pembaruan desain tombol pada Item Cabang. Selain itu, Task \#12160 dilakukan untuk menetapkan \textit{default size} pada \textit{Icon Button}, Task \#12343 dan \#12344 untuk implementasi \textit{modal} pengaturan pada layar Stok Opname dan Rekomendasi Belanja, serta Task \#12809 untuk memperbaiki konsistensi ukuran \textit{font} pada \textit{widget} tabel.
+
+        Pada sisi \textit{React}, pengembangan difokuskan pada fitur Manajemen
+        Inventaris melalui Task \#12576 yang mencakup modifikasi \textit{layout},
+        penataan ulang struktur \textit{tab}, serta \textit{refactoring} navigasi dari
+        pola \textit{Drawer} menjadi \textit{route} terpisah. Selain itu, dikembangkan
+        beberapa halaman baru seperti Riwayat Stok, Stok Opname, \textit{Packing \&
+            Dispersing}, Riwayat Belanja, Penerimaan Stok, Riwayat Belanja B2B, serta
+        halaman \textit{Marketplace} yang mencakup fitur \textit{Cart} dan
+        \textit{Product Detail}. Kegiatan bulan ini juga mencakup pertemuan
+        \textit{Alignment Objective} bersama Tim IT Pharos Group serta presentasi
+        progres pekerjaan kepada mentor dan tim. }
+
+    \logevaluate{Capaian yang
+        Telah Diselesaikan}{
+        \begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+            \item Menyelesaikan Task \#12063: penambahan fitur \textit{freeze column}, perbaikan
+                  \textit{scrollbar}, dan \textit{sort rows ascending/descending} pada
+                  \textit{ListBased Widget}
+
+            \item Menyelesaikan Task \#12071: perapian tampilan \textit{extra button} dalam
+                  \textit{card} melalui modifikasi \textit{raised\_button.dart} dan
+                  \textit{card\_generator\_ext.dart}
+
+            \item Menyelesaikan Task \#12108: perbaikan \textit{update state height} dan
+                  \textit{instant rebuild} pada \textit{searchable single dropdown} di
+                  \textit{ListBased Widget}
+
+            \item Menyelesaikan Task \#12127: pembaruan desain tombol Item Cabang dengan
+                  \textit{IconPencil} dan \textit{IconEye}
+
+            \item Menyelesaikan Task \#12160: penambahan \textit{default height} dan
+                  \textit{width} 48px pada \textit{Icon Button}
+
+            \item Menyelesaikan Task \#12284: perbaikan bug \textit{box overflow} pada
+                  \textit{single dropdown} saat data tidak ditemukan
+
+            \item Menyelesaikan Task \#12117: pembuatan layar Riwayat Stok, Stok Opname, dan
+                  handler \textit{auto-select} pada \textit{Quantity Picker}
+
+            \item Menyelesaikan Task \#12130: pembuatan layar \textit{Packing \& Dispersing}
+                  beserta seluruh komponen di dalamnya
+
+            \item Menyelesaikan Task \#12343 dan \#12344: penambahan tombol dan \textit{modal}
+                  pengaturan pada layar Stok Opname dan Rekomendasi Belanja
+
+            \item Menyelesaikan Task \#12579: pembuatan layar Riwayat Belanja B2B beserta layar
+                  \textit{detail} belanja
+
+            \item Menyelesaikan Task \#12809: perbaikan konsistensi \textit{font size} pada
+                  \textit{table.dart}, \textit{blank\_widget.dart}, dan \textit{text.dart}
+                  melalui parameter \textit{isForEditTable}
+        \end{itemize}}
+
+    \logevaluate{Capaian yang Belum Diselesaikan}{
+        \begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+            \item Penyelesaian Task \#12440: implementasi sistem \textit{Edit Mode} pada tabel
+                  \textit{ListBased} baru dimulai pada tahap analisis dan perencanaan, belum
+                  masuk ke tahap implementasi
+
+            \item Penyelesaian Task \#12576: restrukturisasi navigasi dan pelengkapan
+                  \textit{form} Manajemen Inventaris masih berlanjut hingga akhir bulan
+
+            \item Penyelesaian Task \#12798: pengembangan halaman \textit{Marketplace} baru
+                  mencakup \textit{Home} dan \textit{Product Detail}, layar \textit{Cart}, serta
+                  integrasi dengan \textit{Back-End} yang belum dilakukan
+        \end{itemize}
+    }
+
+    \logevaluate{Kendala}{
+        Proses restrukturisasi navigasi pada Task \#12576 dari pola \textit{Drawer} menjadi \textit{route} terpisah berlangsung cukup panjang karena banyaknya layar yang terdampak, sehingga pengerjaan terbagi di beberapa hari.
+
+        Selain itu, pemahaman terhadap struktur \textit{Back-End} Toraja masih dalam
+        tahap awal sehingga integrasi \textit{Front-End} dengan \textit{Back-End} belum
+        dapat dilakukan secara penuh.
+
+    }
+
+    \logevaluate{Solusi}{
+        Restrukturisasi navigasi dikerjakan secara bertahap per layar untuk meminimalkan risiko \textit{regression}, dengan melibatkan tim \textit{QA} untuk memverifikasi setiap perubahan.
+
+        Untuk pemahaman \textit{Back-End}, dilakukan koordinasi dengan rekan kerja yang
+        berpengalaman dalam menangani Toraja sebagai langkah awal sebelum integrasi
+        dilakukan.
+
+    }
 
 \end{logtable}
 % \input{lists/tasks/task-maret.tex}

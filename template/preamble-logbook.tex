@@ -108,8 +108,13 @@
 
 \newcommand{\logevaluate}[2]
 {
-\multicolumn{2}{
-| @{\hspace{0pt}} >{\centering\arraybackslash}m{4.564cm} @{\hspace{0pt}}|}
+\multicolumn{2}
+{| @{\hspace{0pt}} >{\centering\arraybackslash}m{4.564cm} @{\hspace{0pt}}|}
 {#1}
-& #2 \\ \hline
+&
+\begin{minipage}[t]{\linewidth}
+    \justifying%
+    #2
+\end{minipage}
+\\ \hline
 }
