@@ -8,33 +8,23 @@
     % =============================================================
     \logentry{1.}
     {
-    Senin \linebreak 2 Mar 2026 \linebreak
-    08:23--17:26 \linebreak
-    WFO
+        Senin \linebreak 2 Mar 2026 \linebreak
+        08:23--17:26 \linebreak
+        WFO
     }{
-    \begin{loglist}
-        \item Melanjutkan Task \#11xxx
-    \end{loglist}
+        \begin{loglist}
+            \item Melanjutkan Task \#12116
+        \end{loglist}
     }{
-    \begin{logwork}
-        \item \textit{Refactor structure} dan \textit{code} untuk page \texttt{Item Cabang}
-        untuk meningkatkan performa dan \textit{scalability} dengan menggunakan
-        \textit{modules mapping} (sebelumnya hanya \textit{hardcode/input} manual).
-        \item Merapikan fitur \texttt{Pilih Mode} pada Tab \texttt{Produk} agar bisa redirect
-        sesuai dengan dropdown yang dipilih.
-        \item Menambahkan \textit{page} \texttt{Stok Opname, Rekomendasi Belanja (Defecta),
-            Penjualan Terbesar, dan Tanggal Kedaluwarsa}
-    \end{logwork}
-
-    {\justifying Untuk meningkatkan performa dan \textit{scalability} page Item Cabang,
-    dilakukan refactor pada struktur dan kode yang sebelumnya menggunakan
-    pendekatan hardcode. Implementasi modules mapping diterapkan sebagai pengganti
-    agar pengelolaan halaman menjadi lebih dinamis dan mudah dikembangkan. Selain
-    itu, dilakukan perapian pada fitur Pilih Mode di Tab Produk sehingga redirect
-    dapat berjalan sesuai pilihan dropdown. Pengembangan dilanjutkan dengan
-    penambahan beberapa page baru, yaitu Stok Opname, Rekomendasi Belanja
-    (Defecta), Penjualan Terbesar, dan Tanggal Kedaluwarsa sebagai bagian dari
-    fitur manajemen inventaris.} }
+        \begin{logwork}
+            \item (\#12116) Melakukan \textit{refactor} struktur dan kode layar Item Cabang dengan mengganti \textit{hardcode} ke \textit{modules mapping}
+            \item (\#12116) Merapikan fitur Pilih Mode pada \textit{Tab} Produk agar \textit{redirect} berjalan sesuai \textit{dropdown} yang dipilih
+            \item (\#12116) Menambahkan layar Stok Opname, Rekomendasi Belanja (Defecta), Penjualan Terbesar, dan Tanggal Kedaluwarsa.
+        \end{logwork}
+        \begin{logdetail}
+            \textit{Refactor} layar Item Cabang dilakukan dengan menerapkan \textit{modules mapping} (menggantikan \textit{hardcoded value}) untuk meningkatkan performa dan \textit{scalability}. Fitur Pilih Mode pada \textit{Tab} Produk dirapikan, dan beberapa layar
+            inventaris baru ditambahkan.
+        \end{logdetail} }
 
     \logentry{2.}
     {
@@ -43,19 +33,24 @@
         WFO
     }{
         \begin{loglist}
-            \item Melanjutkan Task \#11xxx
-            \item Mendapatkan Task \#12071 (IMPROVEMENT): Merapikan \textit{extra button} dalam
-            \textit{card} yang tidak rata.
-            \item Menambahkan Task \#12063 (WIDGET): Import \texttt{ListBased} Widget dari
-            Canvasser (buatan Enardo) dan improvisasi fiturnya.
+            \item Melanjutkan Task \#12116
+            \item Mendapat Task \#12071 (IMPROVEMENT): Merapikan \textit{extra button} dalam
+            \textit{card} yang \textit{alignment}-nya tidak rata
+            \item Membuat Task \#12063 (WIDGET): Import ListBased Widget dari Canvasser dan
+            improvisasi fiturnya
+
         \end{loglist}
     }{
         \begin{logwork}
-            \item (Task \#11xxx) Menambahkan panel menu \texttt{Riwayat Transaksi, Stok Opname}
-            \item (Task \#12071) Memodifikasi \texttt{raised\_button.dart} menambah \texttt{EdgeInsets.zero} \textit{padding} pada \textit{disabled button}.
-            \item (Task \#12071) Memodifikasi \texttt{card\_generator\_ext.dart} menambahkan \textit{screen width detector} agar penggunaan \texttt{IntrinsicWidth} -nya sesuai dengan ukuran \texttt{Container}
-            \item (Task \#12063) Memodifikasi ListBased widget agar bisa \textit{freeze column} dan memperbaiki \textit{scrollbar}.
+            \item (\#12063) Memodifikasi \textit{ListBased widget} agar mempunyai fitur \textit{sort rows} secara \textit{ascending} dan \textit{descending}
+            \item (\#12108) Memodifikasi \texttt{single\_dropdown.dart} agar \textit{update state height} berjalan benar dan \textit{widget} dapat di- \textit{rebuild} secara instan saat data dari \textit{Back-End} berhasil diambil
+            \item Mengikuti Pertemuan \textit{Alignment Objective} bersama seluruh Tim IT,
+            membahas \textit{progress} proyek dan visi misi utama dari masing-masing proyek
+            (HealthyOne, Canvasser, Panacea Ecosystem)
         \end{logwork}
+        \begin{logdetail}
+            Task \#12071 diselesaikan dengan modifikasi pada \texttt{raised\_button.dart} dan \texttt{card\_generator\_ext.dart} untuk merapikan tampilan \textit{extra button} dalam card. Task \#12063 dimulai dengan modifikasi ListBased \textit{widget} untuk mendukung \textit{freeze column} dan \textit{scrollbar}.
+        \end{logdetail}
     }
 
     \logentry{3.}
@@ -65,20 +60,24 @@
         WFO
     }{
         \begin{loglist}
-            \item Melanjutkan Task \#12116 (NEW): Buat \textit{page} \texttt{Item Cabang} di
-            HealthyOne React.
+            \item Melanjutkan Task \#12116 (NEW): Buat layar Item Cabang di HealthyOne React.
             \item Mendapatkan Task \#12108 (IMPROVEMENT): Buat agar \textit{searchable single
-                dropdown} dalam \texttt{ListBased} Widget bisa langsung update size saat
-            dropdown berhasil \textit{search}.
+                dropdown} dalam \textit{ListBased Widget} bisa langsung \textit{update size}
+            saat \textit{dropdown} berhasil melakukan \textit{search}.
             \item Mengikuti Pertemuan \textit{Alignment Objective} Tim IT Pharos Group pukul
-            16:00 – 17:30 WIB di Auditorium, Lantai 4 Gedung Century.
+            16:00--17:30 WIB di Auditorium, Lantai 4 Gedung Century.
         \end{loglist}
     }{
         \begin{logwork}
-            \item (Task \#12063) Memodifikasi \texttt{ListBased} Widget agar bisa \textit{sort rows} by \textit{ascending} dan \textit{descending}.
-            \item (Task \#12108) Memodifikasi \texttt{single\_dropdown.dart} agar \textit{update state height}nya benar dan \textit{rebuild widget} secara instan saat data dari \textit{Back-End} sudah terambil.
+            \item (\#12063) Memodifikasi \texttt{ListBased} Widget agar bisa \textit{sort rows} by \textit{ascending} dan \textit{descending}.
+            \item (\#12108) Memodifikasi \texttt{single\_dropdown.dart} agar \textit{update state height}nya benar dan \textit{rebuild widget} secara instan saat data dari \textit{Back-End} sudah terambil.
             \item (Pertemuan \textit{Alignment Objective}) Diikuti oleh seluruh Tim IT, membahas project yang sedang dikerjakan dan kilas balik terkait visi misi utama dari masing-masing proyek (HealthyOne, Canvasser, Panacea Ecosystem).
         \end{logwork}
+        \begin{logdetail}
+            Task \#12063 dilengkapi dengan fitur \textit{sort rows ascending/descending}. Task \#12108 diselesaikan
+            dengan modifikasi \texttt{single\_dropdown.dart} agar \textit{state height} dan \textit{rebuild widget} berjalan
+            responsif. Diikuti pula Pertemuan \textit{Alignment Objective} bersama seluruh Tim IT Pharos Group.
+        \end{logdetail}
     }
 
     \logentry{4.}
@@ -89,23 +88,27 @@
     }{
         \begin{loglist}
             \item Melanjutkan Task \#12108
-            \item Mendapat Task \#12160 (BUG): Perbaiki \texttt{Icon Button} untuk memiliki
-            \textit{default height \& width}.
-            \item Mendapat Task \#12117 (NEW): Buat layar \texttt{Riwayat Stok \& Stok Opname} di
-            HealthyOne React.
-            \item Mendapat Task \#12127 (IMPROVEMENT): Ubah desain tombol di \texttt{Item Cabang}
-            agar sesuai dengan desain terbaru.
-            \item Mendapat Task \#12128 (IMPROVEMENT): Ubah \texttt{ListBased Table} agar bisa
-            dipakaikan \textit{customizeable font size / control}.
-            \item Mendapat Task \#12130 (NEW): Buat layar \texttt{Packing \& Dispersing} di
-            HealthyOne React.
+            \item Mendapat Task \#12160 (BUG): Memperbaiki \textit{Icon Button} agar memiliki
+            \textit{default height} dan \textit{width}
+            \item Mendapat Task \#12117 (NEW): Membuat layar Riwayat Stok dan Stok Opname di
+            HealthyOne React
+            \item Mendapat Task \#12127 (IMPROVEMENT): Menyesuaikan desain tombol di Item Cabang
+            dengan desain terbaru
+            \item Mendapat Task \#12128 (IMPROVEMENT): Menambahkan \textit{customizable font size
+                control} pada \textit{ListBased Table}
+            \item Mendapat Task \#12130 (NEW): Membuat layar Packing \& Dispersing di HealthyOne
+            React
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#12108) Merapikan \textit{styling} dan \textit{overflow issues} dalam drodpown.
-            \item (\#12127) Mengganti \texttt{Text Button} dalam \texttt{ListBased} dengan \texttt{IconPencil} (untuk fitur Edit) dan \texttt{IconEye} (untuk fitur View).
-            \item (\#12160) Memodifikasi \texttt{icon\_button.dart} dan menambahkan \textit{height \& width} dengan \textit{default value} 48px.
+            \item (\#12108) Merapikan \textit{styling} dan menangani \textit{overflow issues} pada \textit{dropdown}
+            \item (\#12127) Mengganti \textit{Text Button} dalam \textit{ListBased} dengan \textit{IconPencil} untuk fitur \textit{Edit} dan \textit{IconEye} untuk fitur \textit{View}
+            \item (\#12160) Memodifikasi \texttt{icon\_button.dart} dengan menambahkan \textit{height} dan \textit{width default value} 48px
         \end{logwork}
+        \begin{logdetail}
+            Task \#12108 diselesaikan dengan merapikan \textit{styling} dan \textit{overflow issues} pada \textit{dropdown}. Task \#12127 diselesaikan dengan mengganti \textit{Text Button} menjadi \textit{IconPencil} dan \textit{IconEye}. Task \#12160 diselesaikan dengan menambahkan \textit{default height} dan \textit{width} 48px pada
+            \texttt{icon\_button.dart}.
+        \end{logdetail}
     }
 
     \logentry{5.}
@@ -116,16 +119,20 @@
     }{
         \begin{loglist}
             \item Melanjutkan Task \#12117
+            \item Melanjutkan Task \#12130
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#12117) Membuat layar \texttt{Riwayat Stok} dan \textit{routing} ke layar-layar lainnya.
-            \item (\#12130) Membuat layar \texttt{Packing \& Dispersing} beserta semua \textit{components} di dalamnya.
-            \item Membuat layar \texttt{Home Individual} untuk memudahkan navigasi saat
-            \textit{development \& testing} menggunakan Next Routing.
-            \item Membuat \textit{component} \texttt{Page Header} untuk digunakan di beberapa
-            layar sekaligus (diguankan sementara untuk \textit{development})
+            \item (\#12117) Membuat layar Riwayat Stok beserta \textit{routing} ke layar-layar lainnya
+            \item (\#12130) Membuat layar \textit{Packing \& Dispersing} beserta seluruh komponen di dalamnya
+            \item Membuat layar \textit{Home Individual} untuk memudahkan navigasi saat
+            \textit{development} dan \textit{testing} menggunakan Next Routing
+            \item Membuat komponen \textit{Page Header} untuk digunakan di beberapa layar
+            sekaligus (digunakan sementara untuk \textit{development})
         \end{logwork}
+        \begin{logdetail}
+            Layar Riwayat Stok beserta routingnya dibuat untuk Task \#12117, dan layar \textit{Packing \& Dispersing} beserta seluruh komponennya diselesaikan untuk Task \#12130. Dibuat pula layar \textit{Home Individual} dan komponen \textit{Page Header} sebagai \textit{header navigation} untuk \textit{development}.
+        \end{logdetail}
     }
 
     % =============================================================
@@ -139,22 +146,24 @@
     }{
         \begin{loglist}
             \item Melanjutkan Task \#12117
-            \item Melanjutkan Task \#12xxx (NEW): Buat layar \texttt{Riwayat Belanja} di
-            HealthyOne React.
-            \item Mendapat Task \#12284 (BUG): Terdapat \textit{box overflow} aneh saat data di
-            \texttt{single dropdown} tidak ditemukan.
+            \item Melanjutkan Task \#12116 (NEW): Membuat layar Riwayat Belanja di HealthyOne
+            React
+            \item Mendapat Task \#12284 (BUG): Menangani \textit{box overflow} saat data di
+            \textit{single dropdown} tidak ditemukan
         \end{loglist}
     }{
         \begin{logwork}
-            \item Merapihkan penggunaan \textit{component} yang berulang kali seperti
-            \texttt{FooterButton} dan \texttt{PilihUnitGudang} sebagai satu
-            \textit{reusable component}.
-            \item Memodifikasi layout \texttt{default card} agar lebih compact dan \textit{first
-                row/value} nya diberikan \textit{styling} berbeda.
+            \item Merapikan komponen yang digunakan berulang seperti \textit{FooterButton} dan
+            \textit{PilihUnitGudang} menjadi satu \textit{reusable component}
+            \item Memodifikasi \textit{layout default card} agar lebih \textit{compact} dengan
+            \textit{styling} berbeda pada \textit{first row/value}
             \item Membuat \textit{custom notification} untuk digunakan selama
-            \textit{development}.
-            \item (\#12xxx) Membuat layar \texttt{Riwayat Belanja} dan form `Tambah Pesanan`.
-        \end{logwork}
+            \textit{development}
+            \item (\#12116) Membuat layar Riwayat Belanja beserta form Tambah Pesanan        \end{logwork}
+        \begin{logdetail}
+            \textit{FooterButton} dan \textit{PilihUnitGudang} diekstrak menjadi \textit{reusable component}, \textit{layout default card} dimodifikasi agar lebih \textit{compact}, dan \textit{custom notification} dibuat untuk kebutuhan \textit{development}. Membuat layar Riwayat Belanja serta
+            form Tambah Pesanan untuk Task \#12xxx.
+        \end{logdetail}
     }
 
     \logentry{7.}
@@ -164,16 +173,21 @@
         WFO
     }{
         \begin{loglist}
-            \item Melanjutkan Task \#12xxx
+            \item Melanjutkan Task \#12116
             \item Melanjutkan Task \#12284
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#12xxx) Membuat layar \texttt{Penerimaan Stok} dengan \textit{View} dan \textit{Form} Penerimaan.
-            \item (\#12284) Menghapus \texttt{Flexible} dalam \texttt{single\_dropdown.dart} untuk mengatasi masalah \textit{FlexParentData is incompatible with BoxParentData}.
+            \item (\#12116) Membuat layar Penerimaan Stok beserta \textit{View} dan \textit{Form} Penerimaan
+            \item (\#12284) Menghapus komponen \textit{Flexible} dalam \texttt{single\_dropdown.dart} untuk mengatasi masalah \texttt{FlexParentData is
+                incompatible with BoxParentData}
             \item Membuat \textit{Navigation Bar} untuk memudahkan navigasi antar layar saat
-            \textit{development}.
+            \textit{development}
         \end{logwork}
+        \begin{logdetail}
+            Layar Penerimaan Stok beserta \textit{View} dan \textit{Form} Penerimaan dibuat untuk Task \#12116. \textit{Bug} Task \#12284 diperbaiki dengan menghapus komponen \textit{Flexible} pada \texttt{single\_dropdown.dart} yang menyebabkan konflik \textit{FlexParentData}. \textit{Navigation Bar} dibuat sebagai alat bantu navigasi selama \textit{development}.
+
+        \end{logdetail}
     }
 
     \logentry{8.}
@@ -183,16 +197,19 @@
         WFO
     }{
         \begin{loglist}
-            \item Mendapat Task \#12343 (IMPROVEMENT): Buat tombol baru di layar \texttt{Stok
-                Opname} untuk memunculkan \textit{setting} frekuensi stok opname.
-            \item Mendapat Task \#12344 (IMPROVEMENT): Buat tombol baru di layar
-            \texttt{Rekomendasi Belanja} untuk memunculkan \textit{setting defecta}.
+            \item Memulai pengerjaan Task \#12343 (IMPROVEMENT): Menambahkan tombol dan modal
+            pengaturan frekuensi stok opname di layar Stok Opname
+            \item Memulai pengerjaan Task \#12344 (IMPROVEMENT): Menambahkan tombol dan modal
+            pengaturan \textit{defecta} di layar Rekomendasi Belanja
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#12343) Menambahkan tombol dan Modal baru untuk memunculkan opsi frekuensi stok opname.
-            \item (\#12344) Menambahkan tombol dan Modal baru untuk memunculkan opsi \textit{defecta} untuk rekomendasi belanja.
+            \item (\#12343) Menambahkan tombol dan Modal baru untuk menampilkan opsi pengaturan frekuensi stok opname
+            \item (\#12344) Menambahkan tombol dan Modal baru untuk menampilkan opsi \textit{defecta} pada layar Rekomendasi Belanja
         \end{logwork}
+        \begin{logdetail}
+            Task \#12343 dan \#12344 diselesaikan dengan menambahkan tombol dan Modal baru pada masing-masing layar Stok Opname dan Rekomendasi Belanja untuk pengaturan frekuensi stok opname dan parameter \textit{defecta}.
+        \end{logdetail}
     }
 
     \logentry{9.}
@@ -210,6 +227,9 @@
                 or dark)}.
             \item (\#12128) Membuat \textit{component table font control} untuk \texttt{ListBased}.
         \end{logwork}
+        \begin{logdetail}
+            Layar \textit{app setting} dengan fitur \textit{toggle color scheme light/dark} dibuat. \textit{Component table font control} untuk Task \#12128 diselesaikan, memungkinkan pengguna menyesuaikan ukuran font tabel.
+        \end{logdetail}
     }
 
     \logentry{10.}
@@ -225,6 +245,11 @@
         \begin{logwork}
             \item (\#12117) Membuat \textit{handler} agar saat \textit{value} \texttt{Quantity Picker} berubah, baris dalam tabel otomatis \textit{selected} khusus pada layar \texttt{Stok Opname}.
         \end{logwork}
+        \begin{logdetail}
+            \textit{Handler} diimplementasikan pada layar Stok Opname agar baris tabel otomatis ter-\textit{select}
+            saat nilai \textit{Quantity Picker} berubah, sehingga alur input data stok opname menjadi lebih
+            efisien.
+        \end{logdetail}
     }
 
     % =============================================================
