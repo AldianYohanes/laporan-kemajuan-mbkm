@@ -93,10 +93,14 @@
 
 \newenvironment{logdetail}
 {
-    \noindent
-    \justifying%
+    \vspace{12pt}
+    \begin{minipage}[c]{8.936cm}
+        \noindent
+        \justifying%
+        }
+        {
+    \end{minipage}
 }
-{}
 
 %==================================================
 % COMMAND: LOG EVALUATION
@@ -112,9 +116,13 @@
 {| @{\hspace{0pt}} >{\centering\arraybackslash}m{4.564cm} @{\hspace{0pt}}|}
 {#1}
 &
-\begin{minipage}[t]{\linewidth}
+% \noindent
+\vspace{4pt}
+\begin{minipage}[c]{8.936cm}
     \justifying%
     #2
 \end{minipage}
+\vspace{4pt}
+
 \\ \hline
 }

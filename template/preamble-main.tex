@@ -29,10 +29,10 @@
 \newenvironment{dhbtable}
 {
     \begin{longtable}{
-        | >{\centering\arraybackslash}m{1cm}
+        | @{\hspace{0pt}} >{\centering\arraybackslash}m{1cm} @{\hspace{0pt}}
         | >{\justifying\arraybackslash}m{7cm}
-        | >{\centering\arraybackslash}m{3cm}
-        | >{\centering\arraybackslash}m{2cm} |
+        | @{\hspace{0pt}} >{\centering\arraybackslash}m{3.2cm} @{\hspace{0pt}}
+        | @{\hspace{0pt}} >{\centering\arraybackslash}m{2cm} @{\hspace{0pt}} |
         } \hline % chktex-file 44
 
         % ---------- Header (halaman pertama) ----------
@@ -42,24 +42,28 @@
         \rule{0pt}{3ex} \textbf{Paraf}                        \\ \hline
         \endfirsthead%
 
-        % ---------- Header (halaman lanjutan) ----------
-        \hline
-        \rule{0pt}{3ex} \textbf{No}                         &
-        \textbf{Materi Bimbingan}                           &
-        \textbf{Tgl. Bimb.}                                 &
-        \textbf{Paraf}
+        % % ---------- Header (halaman lanjutan) ----------
+        % \hline
+        % \rule{0pt}{3ex} \textbf{No}                         &
+        % \textbf{Materi Bimbingan}                           &
+        % \textbf{Tgl. Bimb.}                                 &
+        % \textbf{Paraf}
         \endhead%
         }
         {
     \end{longtable}
 
     % ---------- Blok tanda tangan ----------
-    \begin{flushright}
+    \vspace{1em}
+    \noindent
+    \hfill
+    \begin{minipage}{6cm}
+        \raggedleft%
         {\city}, \textcolor{red}{\signaturedate}\\
         Mengetahui,\\
         Pembimbing {\jenisMBKM},\\[2cm]
-        {\dosen}\\
-    \end{flushright}
+        {\dosen}
+    \end{minipage}
 }
 
 %==================================================

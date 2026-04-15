@@ -10,6 +10,7 @@
 \usepackage{multicol}           % Layout multi-kolom
 \usepackage{array}              % Kontrol format tabel lebih lanjut
 \usepackage{booktabs}           % Garis tabel lebih clean (toprule, midrule, bottomrule)
+\usepackage{caption}            % Custom caption
 
 \usepackage{graphicx}           % Insert gambar
 \usepackage[export]{adjustbox}  % Styling tambahan untuk gambar (misalnya border)
@@ -189,8 +190,11 @@
     keywordstyle=\color{blue!70!black},
     commentstyle=\color{gray},
     stringstyle=\color{red!70!black},
-    showstringspaces=false
+    showstringspaces=false,
+    lineskip=2pt
 }
+
+\captionsetup[lstlisting]{labelsep=space}
 
 %==================================================
 % ASSET PATH
