@@ -1,89 +1,365 @@
 \section{Pekerjaan yang Diberikan oleh Perusahaan}
 
-% % Contoh Penggunaan Text Box untuk memasukkan kode program
-% \begin{lstlisting}
-% function login() {
-%   console.log("Hello World");
-% }
-% \end{lstlisting}
+\subsection{Latihan Membuat \textit{Widget} menggunakan Prinsip SDUI}
 
-\subsection{Pengenalan \textit{Environment} Project di Hospinet}
-\begin{figure}[htbp]
+Tugas pertama diberikan oleh mentor sebagai latihan pengembangan
+\textit{widget} berbasis JSON.\@Proses pengerjaan dilakukan secara
+\textit{local} dengan membuat halaman baru khusus untuk latihan (tidak
+\textit{push} ke \textit{repository} agar kode tetap bersih). Tersedia
+dokumentasi khusus \textit{Front-End} yang dipelajari untuk memahami struktur
+dan implementasi pembuatan widget.
+
+\begin{lstlisting}[caption=Contoh JSON untuk Membuat \textit{Widget TabView}, captionpos=b, xleftmargin=2cm, xrightmargin=2cm]
+{
+  "section_class": 3, 
+  "section_orientation": 1,
+  section_main_alignment": 3,
+  "section_cross_alignment": 3,
+  "section_extra" : {
+     "with_navigation_button": true,
+     "type" : 1,     
+  },
+  "value": [
+     <List of SECTIONS>    
+  ]
+};
+\end{lstlisting}
+
+Pada tahap awal terdapat kesulitan dalam memahami struktur tersebut, namun
+pemahaman meningkat seiring waktu. Melalui proses tersebut, berhasil
+dikembangkan beberapa jenis \textit{widget} seperti \textit{Text, TextField,
+    Image, Radio, Button, Checkbox, TabView, Dropdown,} dan komponen lainnya.
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=7cm]{flow-sdui.png}
-    \caption{\textit{Flow Dynamic Routing} \cite{backendcanva}}
-    \label{fig:flowdynamicrouting}
+    \includegraphics[width=12cm]{3.4-latihan.png}
+    \caption{Layar Latihan yang Berhasil Dibuat}
 \end{figure}
 
-\begin{figure}[htbp]
+\subsection{Migrasi Beberapa \textit{Widget} ke Repository FE Terbaru}
+
+Setelah memahami penggunaan JSON untuk membangun UI dengan Flutter, diberikan
+tugas \#13228 untuk migrasi beberapa \textit{widget} dari \textit{repository}
+sebelumnya (Flutter v3.16.9) ke repository terbaru (Flutter v3.38.5). Selain
+itu, diterapkan struktur \textit{Model-View-Controller} (MVC) untuk
+meningkatkan keterbacaan (readability) serta skalabilitas (scalability) kode
+pada \textit{widget} yang dikembangkan.
+
+Migrasi dilakukan terhadap berbagai \textit{widget}, antara lain
+\textit{AntrianTV, TextField, AddImageCamera, Map, Card, CodeSnippet, Calendar,
+    PieChart, ProgressChart, ProgressBar, BarChart}, dan komponen lainnya.
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=7cm]{flow-render.png}
-    \caption{\textit{Flow Button Render} \cite{backendcanva}}
-    \label{fig:flowbuttonrender}
+    \includegraphics[width=0.475\textwidth]{3.4-migrasi-1.png}
+    \hspace{\fill}
+    \includegraphics[width=0.475\textwidth]{3.4-migrasi-2.png}
+    \caption{Perbandingan Isi dari Misc Widgets pada HealthyOne v1 dan v2}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=7cm]{snippet-response-get.png}
-    \caption{\textit{Response JSON GET} \cite{backendcanva}}
-    \label{fig:responseJSONGET}
-\end{figure}
+\subsection{\textit{Widget Improvements and Bug Fix} di Flutter}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=7cm]{snippet-request-post.png}
-    \caption{\textit{Request JSON POST} \cite{backendcanva}}
-    \label{fig:requestJSONPOST}
-\end{figure}
+Sebagian besar pekerjaan di sisi Flutter berupa perbaikan dan peningkatan
+fungsionalitas \textit{widget} yang sudah ada.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=7cm]{snippet-response-post.png}
-    \caption{\textit{Response JSON POST} \cite{backendcanva}}
-    \label{fig:responseJSONPOST}
-\end{figure}
-\subsection{Tipe Task IMPROVEMENT}
-\subsection{Tipe Task NEW}
-\subsection{Tipe Task BUG}
-\subsection{Tipe Task USER STORY}
+\begin{enumerate}
+    \item \textit{MultipleChoice/Checkbox} bisa diklik di area teks (\#10074) \\ Sebelumnya, \textit{widget
+              MultipleChoice} hanya bisa dipilih dengan mengklik kotaknya saja. Berbeda
+          dengan \textit{SingleChoice} yang area teksnya sudah bisa diklik. Perbaikan
+          dilakukan dengan menambahkan komponen \textit{InkWell} di area teks agar
+          perilakunya konsisten dengan \textit{SingleChoice}.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-checkbox.png}
+              \caption{\textit{Widget MultipleChoice}}
+          \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=10cm]{Figma Canvasser.png}
-    \caption{Tampilan Figma untuk Proyek Canvasser}
-    \label{fig:figmacanvasser}
-\end{figure}
+    \item \textit{Accordion} bisa diimplementasikan di \textit{TemplateForm} (\#10120) \\
+          \textit{Widget Accordion} sebenarnya sudah berjalan di beberapa layar, namun belum bisa digunakan pada layar yang menggunakan \textit{TemplateForm}. Solusinya adalah menambahkan \textit{parser} khusus untuk \textit{Accordion} beserta modelnya di dalam \texttt{template\_form}.dart.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-accordion-closed.png}
+              \caption{\textit{Widget Accordion} dalam \textit{TemplateForm} dalam kondisi tertutup}
+          \end{figure}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-accordion-opened.png}
+              \caption{\textit{Widget Accordion} dalam \textit{TemplateForm} dalam kondisi terbuka}
+          \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=10cm]{Figma HealthyOne.png}
-    \caption{Tampilan Figma untuk Proyek HealthyOne}
-    \label{fig:figmahealthyone}
-\end{figure}
+    \item \textit{MultiDropdown} bisa \textit{flexible} (\textit{searchable}) (\#10319) \\
+          Tugas ini awalnya ditugaskan ke \textit{Front-End Supervisor}, namun kemudian dialihkan. Modifikasi dilakukan pada mekanisme \textit{text handling} agar \textit{FlexibleDropdown} bisa menerima lebih dari satu pilihan sekaligus dan memperbarui \textit{state}-nya dengan benar.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-multidropdown-flexible.png}
+              \caption{\textit{Widget Multidropdown} yang \textit{Flexible}}
+          \end{figure}
 
-\subsection{Migrasi HealthyOne dari Flutter ke React}
+    \item \textit{Line spacing popup AI Scribe} diperbesar 1.5x (\#10735) \\
+          Juga dialihkan dari \textit{supervisor}. Perubahannya cukup mudah, dengan mengubah \textit{textStyle} dengan ukuran 1.5x pada teks hasil \textit{output} di \textit{popup AI Scribe}.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-aiscribe.png}
+              \caption{\textit{Popup AI Scribe}}
+          \end{figure}
 
-Selama proses development, penulis membuat navigation buatan mandiri untuk memudahkan pindah-pindah page.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=10cm]{screen-home.png}
-    \caption{Tampilan Home untuk Development Pribadi}
-    \label{fig:devhome}
-\end{figure}
+    \item \textit{Bug} teks terpotong di layar Antrean Layanan (HealthyOne) dan Master Distributor (Canvasser)  (\#11050 \& \#11059) \\
+          Dua \textit{bug} ini saling berkaitan. Nama distributor dan teks \textit{Subjective}/Keluhan pada layar Antrean Layanan terpotong karena kurangnya ruang vertikal pada \textit{TabView}. Keduanya diselesaikan dengan menambahkan \textit{padding top} pada komponen tersebut.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-textfield-terpotong.png}
+              \caption{\textit{Widget TextField} yang sudah ditambahkan \textit{padding TabView}}
+          \end{figure}
 
-Membuat layar-layar:
-\subsubsection{Data Pasien}
-\subsubsection{Item Cabang}
-\subsubsection{Penerimaan Stok}
-\subsubsection{Stok Opname}
-\subsubsection{Riwayat Stok}
-\subsubsection{Pengemasan dan Pengeluaran}
-\subsubsection{Riwayat Belanja}
-% Template gambar
-% \begin{figure}
-%     \begin{center}
-%         \includegraphics[]{}
-%         \caption{}
-%         \label{fig:}
-%     \end{center}
+    \item \textit{Font size} tabel bisa dikustomisasi (\#11091) \\
+          Ini adalah tugas dengan cakupan paling luas di antara semua pekerjaan Flutter. Permintaannya adalah agar ukuran \textit{font} di dalam tabel, termasuk \textit{editable table} dan seluruh \textit{widget} di dalamnya bisa disesuaikan antara dua ukuran: kecil (ukuran \textit{default}) dan besar. Penyelesaiannya dimulai dengan membuat \texttt{TableFontUtils.dart} sebagai pusat \textit{utils} pengontrol ukuran \textit{font}, yang kemudian diintegrasikan satu per satu ke seluruh widget di dalam tabel: \textit{TextField, IconButton, RaisedButton, SingleDropdown, MultiDropdown, QuantityPicker,} hingga \textit{SingleChoice}. Total pengerjaan memakan waktu delapan hari.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-fontsizetable-small.png}
+              \caption{\textit{Widget ListBased} dengan \textit{font size} terkecil}
+          \end{figure}
+
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-fontsizetable-large.png}
+              \caption{\textit{Widget ListBased} dengan \textit{font size} terbesar}
+          \end{figure}
+
+    \item Halaman lebih panjang agar tidak tertutup FAB (\#11708) \\ Beberapa konten di
+          halaman tertutup oleh \textit{Floating Action Button} (FAB). Solusinya adalah
+          menambahkan detektor pada \texttt{section\_parser.dart} yang secara otomatis
+          menambahkan \textit{extra bottom padding} jika halaman tersebut memiliki FAB
+          Button.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-fab-bottompadding.png}
+              \caption{Layar yang memiliki \textit{FAB} dengan \textit{extra bottom padding}}
+          \end{figure}
+
+    \item \textit{Bug dropdown} tidak bisa dipilih setelah \textit{search} di Canvasser (\#11797) \\
+          Setelah \textit{user} melakukan \textit{search} di \textit{dropdown}, opsi tidak bisa dipilih. Penyebabnya adalah \textit{indexing} yang tidak terlindungi sebelum digunakan, sehingga bisa \textit{out of bound}. Perbaikan dilakukan dengan menambahkan validasi \textit{index} di \texttt{table.dart}.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-bugdropdown-cannotselect.png}
+              \caption{\textit{Dropdown} yang tidak bisa dipilih}
+          \end{figure}
+
+    \item \textit{Button} Tolak Outlet tidak rapi di Canvasser (\#12071) \\
+          Dari tiga tombol yang ditampilkan dalam satu \textit{card}, satu di antaranya tidak sejajar dengan dua lainnya. Perbaikan dilakukan melalui modifikasi \texttt{raised\_button.dart} dan \texttt{card\_generator\_ext.dart} untuk merapikan \textit{alignment} tombol.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-button-alignment.png}
+              \caption{Tombol-tombol yang berantakan}
+          \end{figure}
+
+    \item \textit{Dropdown} di \textit{editable table} tidak langsung \textit{update height} (\#12108) \\
+          Ketika \textit{user} mengetik di \textit{dropdown} dan hasil pencarian dari \textit{back-end} sudah muncul, tinggi \textit{dropdown} tidak ikut menyesuaikan dan tetap pendek seperti saat data kosong. Perbaikan dilakukan pada \texttt{single\_dropdown.dart} agar \textit{state height} diperbarui secara instan begitu data berhasil diambil, tanpa perlu menutup dan membuka dropdown kembali.
+
+    \item \textit{Icon Button} terlalu kecil (\#12160) \\
+          Tugas ini dibuat secara mandiri setelah ditemukan masalah saat mengerjakan tugas lain. Widget \textit{IconButton} tidak memiliki ukuran \textit{default}, sehingga ukurannya mengikuti ukuran \textit{child}-nya dan terlihat terlalu kecil. Solusinya adalah menambahkan nilai \textit{default} 48px untuk \textit{height} dan \textit{width} di \texttt{icon\_button.dart}.
+
+    \item \textit{Bug overflow} saat data tidak ditemukan di \textit{dropdown} (\#12284) \\
+          Saat pencarian di \textit{dropdown} tidak menghasilkan data, \textit{widget} mengalami \textit{box overflow}. Penyebabnya adalah penggunaan komponen \textit{Flexible} di dalam \texttt{single\_dropdown.dart} yang tidak kompatibel dengan konteks \textit{layout}-nya. Solusinya adalah menghapus komponen \textit{Flexible} tersebut.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-erroroverflow-dropdown.png}
+              \caption{\textit{Dropdown} yang \textit{error overflow}}
+          \end{figure}
+
+    \item Beberapa \textit{widget} tidak mengikuti perubahan \textit{font size} tabel
+          (\#12809) \\ Sebagai kelanjutan dari Task \#11091, ditemukan bahwa beberapa
+          \textit{widget} di dalam \textit{editable table} masih belum mengikuti
+          perubahan ukuran \textit{font}, khususnya \textit{TextField} yang tidak bisa
+          di-\textit{edit}. Perbaikan dilakukan pada \texttt{table.dart,
+              blank\_widget.dart,} dan \texttt{text.dart} dengan menambahkan parameter
+          \textit{isForEditTable} agar \textit{font} bisa mendeteksi ukuran yang
+          diperlukan.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-widgetfont-tertinggal-1.png}
+              \caption{\textit{Text} yang belum mengikuti \textit{update font size}}
+          \end{figure}
+
+    \item \textit{Prefix} `Rp' tidak mengikuti perubahan \textit{font size} (\#12928) \\
+          \textit{Prefix} `Rp' pada input nominal memiliki \textit{styling} tersendiri yang terpisah dari teks pada umumnya, sehingga tidak ter-\textit{update} saat ukuran \textit{font} tabel diubah. Penyelesaiannya adalah menambahkan \textit{dynamic styling} pada \textit{prefix} agar mengikuti \textit{state font size} yang aktif.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-widgetfont-tertinggal-2.png}
+              \caption{\textit{Prefix} `Rp' yang belum mengikuti \textit{update font size}}
+          \end{figure}
+
+    \item \textit{DatePicker} tidak bisa digunakan di dalam tabel (\#12934) \\
+          \textit{DatePicker} pada layar Penerimaan Stok tidak berfungsi saat digunakan di dalam tabel. Penyebabnya adalah \textit{null handling} di \textit{widget DateField} tidak diimplementasikan dengan baik untuk konteks \textit{editable table}. Perbaikan dilakukan dengan menambahkan \textit{ternary operator} untuk mengonversi nilai kosong menjadi \textit{null} sebelum diproses.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-datepicker-bug.png}
+              \caption{\textit{Widget DatePicker} yang tidak bisa diklik}
+          \end{figure}
+
+    \item \textit{Delete button} tidak mengikuti perubahan \textit{font size} (\#13137) \\
+          Tombol \textit{delete} di dalam tabel tidak menyesuaikan ukurannya saat \textit{font size} diubah karena \textit{padding} dan \textit{height}-nya tidak memperbarui \textit{state} dengan baik. Solusinya adalah membungkus tombol dengan \textit{ValueListenableBuilder} agar selalu sinkron dengan \textit{state} terkini.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-widgetfont-tertinggal-3.png}
+              \caption{\textit{Widget DeleteButton} yang belum mengikuti \textit{update font size}}
+          \end{figure}
+
+    \item \textit{MultiDropdown} mentok saat di perangkat \textit{mobile} di Canvasser (\#13228) \\
+          Beberapa \textit{dropdown} di Canvasser tidak bisa di-\textit{scroll} sampai bawah ketika dibuka di perangkat \textit{mobile}. Setelah dianalisis, ditemukan adanya beberapa \textit{scrollbar} yang bertumpuk di dalam \textit{widget MultiDropdown}, sehingga saling menghalangi. Solusinya adalah menghapus \textit{SingleChildScrollView} dan \textit{Column} yang bermasalah, menggantinya dengan \textit{Container} biasa karena \textit{ListView.builder} di dalamnya sudah memiliki \textit{scrollbar} sendiri.
+
+    \item \textit{Widget ImageField} (\textit{upload} gambar)  bisa mengambil foto dari kamera (\#13240) \\
+          Sebelumnya, \textit{widget} ini hanya mendukung \textit{upload} dari \textit{file}. \textit{Improvement} ini menambahkan opsi untuk mengambil foto langsung dari kamera perangkat. Implementasinya dengan membuat \textit{widget} baru \textit{`CapturePhotoScreen'} yang mengakses kamera (\textit{webcam}, kamera depan, maupun belakang), kemudian mengintegrasikannya ke dalam \textit{widget ImageField} sehingga \textit{user} bisa memilih antara \textit{upload} dari \textit{file} atau ambil foto langsung.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-capturephotoscreen.png}
+              \caption{\textit{Widget CapturePhotoScreen} yang baru dibuat}
+          \end{figure}
+
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=8cm]{3.4-newimagefield.png}
+              \caption{\textit{Widget ImageField} dengan fitur Ambil Foto}
+          \end{figure}
+
+\end{enumerate}
+
+% \subsection{Perbaikan Beberapa \textit{Bug} Terkait \textit{Widgets}} Lorem ipsum
+\subsection{Pembuatan Layar-layar HealthyOne di React}
+Task yang berkaitan: \#11394, \#12200, \#12201, \#12202, \#12203,
+\subsubsection{Pembuatan Layar Data Pasien HealthyOne di React}
+{\leftskip=1.27cm
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=10cm]{screen-healthyone-flutter-datapasien.png}
+        \caption{Tampilan layar Data Pasien di Flutter}%
+        \label{fig:datapasienflutter}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=10cm]{screen-healthyone-react-datapasien.png}
+        \caption{Tampilan layar Data Pasien di React}%
+        \label{fig:datapasienreact}
+    \end{figure}
+
+    \subsubsection{Pembuatan Layar Item Cabang HealthyOne di React}
+    \subsubsection{Pembuatan Layar Penerimaan Stok HealthyOne di React}
+    \subsubsection{Pembuatan Layar Stok Opname HealthyOne di React}
+    \subsubsection{Pembuatan Layar Perpindahan Stok HealthyOne di React}
+    \subsubsection{Pembuatan Layar Riwayat Stok HealthyOne di React}
+    \subsubsection{Pembuatan Layar Pengemasan dan Pengeluaran HealthyOne di React}
+    \subsubsection{Pembuatan Layar Riwayat Belanja HealthyOne di React}
+    \subsubsection{Pembuatan Layar Riwayat Belanja B2B HealthyOne di React}
+}
+
+\textbf{\subsection{Principle Suite}}
+Proyek ini baru dibentuk
+Techstack yang dipakai
+% \subsection{Pengenalan Environment Project di Hospinet}
+% Sebelum mulai mengerjakan task pengembangan, mahasiswa terlebih dahulu
+% mempelajari environment project yang digunakan pada platform Hospinet. Tahap
+% ini penting agar mahasiswa memahami arsitektur dasar aplikasi, alur navigasi,
+% struktur data, serta mekanisme komunikasi antara front-end dan back-end.
+% Beberapa materi pengenalan yang dipelajari meliputi dynamic routing, button
+% render flow, serta format request dan response dalam pertukaran data berbasis
+% JSON.
+
+% \subsection{Tipe-tipe Task}
+% \subsubsection{Data Pasien}
+% \subsubsection{Item Cabang}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=10cm]{screen-healthyone-flutter-itemcabang.png}
+%     \caption{Tampilan layar Item Cabang di React}%
+%     \label{fig:datapasienflutter}
 % \end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=10cm]{screen-healthyone-react-itemcabang.png}
+%     \caption{Tampilan layar Item Cabang di React}%
+%     \label{fig:datapasienreact}
+% \end{figure}
+% \subsubsection{Penerimaan Stok}
+% \subsubsection{Stok Opname}
+% \subsubsection{Riwayat Stok}
+% \subsubsection{Pengemasan dan Pengeluaran}
+% \subsubsection{Riwayat Belanja}
+% % % Contoh Penggunaan Text Box untuk memasukkan kode program
+% % \begin{lstlisting}
+% % function login() {
+% %   console.log("Hello World");
+% % }
+% % \end{lstlisting}
+
+% \subsection{Pengenalan \textit{Environment} Project di Hospinet}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=7cm]{flow-sdui.png}
+%     \caption{\textit{Flow Dynamic Routing}~\cite{backendcanva}}%
+%     \label{fig:flowdynamicrouting}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=7cm]{flow-render.png}
+%     \caption{\textit{Flow Button Render}~\cite{backendcanva}}%
+%     \label{fig:flowbuttonrender}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=7cm]{snippet-response-get.png}
+%     \caption{\textit{Response JSON GET}~\cite{backendcanva}}%
+%     \label{fig:responseJSONGET}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=7cm]{snippet-request-post.png}
+%     \caption{\textit{Request JSON POST}~\cite{backendcanva}}%
+%     \label{fig:requestJSONPOST}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=7cm]{snippet-response-post.png}
+%     \caption{\textit{Response JSON POST}~\cite{backendcanva}}%
+%     \label{fig:responseJSONPOST}
+% \end{figure}
+% \subsection{Tipe Task IMPROVEMENT}
+% \subsection{Tipe Task NEW}
+% \subsection{Tipe Task BUG}
+% \subsection{Tipe Task USER STORY}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=10cm]{Figma Canvasser.png}
+%     \caption{Tampilan Figma untuk Proyek Canvasser}%
+%     \label{fig:figmacanvasser}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=10cm]{Figma HealthyOne.png}
+%     \caption{Tampilan Figma untuk Proyek HealthyOne}%
+%     \label{fig:figmahealthyone}
+% \end{figure}
+
+% \subsection{Migrasi HealthyOne dari Flutter ke React}
+
+% Selama proses development, penulis membuat navigation buatan mandiri untuk
+% memudahkan pindah-pindah page.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=10cm]{screen-home.png}
+%     \caption{Tampilan Home untuk Development Pribadi}%
+%     \label{fig:devhome}
+% \end{figure}
+
+% % Template gambar
+% % \begin{figure}
+% %     \begin{center}
+% %         \includegraphics[]{}
+% %         \caption{}
+% %         \label{fig:}
+% %     \end{center}
+% % \end{figure}
