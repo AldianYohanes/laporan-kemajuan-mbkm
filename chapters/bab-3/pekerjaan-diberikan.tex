@@ -13,7 +13,7 @@ dan implementasi pembuatan widget.
 {
   "section_class": 3, 
   "section_orientation": 1,
-  section_main_alignment": 3,
+  "section_main_alignment": 3,
   "section_cross_alignment": 3,
   "section_extra" : {
      "with_navigation_button": true,
@@ -225,31 +225,74 @@ fungsionalitas \textit{widget} yang sudah ada.
 
 % \subsection{Perbaikan Beberapa \textit{Bug} Terkait \textit{Widgets}} Lorem ipsum
 \subsection{Pembuatan Layar-layar HealthyOne di React}
-Task yang berkaitan: \#11394, \#12200, \#12201, \#12202, \#12203,
-\subsubsection{Pembuatan Layar Data Pasien HealthyOne di React}
-{\leftskip=1.27cm
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=10cm]{screen-healthyone-flutter-datapasien.png}
-        \caption{Tampilan layar Data Pasien di Flutter}%
-        \label{fig:datapasienflutter}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=10cm]{screen-healthyone-react-datapasien.png}
-        \caption{Tampilan layar Data Pasien di React}%
-        \label{fig:datapasienreact}
-    \end{figure}
+Berbeda dengan pekerjaan di Flutter yang didominasi oleh perbaikan dan
+peningkatan \textit{widget}, pengembangan di React lebih berfokus pada
+pembuatan layar baru untuk aplikasi HealthyOne.
 
-    \subsubsection{Pembuatan Layar Item Cabang HealthyOne di React}
-    \subsubsection{Pembuatan Layar Penerimaan Stok HealthyOne di React}
-    \subsubsection{Pembuatan Layar Stok Opname HealthyOne di React}
-    \subsubsection{Pembuatan Layar Perpindahan Stok HealthyOne di React}
-    \subsubsection{Pembuatan Layar Riwayat Stok HealthyOne di React}
-    \subsubsection{Pembuatan Layar Pengemasan dan Pengeluaran HealthyOne di React}
-    \subsubsection{Pembuatan Layar Riwayat Belanja HealthyOne di React}
-    \subsubsection{Pembuatan Layar Riwayat Belanja B2B HealthyOne di React}
-}
+\begin{enumerate}
+    \item Data Pasien \\ Modul ini mencakup empat layar utama: layar daftar pasien, layar
+          detail pasien yang dibagi ke dalam dua tab (biodata dan rekam medis), serta
+          layar untuk menambah dan mengedit data pasien melalui form. Salah satu
+          penyesuaian yang dilakukan pada modul ini adalah penggunaan split screen, yang
+          memungkinkan tampilan daftar dan detail pasien ditampilkan secara bersamaan
+          untuk meningkatkan efisiensi interaksi.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{screen-healthyone-flutter-datapasien.png}
+              \caption{Tampilan layar Data Pasien di Flutter}%
+              \label{fig:datapasienflutter}
+          \end{figure}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{screen-healthyone-react-datapasien.png}
+              \caption{Tampilan layar Data Pasien di React}%
+              \label{fig:datapasienreact}
+          \end{figure}
+
+    \item Item Cabang\\ (27 Februari – 5 Maret 2026) merupakan modul dengan kompleksitas
+          paling tinggi karena menggabungkan beberapa domain dalam satu struktur
+          navigasi. Pada bagian produk, layar disusun dalam beberapa subtab berdasarkan
+          kategori seperti semua produk, obat resep, produk kesehatan, BMHP, dan lainnya,
+          serta satu kategori khusus untuk obat racik yang memiliki logika berbeda.
+          Setiap kategori (kecuali obat racik) memiliki beberapa mode tampilan seperti
+          daftar produk, rekomendasi belanja (defecta), stok opname, penjualan terbesar,
+          dan riwayat kedaluwarsa. Selain itu, tersedia juga alur untuk menambah,
+          melihat, dan mengedit data produk.\\
+
+          Pada bagian layanan, struktur serupa diterapkan dengan pembagian kategori
+          seperti konsultasi, gigi, layanan lainnya, dan layanan yang belum aktif.
+          Masing-masing kategori memiliki layar untuk pengelolaan data layanan dalam
+          bentuk tambah, edit, dan view. Modul ini juga mencakup layar untuk tindakan
+          serta paket layanan, di mana paket direpresentasikan sebagai bundel layanan
+          yang dapat dikelola melalui form dan tampilan detail.
+
+    \item Penerimaan Stok \\ dikembangkan sebagai modul untuk mencatat barang masuk,
+          dengan layar utama, layar detail, serta form penambahan data. Komponen tambahan
+          berupa pemilihan jenis penerimaan digunakan untuk menyesuaikan alur input. Stok
+          Opname dan Perpindahan Stok pada dasarnya merupakan turunan dari modul Riwayat
+          Stok, dengan perbedaan pada parameter query dan penambahan aksi spesifik
+          seperti pembuatan stok opname serta pengajuan perpindahan stok yang disertai
+          notifikasi.
+
+    \item Riwayat Stok \\ sendiri berfungsi sebagai pusat informasi pergerakan barang,
+          yang menyediakan tampilan daftar serta detail penerimaan stok. Sementara itu,
+          modul Pengemasan dan Pengeluaran dirancang untuk mengelola status pesanan
+          secara bertahap, mulai dari pesanan baru hingga pesanan selesai atau
+          dibatalkan. Struktur navigasinya memanfaatkan main tab dan subtab untuk
+          memisahkan status serta jenis pesanan (online dan offline).
+
+    \item Riwayat Belanja \\ menyediakan layar untuk melihat, menambah, dan mengecek
+          detail pesanan. Riwayat Belanja Marketplace B2B menambahkan segmentasi
+          berdasarkan status pembayaran, yaitu belum lunas dan sudah lunas, dengan akses
+          ke detail masing-masing transaksi.
+
+    \item Terakhir, Marketplace B2B \\ dikembangkan sebagai modul yang memungkinkan
+          proses pembelian produk secara langsung di dalam sistem. Layar yang tersedia
+          mencakup halaman utama marketplace, daftar produk, detail produk, keranjang
+          belanja, serta fitur tambahan seperti Healthy Coin. Selain itu, terdapat
+          beberapa fitur pendukung seperti unggah tanda tangan untuk dokumen SP,
+          pemilihan alamat pengiriman, ekspedisi, dan metode pembayaran.
+\end{enumerate}
 
 \textbf{\subsection{Principle Suite}}
 Proyek ini baru dibentuk
