@@ -230,68 +230,205 @@ peningkatan \textit{widget}, pengembangan di React lebih berfokus pada
 pembuatan layar baru untuk aplikasi HealthyOne.
 
 \begin{enumerate}
-    \item Data Pasien \\ Modul ini mencakup empat layar utama: layar daftar pasien, layar
-          detail pasien yang dibagi ke dalam dua tab (biodata dan rekam medis), serta
-          layar untuk menambah dan mengedit data pasien melalui form. Salah satu
-          penyesuaian yang dilakukan pada modul ini adalah penggunaan split screen, yang
-          memungkinkan tampilan daftar dan detail pasien ditampilkan secara bersamaan
-          untuk meningkatkan efisiensi interaksi.
+    \item Data Pasien
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{screen-healthyone-flutter-datapasien.png}
               \caption{Tampilan layar Data Pasien di Flutter}%
-              \label{fig:datapasienflutter}
           \end{figure}
+
+          Modul ini terdiri dari empat layar utama: layar daftar pasien yang menampilkan
+          data dalam format tabel, layar \textit{View} dengan dua \textit{tab} (Biodata
+          Pasien dan Rekam Medis), layar \textit{Edit} dengan form yang sudah terisi data
+          pasien, serta layar Tambah dengan form kosong untuk \textit{input} data baru.
+          Layar ini juga dilengkapi fitur \textit{split screen}, sehingga form tambah,
+          edit, atau lihat bisa ditampilkan berdampingan dengan tabel tanpa perlu
+          berpindah halaman.
+
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{screen-healthyone-react-datapasien.png}
               \caption{Tampilan layar Data Pasien di React}%
-              \label{fig:datapasienreact}
           \end{figure}
 
-    \item Item Cabang\\ (27 Februari – 5 Maret 2026) merupakan modul dengan kompleksitas
-          paling tinggi karena menggabungkan beberapa domain dalam satu struktur
-          navigasi. Pada bagian produk, layar disusun dalam beberapa subtab berdasarkan
-          kategori seperti semua produk, obat resep, produk kesehatan, BMHP, dan lainnya,
-          serta satu kategori khusus untuk obat racik yang memiliki logika berbeda.
-          Setiap kategori (kecuali obat racik) memiliki beberapa mode tampilan seperti
-          daftar produk, rekomendasi belanja (defecta), stok opname, penjualan terbesar,
-          dan riwayat kedaluwarsa. Selain itu, tersedia juga alur untuk menambah,
-          melihat, dan mengedit data produk.\\
+    \item Item Cabang
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-itemcabang-flutter.png}
+              \caption{Tampilan layar Data Pasien di Flutter}%
+          \end{figure}
 
-          Pada bagian layanan, struktur serupa diterapkan dengan pembagian kategori
-          seperti konsultasi, gigi, layanan lainnya, dan layanan yang belum aktif.
-          Masing-masing kategori memiliki layar untuk pengelolaan data layanan dalam
-          bentuk tambah, edit, dan view. Modul ini juga mencakup layar untuk tindakan
-          serta paket layanan, di mana paket direpresentasikan sebagai bundel layanan
-          yang dapat dikelola melalui form dan tampilan detail.
+          Terdapat empat tab utama dengan isi masing-masing sebagai berikut:
+          \begin{enumerate}
+              \item Tab Produk menampilkan enam subtab: Semua, Obat Resep, Produk Kesehatan, Produk
+                    BMHP, Produk Lainnya, dan Obat Racik. Khusus untuk lima subtab pertama (kecuali
+                    Obat Racik), masing-masing memiliki lima mode tampilan: Daftar Produk,
+                    Rekomendasi Belanja (Defecta), Stok Opname, Penjualan Terbesar, dan Riwayat
+                    Kedaluwarsa. Subtab Obat Racik memiliki logika tersendiri karena tidak
+                    menggunakan mekanisme filtering yang sama. Setiap subtab juga mendukung operasi
+                    Tambah, View, dan Edit produk.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=10cm]{3.4-itemcabang-react-produk.png}
+                        \caption{Tampilan layar Data Pasien bagian Produk di React}%
+                    \end{figure}
+              \item Tab Layanan menampilkan empat subtab: Konsultasi, Gigi, Lainnya, dan Belum
+                    Aktif. Masing-masing subtab menampilkan daftar layanan yang tersedia di unit
+                    pelayanan, lengkap dengan operasi Tambah, Edit, dan View.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=10cm]{3.4-itemcabang-react-layanan.png}
+                        \caption{Tampilan layar Data Pasien bagian Layanan di React}%
+                    \end{figure}
+              \item Tab Tindakan menampilkan daftar tindakan yang tersedia di unit pelayanan,
+                    dengan fitur Tambah Tindakan.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=10cm]{3.4-itemcabang-react-tindakan.png}
+                        \caption{Tampilan layar Data Pasien bagian Tindakan di React}%
+                    \end{figure}
+              \item Tab Paket menampilkan daftar paket (bundle) yang tersedia, dengan dukungan
+                    operasi Tambah, Edit, dan Lihat Paket masing-masing dalam bentuk form
+                    tersendiri.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=10cm]{3.4-itemcabang-react-paket.png}
+                        \caption{Tampilan layar Data Pasien bagian Paket di React}%
+                    \end{figure}
+          \end{enumerate}
 
-    \item Penerimaan Stok \\ dikembangkan sebagai modul untuk mencatat barang masuk,
-          dengan layar utama, layar detail, serta form penambahan data. Komponen tambahan
-          berupa pemilihan jenis penerimaan digunakan untuk menyesuaikan alur input. Stok
-          Opname dan Perpindahan Stok pada dasarnya merupakan turunan dari modul Riwayat
-          Stok, dengan perbedaan pada parameter query dan penambahan aksi spesifik
-          seperti pembuatan stok opname serta pengajuan perpindahan stok yang disertai
-          notifikasi.
+    \item Penerimaan Stok
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-penerimaanstok-flutter.png}
+              \caption{Tampilan layar Penerimaan Stok di Flutter}%
+          \end{figure}
 
-    \item Riwayat Stok \\ sendiri berfungsi sebagai pusat informasi pergerakan barang,
-          yang menyediakan tampilan daftar serta detail penerimaan stok. Sementara itu,
-          modul Pengemasan dan Pengeluaran dirancang untuk mengelola status pesanan
-          secara bertahap, mulai dari pesanan baru hingga pesanan selesai atau
-          dibatalkan. Struktur navigasinya memanfaatkan main tab dan subtab untuk
-          memisahkan status serta jenis pesanan (online dan offline).
+          Modul ini terdiri dari tiga layar: layar utama Penerimaan Stok, layar View
+          Penerimaan, dan layar Tambah Penerimaan. Selain ketiga layar tersebut, dibuat
+          pula komponen Jenis Penerimaan Stok yang digunakan sebagai bagian dari alur
+          input data penerimaan.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-penerimaanstok-react.png}
+              \caption{Tampilan layar Penerimaan Stok di React}%
+          \end{figure}
 
-    \item Riwayat Belanja \\ menyediakan layar untuk melihat, menambah, dan mengecek
-          detail pesanan. Riwayat Belanja Marketplace B2B menambahkan segmentasi
-          berdasarkan status pembayaran, yaitu belum lunas dan sudah lunas, dengan akses
-          ke detail masing-masing transaksi.
+    \item Stok Opname
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-stokopname-flutter.png}
+              \caption{Tampilan layar Stok Opname di Flutter}%
+          \end{figure}
 
-    \item Terakhir, Marketplace B2B \\ dikembangkan sebagai modul yang memungkinkan
-          proses pembelian produk secara langsung di dalam sistem. Layar yang tersedia
-          mencakup halaman utama marketplace, daftar produk, detail produk, keranjang
-          belanja, serta fitur tambahan seperti Healthy Coin. Selain itu, terdapat
-          beberapa fitur pendukung seperti unggah tanda tangan untuk dokumen SP,
-          pemilihan alamat pengiriman, ekspedisi, dan metode pembayaran.
+          Layar Stok Opname pada dasarnya merupakan layar Riwayat Stok yang dirender
+          ulang dengan parameter query isForStokOpname=true, disertai tambahan tombol
+          Buat Stok Opname di bagian antarmukanya.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-stokopname-react.png}
+              \caption{Tampilan layar Stok Opname di React}%
+          \end{figure}
+
+    \item Perpindahan Stok
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-perpindahanstok-flutter.png}
+              \caption{Tampilan layar Perpindahan Stok di Flutter}%
+          \end{figure}
+
+          Serupa dengan Stok Opname, layar ini juga memanfaatkan kembali komponen Riwayat
+          Stok dengan query yang sesuai, ditambah tombol Ajukan Perpindahan Stok dan
+          komponen notifikasi sebagai pembeda fungsionalnya.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-perpindahanstok-react.png}
+              \caption{Tampilan layar Perpindahan Stok di React}%
+          \end{figure}
+
+    \item Riwayat Stok
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-riwayatstok-flutter.png}
+              \caption{Tampilan layar Riwayat Stok di Flutter}%
+          \end{figure}
+
+          Terdiri dari dua layar: layar utama Riwayat Stok dan layar Lihat Detail
+          Penerimaan Stok. Layar ini juga menjadi basis yang digunakan kembali oleh modul
+          Stok Opname dan Perpindahan Stok.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-riwayatstok-react.png}
+              \caption{Tampilan layar Riwayat Stok di React}%
+          \end{figure}
+
+    \item Pengemasan dan Pengeluaran
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-pengemasanpengeluaran-flutter.png}
+              \caption{Tampilan layar Pengemasan dan Pengeluaran di Flutter}%
+          \end{figure}
+
+          Modul ini mengelola alur pemrosesan pesanan dari awal hingga selesai. Terdapat
+          enam tab utama yang merepresentasikan status pesanan: Pesanan Baru, Disiapkan,
+          Siap Dikirim, Dalam Pengiriman, Dibatalkan, dan Pesanan Selesai. Masing-masing
+          tab memiliki subtab berdasarkan jenis pesanan—Online dan/atau Offline—sesuai
+          dengan alur distribusi yang relevan untuk setiap status.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-pengemasanpengeluaran-react.png}
+              \caption{Tampilan layar Pengemasan dan Pengeluaran di React}%
+          \end{figure}
+
+    \item Riwayat Belanja
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-riwayatbelanja-flutter.png}
+              \caption{Tampilan layar Riwayat Belanja di Flutter}%
+          \end{figure}
+
+          Modul ini terdiri dari tiga layar: layar utama Riwayat Belanja, layar Tambah
+          Pesanan dengan form input, dan layar Lihat Pesanan untuk melihat detail
+          transaksi yang sudah ada.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-riwayatbelanja-react.png}
+              \caption{Tampilan layar Riwayat Belanja di React}%
+          \end{figure}
+
+    \item Riwayat Belanja Marketplace B2B
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-riwayatbelanjab2b-flutter.png}
+              \caption{Tampilan layar Riwayat Belanja B2B di Flutter}%
+          \end{figure}
+
+          Layar ini menampilkan riwayat transaksi B2B yang dibagi menjadi dua tab: Belum
+          Lunas dan Sudah Lunas. Masing-masing tab memiliki layar Detail Belanja untuk
+          melihat informasi transaksi secara lengkap.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-riwayatbelanjab2b-react.png}
+              \caption{Tampilan layar Riwayat Belanja B2B di React}%
+          \end{figure}
+
+    \item Marketplace B2B
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-marketplaceb2b-flutter.png}
+              \caption{Tampilan layar Marketplace B2B di Flutter}%
+          \end{figure}
+
+          Modul terakhir yang dikerjakan adalah Marketplace B2B, yang terdiri dari lima
+          layar: layar utama Marketplace, layar Healthy Coin, layar Produk Kesehatan,
+          layar Cart, dan layar Detail Produk. Modul ini juga dilengkapi beberapa fitur
+          tambahan, yaitu upload tanda tangan untuk pengajuan File SP, serta pemilihan
+          alamat pengiriman, jenis ekspedisi, dan metode pembayaran dalam alur checkout.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-marketplaceb2b-react.png}
+              \caption{Tampilan layar Marketplace B2B di React}%
+          \end{figure}
 \end{enumerate}
 
 \textbf{\subsection{Principle Suite}}
