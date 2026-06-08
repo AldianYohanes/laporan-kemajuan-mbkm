@@ -7,7 +7,7 @@ Tugas pertama diberikan oleh mentor sebagai latihan pengembangan
 \textit{local} dengan membuat halaman baru khusus untuk latihan (tidak
 \textit{push} ke \textit{repository} agar kode tetap bersih). Tersedia
 dokumentasi khusus \textit{Front-End} yang dipelajari untuk memahami struktur
-dan implementasi pembuatan widget.
+dan implementasi pembuatan \textit{widget}.
 
 \begin{lstlisting}[caption=Contoh JSON untuk Membuat \textit{Widget TabView}, captionpos=b, xleftmargin=2cm, xrightmargin=2cm]
 {
@@ -431,9 +431,61 @@ pembuatan layar baru untuk aplikasi HealthyOne.
           \end{figure}
 \end{enumerate}
 
-\textbf{\subsection{Principle Suite}}
-Proyek ini baru dibentuk
-Techstack yang dipakai
+\subsection{\textit{Alignment Front-End} ke \textit{Back-End}}
+
+Mulai pertengahan April 2026, Tim FE ditugaskan untuk menghubungkan layar-layar
+React yang telah dibuat dengan API dari \textit{Back-End} agar data dapat
+ditampilkan secara dinamis. Pada tahap ini, pekerjaan tidak hanya berada di
+sisi \textit{Front-End}, tetapi juga melibatkan penyesuaian di sisi
+\textit{Back-End}, terutama dalam penyediaan \textit{endpoint} yang sesuai
+dengan kebutuhan tampilan.
+
+Di sisi React, dikembangkan beberapa layer pendukung seperti \textit{services,
+    hooks, mapper, helper,} dan \textit{utils} untuk menangani proses \textit{fetch
+    data}, pengolahan response, hingga distribusi data ke \textit{component}.
+Sementara itu, di sisi Toraja, dibuat API untuk menampilkan halaman React
+melalui \textit{iframe}, serta API yang digunakan oleh React untuk mengambil
+data dari \textit{database}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{3.4-alignment-1.png}
+    \caption{Layar React yang Sudah Terkoneksi dengan \textit{Back-End}}
+\end{figure}
+
+\begin{enumerate}
+    \item Riwayat Stok \\ Halaman React ditampilkan melalui API
+          \textit{GetRiwayatStokView} menggunakan \textit{iframe widget}. Setelah halaman
+          dimuat, data riwayat stok diambil melalui API
+          \textit{GetStockHistoryTableData}, kemudian ditampilkan dalam bentuk tabel pada
+          halaman tersebut.
+
+    \item Stok Opname \\ Prosesnya serupa dengan Riwayat Stok. Halaman React ditampilkan
+          melalui API \textit{GetPilihNomorLotView} menggunakan \textit{iframe widget}.
+          Untuk pengambilan data, digunakan API \textit{GetDynamicStockOpnameView} yang
+          dikembangkan oleh Tim \textit{Back-End}, sehingga data dapat dimuat dan
+          ditampilkan sesuai kebutuhan.
+\end{enumerate}
+
+\subsection{Perkiraan Pekerjaan yang Akan Dilanjutkan Selanjutnya}
+
+Ke depan, pekerjaan masih akan berfokus pada migrasi HealthyOne dan Canvasser
+ke React, terutama untuk memastikan integrasi dengan \textit{Back-End} berjalan
+stabil dan minim \textit{bug}.
+
+Selain itu, \textit{Project Manager} juga telah menyampaikan rencana
+pengembangan proyek baru bernama \textit{Principal Suite}. Informasi terkait
+proyek ini masih bersifat \textit{confidential}, sehingga belum dapat
+dijelaskan secara rinci.
+
+Namun, Tim \textit{Front-End} direncanakan akan terlibat secara
+\textit{full-stack} dalam proyek tersebut dengan \textit{tech stack} yang
+berbeda dari proyek sebelumnya. Pengerjaan proyek ini akan dimulai setelah
+proses migrasi sistem yang sedang berjalan sudah cukup stabil.
+
+% \textbf{\subsection{Principle Suite}}
+% Proyek ini baru dibentuk
+% Techstack yang dipakai
 % \subsection{Pengenalan Environment Project di Hospinet}
 % Sebelum mulai mengerjakan task pengembangan, mahasiswa terlebih dahulu
 % mempelajari environment project yang digunakan pada platform Hospinet. Tahap

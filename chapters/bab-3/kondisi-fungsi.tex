@@ -3,13 +3,6 @@
 % \begin{figure}[h]
 %     \centering
 %     \includegraphics[width=7.5cm]{dummy.png}
-%     \caption{Ruang Kerja}
-%     \label{fig:ruangkerja}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=7.5cm]{dummy.png}
 %     \caption{Lorong Ruang Kerja}
 %     \label{fig:lorongruangkerja}
 % \end{figure}
@@ -35,96 +28,119 @@
 %     \label{fig:ruangauditorium}
 % \end{figure}
 
-Pelaksanaan magang industri di PT Inti Utama Solusindo (PT IUS) memberikan 
-eksposur langsung terhadap ekosistem pengembangan perangkat lunak skala 
-korporasi yang terstruktur. Kondisi kerja di perusahaan ini didesain 
-untuk menyeimbangkan kedisiplinan operasional dengan fleksibilitas kreatif 
-yang dibutuhkan oleh seorang pengembang.
+Pelaksanaan magang industri di PT Inti Utama Solusindo (PT IUS) memberikan
+eksposur langsung terhadap ekosistem pengembangan perangkat lunak skala
+korporasi yang terstruktur. Kondisi kerja di perusahaan ini didesain untuk
+menyeimbangkan kedisiplinan operasional dengan fleksibilitas kreatif yang
+dibutuhkan oleh seorang pengembang.
 
 \subsection{Penempatan dan Ruang Kerja}
-Penulis ditempatkan pada Departemen Hospinet / Pharmalogic PT IUS yang 
-berlokasi di Gedung Century (Pharos Group). Ruang kerja di departemen ini 
-mengusung konsep open-space office yang bertujuan untuk mereduksi hambatan 
-komunikasi antar-tim pengembang. Penataan meja kerja diatur secara 
-berkelompok berdasarkan spesialisasi teknologi, namun tetap memungkinkan 
-interaksi lintas fungsi yang cair. Secara teoritis, penataan ruang kantor 
-yang tepat terbukti secara signifikan meningkatkan efektivitas kerja melalui 
-kemudahan koordinasi dan penataan sarana prasarana yang ergonomis.
+Kegiatan magang dilaksanakan pada Departemen Hospinet / Pharmalogic PT Inti
+Utama Solusindo yang berlokasi di Lantai 2, Gedung Century (Pharos Group).
+Departemen ini mengusung konsep \textit{open-space office} yang bertujuan untuk
+mengurangi hambatan komunikasi antar tim \textit{developer}, QA, dan PM./@
 
-\subsection{Struktur Tim dan Ekosistem Produk}
-Di PT IUS, penulis berinteraksi dalam ekosistem IT yang terdiri dari beberapa 
-tim inti yang saling berintegrasi untuk mendukung unit bisnis Pharos Group:
-\begin{enumerate}[noitemsep, topsep=0pt]
-    \item Tim HealthyOne: Fokus pada pengembangan dan pemeliharaan Sistem 
-          Informasi Manajemen (SIM) Klinik dan Rekam Medis Elektronik (RME) 
-          yang terintegrasi dengan SatuSehat dan BPJS Kesehatan.
-    \item Tim Canvasser: Bertanggung jawab atas aplikasi logistik dan 
-          manajemen distribusi lapangan untuk memastikan ketersediaan produk 
-          di jaringan apotek.
-    \item Tim Front-End: Bertanggung jawab atas tampilan dan penggunaan fitur 
-          platform yang akan digunakan oleh tim HealthyOne dan Canvasser.
-    \item Tim Quality Assurance (QA): Bertindak sebagai "penjaga gerbang" 
-          kualitas yang melakukan pengujian ketat sebelum kode program 
-          dirilis ke tahap produksi.
-    \item Tim AI: Mengembangkan solusi berbasis kecerdasan buatan untuk 
-          optimasi data kesehatan dan operasional perusahaan.
-\end{enumerate}
-
-\subsection{Fungsi dan Peran Penulis sebagai Front-End Developer}
-Sebagai bagian dari tim Front-End (FE), penulis memegang tanggung jawab dalam 
-mentransformasikan desain antarmuka menjadi komponen web dan mobile yang fungsional. 
-Tugas utama mencakup migrasi kode pada proyek HealthyOne dari Flutter v1 ke v2 serta 
-inisiasi pembangunan ulang modul menggunakan React. Peran ini menuntut ketelitian dalam 
-mengimplementasikan prinsip Clean Code agar setiap komponen yang dibangun bersifat 
-reusable (dapat digunakan kembali) dan mudah dipelihara oleh tim lain di masa depan.
-
-\subsection{Kedisiplinan dan Sistem Absensi Biometrik}
-PT IUS menerapkan standar kedisiplinan tinggi dengan penggunaan sistem absensi biometrik 
-berbasis sidik jari (fingerprint). Proses perekaman kehadiran dilakukan secara mandiri 
-oleh setiap karyawan saat tiba di kantor (pukul 08:00 WIB) dan saat akan pulang 
-(pukul 17:00 WIB). Penerapan teknologi biometrik ini bukan sekadar alat kontrol, 
-melainkan mekanisme untuk membangun integritas data kehadiran yang akurat, transparan, 
-dan mampu meminimalisir kecurangan administratif. Hal ini secara tidak langsung membentuk 
-karakter profesional penulis untuk lebih menghargai ketepatan waktu dalam lingkungan kerja.
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=7.5cm]{dummy.png}
-    \caption{Mesin Fingerprint}
-    \label{fig:mesinfingerprint}
+      \centering
+      \includegraphics[width=7.5cm]{camera-ruangkerja.png}
+      \caption{Ruang Kerja}%
+      \label{fig:ruangkerja}
 \end{figure}
 
-Kehadiran bisa dilihat di website SIPP (https://sipp.pharmalink.id/) 
+\subsection{Fungsi dan Peran}
+Peran yang dijalankan selama magang adalah \textit{Front-End Developer}, dengan
+tanggung jawab utama mengimplementasikan tampilan antarmuka berdasarkan desain
+yang sudah diberikan oleh Tim UI/UX.\@ Pekerjaan sehari-hari mencakup pembuatan
+layar-layar baru menggunakan React, peningkatan fitur \textit{widget/component}
+dan perbaikan \textit{bug} pada fitur-fitur yang sudah berjalan.
+
+Mentor sekaligus \textit{Front-End Developer Supervisor} memiliki tanggung
+jawab untuk mengawasi pembuatan kode yang dibuat oleh tim FE.\@ Interaksi
+dengan mentor dilakukan pada saat dibutuhkan tindakan yang membutuhkan peran
+\textit{supervisor}, seperti \textit{code review, merge request,} dan
+menanyakan kode yang sulit dimengerti dalam \textit{framework}. Untuk pemberian
+tugas (\textit{Task}) dan pemantauan progres, koordinasi dilakukan bersama
+\textit{Deputy Project Manager} (DPM) melalui platform OpenProject.
+
+Dalam pengerjaan proyek yang terkait pembuatan layar baru, seringkali dilakukan
+koordinasi dengan tim \textit{Back-End} untuk integrasi data dan API.\@ Apabila
+terkait pengerjaan perbaikan \textit{bug} atau \textit{improvement} fitur baru,
+dilakukan koordinasi rutin dengan tim \textit{Quality Assurance} untuk
+pengujian fitur.
+
+\subsection{Sistem Presensi}
+Sistem pencatatan kehadiran di PT IUS menggunakan mesin fingerprint yang
+tersedia di kantor. Setiap karyawan dan intern diwajibkan melakukan rekam sidik
+jari saat tiba (finger-in) dan saat akan pulang (finger-out). Jam kerja resmi
+dimulai pukul 08.00 WIB, dengan toleransi keterlambatan hingga pukul 10.00 WIB.
+
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=7.5cm]{screen-sipp-main.png}
-    \caption{Dashboard SIPP Karyawan Pharos}
+      \centering
+      \includegraphics[width=7.5cm]{fingerprint.png}
+      \caption{Mesin Fingerprint}%
+      \label{fig:mesinfingerprint}
 \end{figure}
 
-Tes
+Apabila penulis tiba setelah batas waktu tersebut, kehadiran pada hari itu
+tidak akan tercatat sebagai hari masuk oleh sistem. Selain aturan jam masuk,
+terdapat juga ketentuan minimum durasi kerja harian sebesar sembilan jam.
+Artinya, meskipun hadir tepat waktu, apabila total durasi kerja dalam satu hari
+kurang dari sembilan jam — misalnya masuk pukul 08.30 lalu pulang pukul 17.00 —
+sistem secara otomatis tidak menghitung hari tersebut sebagai hari kerja penuh.
+Ketentuan ini mendorong kedisiplinan tidak hanya dari sisi waktu kedatangan,
+tetapi juga dari sisi konsistensi durasi kerja.
+
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=7.5cm]{screen-sipp-kehadiran.png}
-    \caption{Daftar Kehadiran Pribadi}
+      \centering
+      \includegraphics[width=7.5cm]{screen-sipp-main.png}
+      \caption{Dashboard SIPP Karyawan Pharos}
 \end{figure}
 
-\subsection{Budaya Berpakaian dan Representasi Profesional}
-Perusahaan menetapkan regulasi berpakaian yang menyesuaikan dengan dinamika industri. Pada hari Senin hingga Kamis, penulis diwajibkan mengenakan outfit formal (kemeja dan celana bahan). Sementara itu, hari Jumat ditetapkan sebagai Casual Friday, di mana pengembang diperbolehkan mengenakan pakaian lebih santai seperti kaos polo dan celana jeans.
+Rekap kehadiran dapat dipantau secara mandiri melalui portal Sistem Informasi
+Pelaporan Perusahaan (SIPP) di https://sipp.pharmalink.id/, yang menampilkan
+informasi waktu masuk, waktu keluar, durasi harian, dan status kehadiran secara
+keseluruhan.
 
-Aturan ini memiliki manfaat psikologis ganda: pakaian formal di awal minggu berfungsi untuk meningkatkan identitas profesional dan kepercayaan diri saat berhadapan dengan manajemen atau pemangku kepentingan. Sebaliknya, gaya kasual di akhir pekan memberikan ruang bagi relaksasi mental dan kreativitas, yang sangat krusial dalam proses problem-solving di bidang pemrograman.
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=7.5cm]{screen-sipp-kehadiran.png}
+      \caption{Daftar Kehadiran Pribadi}
+\end{figure}
 
-\subsection{Fasilitas Pendukung dan Kesejahteraan Kerja}
-Untuk menjaga produktivitas pengembang tetap optimal, PT IUS menyediakan berbagai fasilitas yang mendukung kebutuhan fisik maupun mental selama berada di kantor:
+\subsection{Budaya Berpakaian}
+Perusahaan memberlakukan aturan berpakaian yang cukup standar untuk lingkungan
+perusahaan pada umumnya. Senin hingga Kamis menggunakan pakaian kemeja dan
+celana bahan (formal). Hari Jumat diberlakukan sebagai \textit{Casual Friday},
+di mana karyawan boleh mengenakan pakaian yang lebih santai seperti kaos polo
+dan \textit{jeans}.
+
+Pharos juga memiliki peraturan unik dimana setiap karyawan wajib melepaskan
+sepatu yang dikenakan dari luar lalu menggantinya dengan sepatu khusus dalam
+kantor (berupa sepatu Crocs).
+
+\subsection{Konsumsi Siang Gratis}
+Seluruh karyawan dan peserta magang mendapatkan makan siang gratis dari kantin
+Pharos Group. Secara tidak langsung dapat menjadi kesempatan untuk berinteraksi
+dengan rekan-rekan dari tim lain di ruang makan.
+
+\subsection{Fasilitas Lainnya}
+Beberapa fasilitas pendukung lain yang tersedia di kantor:
 \begin{enumerate}[noitemsep, topsep=2pt]
-    \item Konsumsi: Pemberian makan siang gratis dari kantin perusahaan Pharos. Fasilitas ini terbukti mampu meningkatkan retensi karyawan, mengurangi stres akibat manajemen waktu makan, serta mempererat hubungan interpersonal antar-karyawan saat beristirahat.
-    \item Infrastruktur Digital: Akses koneksi WiFi berkecepatan tinggi melalui SSID 'Pharmalogic 2.4GHz' dan 'Pharmalogic 5GHz' untuk mendukung proses coding, deployment, dan riset teknologi.
-    \item Sarana Fisik: Meja dan kursi kerja pribadi yang ergonomis, serta akses ke pantry untuk kebersihan peralatan konsumsi pribadi.
-    \item Ruang Pertemuan: Ruang rapat khusus untuk koordinasi internal tim (spt. pembahasan bug atau fitur baru) serta ruang Auditorium untuk pertemuan berskala besar atau seminar perusahaan. Ketersediaan ruang kolaboratif seperti ini sangat penting dalam membangun komunitas pengembang yang mampu berbagi pengetahuan dan inovasi secara kolektif.
+      \item WiFi: Jaringan internet tersedia melalui dua jalur frekuensi, `Pharmalogic
+            2.4GHz' dan `Pharmalogic 5GHz', yang cukup stabil untuk kebutuhan
+            \textit{coding, deployment}, maupun untuk \textit{download package} berukuran
+            besar.
+      \item Ruang Pertemuan: Tersedia ruang rapat untuk koordinasi tim dalam skala kecil,
+            serta Ruang Auditorium untuk pertemuan yang melibatkan lebih banyak peserta,
+            seperti presentasi hasil pekerjaan divisi ke \textit{supervisor}.
+      \item Ruang Auditorium: Di Lantai 4 Gedung Century terdapat ruang pertemuan besar
+            yang digunakan pada saat ada koordinasi tim yang memerlukan semua anggota
+            perusahaan ikut serta, seperti \textit{Objective Alignment} dengan direksi.
+      \item Ruang Pantry: Tersedia ruang untuk mencuci peralatan makan/minum dan membuang
+            sampah basah.
 \end{enumerate}
-(Gambar 1.3: Ruang Kerja)\\
-(Meja Kerja Pribadi)\\
-(Gambar 1.4: Lorong Ruang Kerja)\\
-(Gambar 1.5: Ruang Pantry)\\
-(Gambar 1.6: Ruang Rapat)\\
-(Gambar 1.7: Ruang Auditorium)\\
 
-Secara keseluruhan, kondisi kerja di PT IUS didesain untuk menciptakan lingkungan yang sustainable, di mana fasilitas fisik yang memadai bersinergi dengan budaya kerja yang disiplin untuk menghasilkan produk digital berkualitas tinggi.
+Secara keseluruhan, kondisi kerja di PT IUS didesain untuk menciptakan
+lingkungan yang sustainable, di mana fasilitas fisik yang memadai bersinergi
+dengan budaya kerja yang disiplin untuk menghasilkan produk digital berkualitas
+tinggi.

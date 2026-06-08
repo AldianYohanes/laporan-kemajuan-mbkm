@@ -1,5 +1,5 @@
 \renewcommand{\reportmonth}{April}
-\renewcommand{\signaturedate}{1 Juni 2026}
+\renewcommand{\signaturedate}{1 Mei 2026}
 \input{logbook/top.tex}
 \begin{logtable}
 
@@ -7,14 +7,233 @@
     % Minggu Ke-12  (30 Maret - 5 April 2026)
     % =============================================================
 
+    \logentry{1.}
+    {
+        Rabu \linebreak 1 Apr 2026 \linebreak
+        07:52--17:08 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#12809
+            \item Mendapat Task \#12934 (BUG): Tidak bisa menggunakan \textit{Date Picker widget}
+            di dalam \textit{Editable Table}
+            \item Mendapat Task \#12928 (IMPROVEMENT): Teks `Rp' di dalam \textit{Nominal Text
+                Input widget} tidak terpengaruh \textit{customizable font size}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#12809) Merapihkan \textit{styling} dan kode yang tidak penting dalam \textit{file} yang diubah
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
+
+    \logentry{2.}
+    {
+        Kamis \linebreak 2 Apr 2026 \linebreak
+        08:19--17:26 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#12934 dan \#12928
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#12928) Memodifikasi \textit{file} \texttt{text\_form.dart} agar bisa mendeteksi
+            \texttt{if (widget.isForEditTable == true)}. % cktex 36
+            \item (\#12934) Memodifikasi \textit{logic} \texttt{date\_field.dart} dan \texttt{date\_picker.dart} agar bisa \textit{build} \texttt{selectableDayPredicate} dengan benar
+
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
+
     % =============================================================
     % Minggu Ke-13  (6 April - 12 April 2026)
-    % =============================================================
+    % ============================================================= 
+    \logentry{3.}
+    {
+        Senin \linebreak 6 Apr 2026 \linebreak
+        08:04--17:54 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#13137 (IMPROVEMENT): Ukuran tombol \textit{Delete} pada
+            \textit{ListBased widget} tidak \textit{responsive} dengan \textit{customizable
+                font size}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13137) Memodifikasi \texttt{table.dart, button\_widgets.dart} dan
+            \texttt{delete\_button.dart} untuk memperbaiki \textit{styling} yang
+            \textit{error}
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
 
+    \logentry{4.}
+    {
+        Selasa \linebreak 7 Apr 2026 \linebreak
+        07:57--17:xx \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#13137
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13137) Mengecek penggunaan \textit{delete button} dalam \textit{ListBased widget} di layar-layar lain untuk memastikan \textit{styling} konsisten
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
+
+    \logentry{5.}
+    {
+        Rabu \linebreak 8 Apr 2026 \linebreak
+        08:06--xx:xx \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#13328 (BUG): \textit{Multi Dropdown} tidak bisa \textit{scroll}
+            sampai bawah ketika menggunakan \textit{mobile device}
+            \item Mendapat Task \#13240 (IMPROVEMENT): Tambah fitur ambil gambar pakai kamera
+            dalam \textit{Multiple Upload widget}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13328) Memodifikasi \texttt{custom\_dropdown.dart} dan mengganti
+            \texttt{SingleChildScrollView + Column} dengan \texttt{Container} karena sudah
+            ada \textit{scrollbar} di dalam \texttt{ListView.builder}
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
+
+    \logentry{6.}
+    {
+        Kamis \linebreak 9 Apr 2026 \linebreak
+        xx:xx--xx:xx \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#13228 dan \#13240
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13228) Memastikan layar lain yang menggunakan \textit{Multi Dropdown widget} sudah fungsional dan konsisten
+            \item (\#13240) Membuat \textit{widget} baru bernama \textit{Capture Photo Screen} yang berfungsi untuk mengambil gambar menggunakan kamera dari perangkat yang digunakan \textit{user} (\textit{webcam}/kamera)
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
+
+    \logentry{7.}
+    {
+        Jumat \linebreak 10 Apr 2026
+    }{Izin tidak masuk kerja karena sakit.}{}
     % =============================================================
     % Minggu Ke-14  (13 April - 19 April 2026)
     % =============================================================
+    \logentry{8.}
+    {
+        Senin \linebreak 13 Apr 2026 \linebreak
+        08:04--17:06 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#13240
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item %
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
+    % =============================================================
+    % CURRENT DAY
+    % =============================================================
+    \logentry{9.}
+    {
+        Selasa \linebreak 14 Apr 2026 \linebreak
+        08:02--17:15 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Tidak ada Task baru
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item %
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
 
+    \logentry{10.}
+    {
+        Rabu \linebreak 15 Apr 2026 \linebreak
+        07:40--17:11 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item %
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item %
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
+
+    \logentry{11.}
+    {
+        Kamis \linebreak 16 Apr 2026 \linebreak
+        xx:xx--xx:xx \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task #13508 (BUG): \textit{Fix Sorting} Tabel untuk kolom tanggal
+            karena tidak urut berdasarkan tanggal
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13508) Mendeteksi kesalahan dari \textit{back-end} karena tipe data yang dipakai adalah \textit{`String'} yang seharusnya adalah \textit{`Date'} (kebanyakan tabel seperti ini)
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
+
+    \logentry{12.}
+    {
+        Jumat \linebreak 17 Apr 2026 \linebreak
+        xx:xx--xx:xx \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#13549 (IMPROVEMENT): \textit{Widget Text Custom} bisa
+            \textit{styling padding} dan \textit{spacing} dari \textit{Back-End} \end{loglist}
+    }{
+        \begin{logwork}
+            \item %
+        \end{logwork}
+        \begin{logdetail}
+            %
+        \end{logdetail}
+    }
     % =============================================================
     % Minggu Ke-15 (20 April - 26 April 2026)
     % =============================================================
@@ -22,21 +241,24 @@
     % =============================================================
     % Minggu Ke-16  (27 April - 3 Mei 2026)
     % =============================================================
-    
+
     % =============================================================
     % TEMPLATE
     \logentry{x.}
     {
         x \linebreak Apr 2026 \linebreak
-        xx:xx--xx:xx \linebreak
+        xx:xx--xx:xx \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item 
+            \item %
         \end{loglist}
     }{
+        \begin{logwork}
+            \item %
+        \end{logwork}
         \begin{logdetail}
-            \item -
+            %
         \end{logdetail}
     }
 
