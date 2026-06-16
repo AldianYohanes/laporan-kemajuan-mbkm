@@ -1,39 +1,487 @@
 \renewcommand{\reportmonth}{Mei}
-\renewcommand{\signaturedate}{1 Juni 2026}
+\renewcommand{\signaturedate}{2 Juni 2026}
 \input{logbook/top.tex}
 \begin{logtable}
 
     % =============================================================
-    % Minggu Ke-17  (4 Mei - 10 Mei 2026)
+    % Minggu Ke-17 (4 Mei -- 8 Mei 2026)
     % =============================================================
 
-    % =============================================================
-    % Minggu Ke-18  (11 Mei - 17 Mei  2026)
-    % =============================================================
-
-    % =============================================================
-    % Minggu Ke-19  (18 Mei - 24 Mei 2026)
-    % =============================================================
-
-    % =============================================================
-    % Minggu Ke-20 (25 Mei - 31 Mei 2026)
-    % =============================================================
-
-    % =============================================================
-    % TEMPLATE
-    \logentry{x.}
+    \logentry{1.}
     {
-        x \linebreak Mei 2026 \linebreak
-        xx:xx--xx:xx \linebreak
+        Senin \linebreak 4 Mei 2026 \linebreak
+        08:00--17:35 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item 
+            \item Menyelesaikan Task \#13848 (IMPROVEMENT): membuat mekanisme navigasi
+            \textit{split screen} antara React dan Toraja
+            \item Melakukan \textit{merge} dan \textit{clean up} pekerjaan Task \#13410 yang
+            sudah selesai di akhir April
         \end{loglist}
     }{
-        \begin{logdetail}
-            \item -
-        \end{logdetail}
+        \begin{logwork}
+            \item (\#13848) Menambahkan fungsi \texttt{redirectSplitScreen} yang memungkinkan halaman React mengirim sinyal navigasi ke Toraja melalui \textit{iframe}
+            \item (React) Menambahkan konfigurasi \textit{routing} Toraja ke aplikasi React, serta melakukan \textit{minor UI changes} dan \textit{merge branch master} ke branch 13410
+            \item (Toraja) Menambahkan \texttt{bp\_id} ke \texttt{GetPilihNomorLotView}, menonaktifkan \textit{iframe} Riwayat Stok yang sudah dipindahkan, memperbaiki \textit{typo} \texttt{http} $\rightarrow$ \texttt{https}, dan melakukan beberapa \textit{merge branch master} ke branch 13410
+        \end{logwork}
+    }
+
+    \logentry{2.}
+    {
+        Selasa \linebreak 5 Mei 2026 \linebreak
+        07:58--17:21 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melakukan penyesuaian bahasa dan tampilan di beberapa komponen React setelah
+            hasil \textit{code review} dari Mentor
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Mengubah \textit{date formatter} agar menggunakan bahasa Indonesia secara konsisten, termasuk pada komponen \textit{date range selector}
+            \item (React) Menambahkan \textit{skeleton loader} baru (\texttt{listbased-skeleton}) yang tampil ketika proses pengambilan data dari \textit{backend} memakan waktu lebih lama
+            \item (React) Menyembunyikan \textit{separator} di \texttt{dashboard-inventaris} saat tidak ada panel yang dibuka agar tampilan lebih bersih
+        \end{logwork}
+    }
+
+    \logentry{3.}
+    {
+        Rabu \linebreak 6 Mei 2026 \linebreak
+        08:02--17:48 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#14125 dan \#14130 (BUG): \textit{column mismatch} dan
+            \textit{state handling} pada Stok Opname
+            \item Mendapat Task \#14129 (BUG): \texttt{QuantityPicker} bertumpuk dengan
+            \textit{scrollbar}
+            \item Menyiapkan \textit{environment} baru untuk modul \textit{Stock Management} di
+            Toraja dan packages
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#14125 \& \#14130) Memperbaiki ketidaksesuaian nama kolom antara \textit{payload} \texttt{POST} dan \textit{response} API, serta meningkatkan logika \textit{error handling} dan manajemen \textit{state} pada halaman Stok Opname
+            \item (\#14129) Menetapkan \texttt{zIndex: 0} pada \texttt{QuantityPicker} agar tidak bertumpuk dengan \textit{scrollbar} komponen di sekitarnya
+            \item (React) Membangun komponen \texttt{error-toast} dan \texttt{show-toast}, mulai membangun halaman \texttt{dashboard-inventaris}, menyesuaikan warna utama ke \textit{shade} 4 sesuai warna asli HealthyOne, dan memformat tanggal panjang ke bahasa Indonesia
+            \item (Toraja + packages) Menambahkan konfigurasi \textit{environment} baru khusus untuk modul \textit{Stock Management}
+        \end{logwork}
+    }
+
+    \logentry{4.}
+    {
+        Kamis \linebreak 7 Mei 2026 \linebreak
+        08:05--17:17 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan perbaikan Stok Opname berdasarkan hasil \textit{testing} QA
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Memisahkan \textit{state} \texttt{search query} Stok Opname dari \texttt{bp\_id} agar keduanya tidak saling memengaruhi
+            \item (React) Menyembunyikan sementara komponen \textit{filter} pada \texttt{ListBased} Stok Opname yang belum berfungsi penuh agar tidak membingungkan pengguna
+        \end{logwork}
+    }
+
+    \logentry{5.}
+    {
+        Jumat \linebreak 8 Mei 2026 \linebreak
+        07:55--17:10 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#13848: memperbaiki nilai \texttt{is\_split\_screen} yang
+            salah saat melakukan \textit{redirect}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13848) Memperbaiki bug di mana nilai \texttt{is\_split\_screen} dikirim sebagai \texttt{false} saat seharusnya \texttt{true} ketika halaman dibuka dalam mode \textit{split screen} dari Toraja
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Minggu Ke-18 (11 Mei -- 15 Mei 2026)
+    % =============================================================
+
+    \logentry{6.}
+    {
+        Senin \linebreak 11 Mei 2026 \linebreak
+        07:59--17:33 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#14201 dan \#14281 (BUG): masalah pemilihan baris pada
+            \texttt{PilihNomorLot}
+            \item Menyelesaikan Task \#14282 (USER STORY): tampilkan \textit{error toast} jika
+            item dipilih tanpa perubahan kuantitas
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Memperbaiki logika \textit{select row} berdasarkan ID dan ketidaksesuaian tipe data di halaman \texttt{pilih-nomor-lot}
+            \item (\#14281 \& \#14201) Mengubah \textit{state} \texttt{selectedIds} dan menambahkan \texttt{allLoadedRows} untuk menyimpan baris dari seluruh halaman agar seleksi lintas halaman berjalan dengan benar
+            \item (\#14282) Menampilkan \textit{error toast} ketika pengguna memilih item tetapi tidak mengubah kuantitas sebelum menyimpan
+            \item (React) Meningkatkan UI \texttt{ListBased}: memperbaiki \textit{state} \texttt{viewType}, menambahkan tombol \textit{extra} untuk tampilan \textit{card}, serta memperbaiki tinggi baris dan tampilan \textit{pagination}
+        \end{logwork}
+    }
+
+    \logentry{7.}
+    {
+        Selasa \linebreak 12 Mei 2026 \linebreak
+        08:03--17:40 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Membangun komponen generik baru \textit{DataView} sebagai pengganti
+            \textit{ListBased} yang lebih \textit{powerful} dan fleksibel
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Merancang dan membangun struktur komponen \textit{DataView} (\textit{ListBased v2}) beserta arsitektur internalnya: \texttt{TableView}, \texttt{CardView}, \textit{filter menu}, \textit{group by}, dan \textit{visible columns}
+            \item (React) Mengimplementasikan sistem \textit{filtering} berbasis \textit{backend} pada \textit{DataView}, termasuk pengiriman parameter \textit{filter} ke API secara dinamis
+        \end{logwork}
+    }
+
+    \logentry{8.}
+    {
+        Rabu \linebreak 13 Mei 2026 \linebreak
+        08:07--17:50 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan pengembangan komponen \textit{DataView} dengan menambahkan fitur
+            \textit{card}, \textit{group by}, dan \textit{visible columns}
+            \item Melakukan \textit{refactor} halaman \texttt{laporan-stok-opname} agar
+            menggunakan \textit{DataView}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Menambahkan fungsi \texttt{setCardHeader} pada \textit{DataView} untuk menetapkan kolom tertentu sebagai \textit{header card}
+            \item (React) Melakukan \textit{refactor} halaman \texttt{laporan-stok-opname}: mengganti \texttt{ListBased} dengan \textit{DataView} beserta \textit{pagination}, \textit{filtering}, \textit{group by}, dan \textit{date select} yang sepenuhnya fungsional
+            \item (React) Membuat fungsi \texttt{generateColumnDef} yang secara otomatis membuat definisi kolom dari \texttt{response.data} API
+            \item (React) Menambahkan tampilan \textit{filter/group by} yang sedang aktif di bawah \textit{control bar} serta mengimplementasikan \textit{backend group by} dan fitur \textit{visible columns} (sembunyikan/tampilkan kolom)
+        \end{logwork}
+    }
+
+    \logentry{9.}
+    {
+        Jumat \linebreak 15 Mei 2026 \linebreak
+        08:00--17:28 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melengkapi fitur \textit{filtering} pada \textit{DataView} dan melakukan
+            \textit{refactor} halaman \texttt{laporan-pembelian}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Menambahkan fungsi \texttt{hideFilters} pada \textit{DataView} untuk menyembunyikan \textit{filter} tertentu dari \texttt{FilterMenu}, serta menambahkan tipe \textit{filter}: \textit{single select} dan \textit{multi select}
+            \item (React) Melakukan \textit{refactor} halaman \texttt{laporan-pembelian}: mengganti \texttt{ListBased} dengan \textit{DataView} serta mengimplementasikan \textit{pagination}, \textit{filtering}, \textit{group by}, dan \textit{date range select} yang sepenuhnya fungsional
+        \end{logwork}
+    }
+
+    \logevaluate{Dokumentasi Hasil Pekerjaan: Hasil Pekerjaan: Komponen DataView dengan fitur filter, group by, dan visible columns}{
+        \noindent\includegraphics[width=\linewidth]{3.4-dataview-component.png}
+    }
+
+    % =============================================================
+    % Minggu Ke-19 (18 Mei -- 22 Mei 2026)
+    % =============================================================
+
+    \logentry{10.}
+    {
+        Senin \linebreak 18 Mei 2026 \linebreak
+        08:04--17:42 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mengembangkan fitur \textit{filtering} dan \textit{labeling} pada
+            \texttt{dashboard-inventaris} dan \textit{DataView}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Memperbaiki \textit{DataView}: menangani \textit{input} kosong pada \textit{multi search} dan memindahkan definisi kolom (\textit{coldef}) \texttt{dashboard-inventaris} ke file tersendiri
+            \item (React) Membuat \textit{interface}, logika, dan komponen \textit{filtering} untuk \texttt{dashboard-inventaris} serta menambahkan kolom-kolom baru
+            \item (React) Menambahkan dukungan untuk label dan \textit{placeholder} terpetakan dari halaman ke \textit{DataView} agar nama kolom dan \textit{filter} yang tampil bisa disesuaikan
+            \item (React) Melakukan \textit{refactor} \texttt{laporan-pembelian} menggunakan \textit{DataView} sepenuhnya serta menambahkan tampilan \textit{mobile responsive} untuk \texttt{dashboard-inventaris}
+        \end{logwork}
+    }
+
+    \logentry{11.}
+    {
+        Selasa \linebreak 19 Mei 2026 \linebreak
+        07:57--17:35 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menambahkan fungsionalitas pembayaran di \texttt{laporan-pembelian} dan fitur
+            \textit{selectable row} di \textit{DataView}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Menambahkan fungsi \texttt{PutPurchaseReportManager} (tombol Bayar) di \texttt{laporan-pembelian} untuk memproses pembayaran laporan pembelian
+            \item (React) Menambahkan \textit{overlay} pesan \textit{unauthorized error} pada \texttt{dashboard-inventaris}
+            \item (React) Menambahkan fitur \textit{selectable row} pada \textit{DataView}, \textit{popover hover} pada \textit{header} kolom, dan \textit{skeleton loading} yang lebih baik
+            \item (React) Memperbarui fungsi \texttt{formatIDR} dan menambahkan \texttt{parseError} ke utils
+        \end{logwork}
+    }
+
+    \logentry{12.}
+    {
+        Rabu \linebreak 20 Mei 2026 \linebreak
+        08:01--17:29 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#14486 (BUG): kuantitas tidak sesuai unit terkecil di
+            \texttt{pilih-nomor-lot}
+            \item Melakukan \textit{cleanup} dan berbagai perbaikan \textit{minor}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#14486) Memperbaiki bug \texttt{setQuantities} di \texttt{pilih-nomor-lot}: menambahkan logika konversi ke unit terkecil di dalam \texttt{useEffect} agar \texttt{Pick Unit Select} tidak mengalami ketidaksesuaian saat pertama kali dimuat
+            \item (React) Melakukan \textit{cleanup} kode dan memperbarui package \texttt{Mantine} ke versi terbaru
+            \item (React) Menambahkan \textit{label map} untuk nama kolom saat melakukan \textit{group by} di \textit{DataView} dan \texttt{dashboard-inventaris}
+            \item (React) Memperbaiki \texttt{laporan-pembelian}: menambahkan \texttt{payment\_status\_label} untuk menentukan status tombol Bayar, menonaktifkan beberapa kolom yang belum relevan, dan memperbaiki \textit{field-column name mismatch}
+            \item (React) Memperbaiki \textit{DataView}: mengganti \textit{search chip} menjadi \texttt{renderPill} agar proses hapus \textit{search} lebih responsif, serta memperbaiki nama kolom yang dipilih untuk \textit{group by}
+        \end{logwork}
+    }
+
+    \logentry{13.}
+    {
+        Kamis \linebreak 21 Mei 2026 \linebreak
+        08:08--17:45 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#14263 (BUG): ketidakkonsistenan tinggi widget dan ukuran
+            ikon pada Flutter
+            \item Menyelesaikan Task \#13999 (BUILD): menghubungkan \texttt{dashboard-inventaris}
+            React dengan Toraja \textit{backend}
+            \item Menyelesaikan Task \#14553 (BUG) di repository
+            \texttt{healthcare-productdetection}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#14263) Memperbaiki ketidakkonsistenan tinggi widget dan ukuran ikon pada \texttt{TextForm}, \texttt{TimePicker}, \texttt{SingleDropdown}, dan \texttt{MultiDropdown} yang terkait sistem \textit{font size} tabel
+            \item (React) Menghapus file konfigurasi \texttt{pnpm} yang tidak digunakan serta memperbaiki warna \textit{hover} dan \textit{selected} pada \textit{list-based}
+            \item (\#13999) Membangun integrasi \textit{backend} untuk \texttt{dashboard-inventaris}: menghubungkan \texttt{laporan-pembelian} dan \texttt{laporan-stok-opname} React ke Toraja menggunakan \textit{iframe} dan API
+            \item (\#14553) Menghapus \textit{flag} \texttt{is\_currency} pada kolom 'Alasan Pengajuan PS/SP' yang menyebabkan format data tidak benar
+        \end{logwork}
+    }
+
+    \logentry{14.}
+    {
+        Jumat \linebreak 22 Mei 2026 \linebreak
+        07:53--17:21 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#14579 (BUG): perubahan versi \texttt{Mantine} menyebabkan
+            \textit{checkbox} di \textit{DataView} tidak berfungsi
+            \item Menambahkan \textit{font size provider} pada \textit{DataView}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React, \#14579) Memperbaiki \textit{module version change} yang menyebabkan \textit{checkbox} \texttt{Mantine} tidak ter-\textit{render} dengan benar di \textit{DataView}
+            \item (React) Menambahkan kemampuan komponen \textit{custom render} di dalam \textit{DataView} untuk mengikuti \textit{font size provider} yang aktif
+            \item (React) Menonaktifkan pengurutan untuk kolom yang memiliki komponen \textit{render} kustom di \texttt{pilih-nomor-lot}
+            \item (React) Mengoptimalkan penanganan \texttt{laporanType} di \texttt{laporan-pembelian} agar data tidak hilang setelah proses \textit{fetch}
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Minggu Ke-20 (25 Mei -- 29 Mei 2026)
+    % =============================================================
+
+    \logentry{15.}
+    {
+        Senin \linebreak 25 Mei 2026 \linebreak
+        07:58--17:36 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melengkapi fungsionalitas \textit{DataView} dengan fitur \textit{selectable}
+            yang sepenuhnya berjalan di \texttt{TableView} dan \texttt{CardView}, serta
+            \textit{custom controls}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Menambahkan fitur \textit{selectable} penuh pada \texttt{TableView} dan \texttt{CardView}: komponen \textit{render} dinamis mengikuti \texttt{TableFontSize}, memperbaiki algoritma pengurutan, dan melakukan various perbaikan \textit{styling}
+            \item (React) Menambahkan \textit{custom controls} untuk menyembunyikan komponen tertentu dari \textit{DataView} (seperti \texttt{FilterMenu}, \texttt{SearchBar}, \texttt{Select ViewType}), menambahkan tampilan \textit{empty state}, serta mengoptimalkan performa komponen
+            \item (React) Menambahkan \textit{transition} pada komponen \texttt{footer-button}
+            \item (React) Menambahkan \texttt{initialMount} \textit{ref} untuk mengatasi bug di mana kolom \textit{visible} menghilang ketika \textit{DataView} melakukan \textit{rerender}
+        \end{logwork}
+    }
+
+    \logentry{16.}
+    {
+        Selasa \linebreak 26 Mei 2026 \linebreak
+        08:00--17:15 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melakukan \textit{internal review} hasil pekerjaan \textit{DataView} bersama
+            Mentor dan tim QA
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item Mempresentasikan hasil fitur \textit{DataView} terbaru kepada Mentor untuk
+            mendapatkan \textit{feedback} dan arah pengembangan selanjutnya
+            \item Mendiskusikan prioritas perbaikan dan pengembangan bersama tim QA berdasarkan
+            hasil \textit{testing} komponen \textit{DataView}
+        \end{logwork}
+    }
+
+    \logevaluate{Dokumentasi Hasil Pekerjaan: Hasil Pekerjaan: Layar Detail Klinik Canvasser}{
+        \noindent\includegraphics[width=\linewidth]{3.4-canvasser-detailklinik.png}
+    }
+
+    \logentry{17.}
+    {
+        Rabu \linebreak 27 Mei 2026 \linebreak
+        08:03--17:22 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Merencanakan dan mulai mempersiapkan fitur \textit{export} data dan
+            \textit{multiple group by} pada \textit{DataView} dan
+            \texttt{dashboard-inventaris}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item Melakukan riset implementasi \textit{export} ke CSV dan XLSX menggunakan
+            \textit{library} yang kompatibel dengan \textit{stack} yang digunakan
+            \item Merancang arsitektur untuk fitur \textit{multiple group by keys} pada
+            \textit{DataView}
+        \end{logwork}
+    }
+
+    \logentry{18.}
+    {
+        Kamis \linebreak 28 Mei 2026 \linebreak
+        07:51--17:44 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melakukan \textit{refactor} besar pada \texttt{dashboard-inventaris} dan
+            \texttt{pilih-nomor-lot} serta berbagai perbaikan performa pada
+            \textit{DataView}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (React) Mengoptimalkan \texttt{dashboard-inventaris}: memecah komponen \texttt{laporan-pembelian} menjadi 3 komponen dan \textit{service} terpisah untuk menghindari \textit{data racing}, mengoptimalkan \textit{styling} dan logika \texttt{laporan-stok-opname}, serta menambahkan \texttt{TableFontSize} yang dinamis
+            \item (React) Mengoptimalkan \texttt{pilih-nomor-lot}: mengganti \texttt{ListBased} dengan \textit{DataView}, mengoptimalkan parameter \textit{service}, serta mempertahankan \textit{state} \texttt{selectedIds} saat \textit{pagination} atau \textit{search} dilakukan
+            \item (React) Memperbaiki \textit{DataView}: menambahkan \textit{overflow wrap} saat \textit{cardview} terlalu sempit, memperbaiki \textit{filtering} sebelum data di-\textit{render} oleh \texttt{AgGrid}, dan menonaktifkan sementara \textit{cell align}
+            \item (React) Memperbaiki \textit{state} \textit{group by} menjadi \texttt{null} jika kosong, menambahkan tombol hapus pada \textit{chip filter} tipe \textit{group}, dan memperbaiki \textit{double search} yang dipicu oleh \texttt{onBlur}
+            \item (React) Menambahkan \textit{advanced styling functionality} pada \texttt{quantity-picker} serta memperbaiki \texttt{formatIDR} agar menangani nilai \texttt{NaN}
+        \end{logwork}
+    }
+
+    \logentry{19.}
+    {
+        Jumat \linebreak 29 Mei 2026 \linebreak
+        08:05--17:32 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan beberapa \textit{bug fix} Flutter: Task \#13670, \#14699, dan
+            perbaikan \texttt{text-form}
+            \item Menyelesaikan Task \#14696 (IMPROVEMENT): fitur \textit{export} CSV dari
+            \textit{DataView} dan \texttt{dashboard-inventaris}
+            \item Menyelesaikan Task \#14697 (IMPROVEMENT): fitur \textit{multiple group by keys}
+            pada \textit{DataView} dan \texttt{dashboard-inventaris}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13670) Menonaktifkan fitur \textit{group by} untuk tipe tampilan \textit{card-vertical} pada \texttt{ListBased} yang belum mendukung fitur tersebut
+            \item (\#14699) Membungkus komponen \textit{error message} dengan \texttt{Flexible} agar tidak \textit{overflow} terhadap \textit{widget} lain di sekitarnya
+            \item Memperbaiki \texttt{text-form}: menambahkan \textit{ternary} untuk menentukan
+            ukuran \textit{font} berdasarkan \texttt{isForEditTable} serta memperbaiki
+            warna simbol \textit{required}
+            \item (\#14696) Menambahkan fungsi \textit{export} CSV di sisi \textit{frontend} pada \textit{DataView} dan halaman \texttt{dashboard-inventaris}
+            \item (\#14697) Menambahkan fitur \textit{multiple group by keys} pada \textit{DataView} dan \texttt{dashboard-inventaris}, memungkinkan data dikelompokkan berdasarkan lebih dari satu kolom sekaligus
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Evaluasi Bulanan
+    % ============================================================= 
+    \logevaluate{Analisis dan Pembahasan}{
+        Di awal bulan, pekerjaan berfokus pada penyelesaian sisa \textit{alignment} dari April (Task \#13286, \#13592, \#13999, \#14000, \#13848), yang kemudian langsung diikuti oleh serangkaian \textit{bug fix} dan \textit{user story} pada halaman Stok Opname (\#14125--\#14133, \#14201, \#14176).
+
+        Development komponen generik \texttt{DataView} (Task \#14855) pada minggu kedua
+        merupakan tugas terbesar selama menjalani magang karena fungsionalitasnya yang
+        kompleks. Komponen ini dirancang sebagai pengganti \texttt{ListBased} yang
+        lebih canggih: mendukung \textit{pagination}, \textit{filtering}, \textit{group
+            by}, \textit{visible columns}, \textit{selectable rows}, dan \textit{custom
+            render components} yang semuanya bisa dikonfigurasi dari halaman pemakai. Dalam
+        waktu dua minggu, \texttt{DataView} sudah diterapkan di
+        \texttt{laporan-stok-opname}, \texttt{laporan-pembelian}, dan
+        \texttt{dashboard-inventaris}.
+
+        Di minggu ketiga dan keempat, pekerjaan terbagi antara fitur-fitur baru (Task
+        \#14481 --- Layar Detail Klinik Canvasser, Task \#14586 --- migrasi komponen ke
+        DataView, Task \#14696/\#14697 --- export dan multiple group by) serta berbagai
+        \textit{bug fix} lintas repository (\#14271, \#14486, \#14553, \#14572,
+        \#14579, \#14646, \#14685, \#14699). Pada periode ini peran \textit{full-stack}
+        semakin terasa dengan tetap terlibat di sisi Toraja untuk keperluan endpoint
+        Dashboard Inventaris. }
+
+    \logevaluate{Capaian yang Telah Diselesaikan}{
+        \begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+            \item Menyelesaikan Task \#13286 \& \#13592: halaman laporan Stok Opname dan laporan
+                  Pembelian React (STAGING).
+            \item Menyelesaikan Task \#13999: \textit{alignment} Dashboard Inventaris ke
+                  \textit{backend} Toraja.
+            \item Menyelesaikan Task \#14000: Riwayat Stok align ke \textit{backend}.
+            \item Menyelesaikan Task \#13848: navigasi \textit{split screen} React--Toraja
+                  berfungsi penuh.
+            \item Menyelesaikan Task \#14125, \#14128--\#14131, \#14133, \#14176, \#14201:
+                  serangkaian perbaikan halaman Stok Opname.
+            \item Menyelesaikan Task \#14234: filter Dashboard Inventaris.
+            \item Menyelesaikan Task \#14263: konsistensi ukuran widget pada \textit{editable
+                      table} Flutter.
+            \item Menyelesaikan Task \#14271: bug \textit{double entry} supplier di detail PSSP.
+            \item Menyelesaikan Task \#14281 \& \#14282: perbaikan Stok Opname multi-halaman dan
+                  validasi seleksi produk.
+            \item Menyelesaikan Task \#14486: konversi kuantitas ke unit terkecil di
+                  \texttt{pilih-nomor-lot}.
+            \item Menyelesaikan Task \#14481: layar Detail Klinik Canvasser.
+            \item Menyelesaikan Task \#14553: perbaikan tampilan alasan under branded Canvasser.
+            \item Menyelesaikan Task \#14572 \& \#14579: perbaikan data tabel dan checkbox di
+                  \texttt{laporan-pembelian}.
+            \item Menyelesaikan Task \#14586: migrasi komponen \texttt{ListBased} ke
+                  \texttt{DataView} di seluruh halaman terdampak.
+            \item Menyelesaikan Task \#14627: tombol Bayar tetap di halaman yang sama.
+            \item Menyelesaikan Task \#14127: perbaikan lanjutan \textit{font size} widget
+                  Flutter.
+            \item Menyelesaikan Task \#14646 \& \#14685: bug fix pasca-migrasi pada Dashboard
+                  Inventaris dan Stok Opname.
+            \item Menyelesaikan Task \#14699: perbaikan pesan validasi \textit{birthdate}
+                  Flutter.
+            \item Menyelesaikan Task \#13670: perbaikan \textit{Group By} filter pada
+                  \texttt{ListBased} Flutter.
+            \item Memulai Task \#14696, \#14697, \#14740, dan \#14374 yang akan dilanjutkan di
+                  Juni.
+        \end{itemize}
+    }
+
+    \logevaluate{Capaian yang Belum Diselesaikan}{
+        \begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+            \item Task \#14696 (\textit{export} XLSX), \#14697 (\textit{multiple group by}),
+                  \#14740 (\textit{fix sort jumlah data}), dan \#14374 (\textit{Diagnosis
+                      Sekunder hilang}) sudah dimulai di akhir bulan dan akan diselesaikan di awal
+                  Juni.
+        \end{itemize}
+    }
+
+    \logevaluate{Kendala}{
+        Pembangunan komponen \texttt{DataView} dari nol sambil sekaligus menggunakannya di beberapa halaman berbeda menimbulkan banyak bug yang tidak terduga --- terutama terkait \textit{state management} saat \textit{rerendering}, konflik \textit{scrollbar}, dan ketidaksesuaian tipe data. Debugging membutuhkan waktu cukup lama karena penyebabnya seringkali berasal dari interaksi antar komponen yang kompleks.
+    }
+
+    \logevaluate{Solusi}{
+        Pembangunan \texttt{DataView} dilakukan secara bertahap dengan mengutamakan pengujian di setiap penambahan fitur baru. Ketika bug muncul, \textit{state flow} ditelusuri satu per satu menggunakan \texttt{console.log} sementara dan \textit{React DevTools}. Migrasi dari \texttt{ListBased} ke \texttt{DataView} dilakukan halaman per halaman (bukan sekaligus) untuk memastikan setiap halaman berfungsi sebelum lanjut ke berikutnya.
     }
 
 \end{logtable}

@@ -4,40 +4,97 @@
 \begin{logtable}
 
     % =============================================================
-    % Minggu Ke-21  (1 Juni - 7 Juni 2026)
+    % Minggu Ke-21 (1 Juni -- 7 Juni 2026)
     % =============================================================
 
-    % =============================================================
-    % Minggu Ke-22  (8 Juni - 14 Juni 2026)
-    % =============================================================
-
-    % =============================================================
-    % Minggu Ke-23  (15 Juni - 21 Juni 2026)
-    % =============================================================
-
-    % =============================================================
-    % Minggu Ke-24 (22 Juni - 28 Juni 2026)
-    % =============================================================
-
-    % =============================================================
-    % Minggu Ke-25 (29 Juni - 5 Juli 2026)
-    % =============================================================
-
-    % =============================================================
-    % TEMPLATE
-    \logentry{x.}
+    \logentry{1.}
     {
-        x \linebreak Mei 2026 \linebreak
-        xx:xx--xx:xx \linebreak
+        Selasa \linebreak 2 Jun 2026 \linebreak
+        08:13--17:21 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item 
+            \item Melengkapi Task \#14696 (\textit{USER STORY}): Export file Dashboard Inventaris
+            dengan format XLSX
+            \item Menyelesaikan Task \#14740 (\textit{BUG}): Perbaikan \textit{sorting} kolom
+            \texttt{jumlah\_data} saat \textit{group by} aktif
+            \item Menyelesaikan Task \#14697 (\textit{USER STORY}): \textit{Group by} lebih dari
+            1 kolom
         \end{loglist}
     }{
-        \begin{logdetail}
-            \item -
-        \end{logdetail}
+        \begin{logwork}
+            \item (\#14696) Menambahkan fungsi \textit{export} ke format XLSX sebagai pelengkap dari fitur CSV; menambahkan pengecekan \texttt{hasActiveFilters} agar hasil ekspor sesuai filter aktif; menonaktifkan \textit{alternating row color} saat proses \textit{export}
+            \item (\#14740) Memperbaiki logika pengurutan pada kolom \texttt{jumlah\_data} yang bermasalah ketika data sedang dikelompokkan
+            \item (\#14697) Merapikan dan memfinalisasi implementasi \textit{multiple group by keys} pada \textit{DataView} dan Dashboard Inventaris, termasuk merapikan komponen \textit{chip} kelompok data
+        \end{logwork}
+    }
+
+    \logentry{2.}
+    {
+        Rabu \linebreak 3 Jun 2026 \linebreak
+        08:11--17:14 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat dan menyelesaikan Task \#14858 (\textit{BUG}): Dropdown tidak lengkap
+            menampilkan data di layar Riwayat Pengobatan
+            \item Mendapat Task \#14965 (\textit{IMPROVEMENT}): Pembaruan
+            \texttt{generateColumnDef} di \textit{DataView} agar otomatis mendeteksi format
+            data
+            \item Mendapat Task \#14857 (\textit{NEW}): Inisiasi pengerjaan \textit{alignment
+                endpoint} Stok Opname \& Riwayat Belanja ke \textit{backend}
+            \item Melanjutkan penanganan Task \#14374 (\textit{BUG}): Diagnosis Sekunder hilang
+            di widget \textit{search chip} Flutter
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#14858) Menemukan penyebab dropdown terkunci karena properti \texttt{prototypeItem} pada komponen \texttt{search\_chip}; menghapus properti tersebut agar tinggi \textit{chip} responsif secara dinamis
+            \item (\#14965) Merancang fitur \textit{auto-detect} tipe data pada \texttt{generateColumnDef}: memformat otomatis tipe \textit{currency} ke 'Rp' dan tipe \textit{date} ke format tanggal Indonesia
+            \item (\#14857) Mempelajari kebutuhan struktur \textit{endpoint} pada komponen Toraja untuk halaman terkait
+        \end{logwork}
+    }
+
+    \logentry{3.}
+    {
+        Kamis \linebreak 4 Jun 2026 \linebreak
+        12:08--17:11 \linebreak % chktex 8
+        WFO *(terlambat 248 menit)*
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#14374, \#14858, \#14965, \#14696, dan \#14697
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#14374) Memperbaiki penanganan \textit{items provider} pada widget \texttt{search\_chip} Flutter agar data Diagnosis Sekunder tidak hilang saat AI Scribe melakukan pembaruan \textit{state}
+            \item (\#14858) Melakukan \textit{commit} final perbaikan \texttt{search-chip} dan mengajukan \textit{merge request}
+            \item (\#14965) Memfinalisasi implementasi otomatisasi \textit{data formatter} untuk \textit{CardItem} di komponen \textit{DataView}
+            \item (\#14696 \& \#14697) Melakukan \textit{merge} cabang akhir untuk fitur \textit{export} XLSX dan \textit{multiple group by}, memastikan fungsionalitas berjalan lancar di \textit{environment staging}
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Minggu Ke-22 (8 Juni -- 14 Juni 2026)
+    % =============================================================
+
+    \logentry{4.}
+    {
+        Senin \linebreak 8 Jun 2026 \linebreak
+        08:03--17:14 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#15085 (\textit{NEW}): Menghubungkan \textit{endpoint backend}
+            ke halaman Details Belanja
+            \item Membuat halaman \textit{landing page} baru aplikasi \textit{Stock Management}
+            dan melakukan \textit{cleanup} komponen lama
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15085) Menganalisis struktur halaman Details Belanja, memetakan \textit{endpoint} Toraja, dan berkoordinasi dengan tim \textit{Backend} terkait format data \textit{response}
+            \item Membangun halaman \textit{landing page} \textit{Stock Management} dengan
+            \textit{routing} modul yang fleksibel (Riwayat Stok, Stok Opname, Dashboard
+            Inventaris)
+        \end{logwork}
     }
 
 \end{logtable}

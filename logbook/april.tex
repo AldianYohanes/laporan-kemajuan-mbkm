@@ -1,10 +1,11 @@
 \renewcommand{\reportmonth}{April}
 \renewcommand{\signaturedate}{1 Mei 2026}
 \input{logbook/top.tex}
+
 \begin{logtable}
 
     % =============================================================
-    % Minggu Ke-12  (30 Maret - 5 April 2026)
+    % Minggu Ke-13 (1 April - 5 April 2026)
     % =============================================================
 
     \logentry{1.}
@@ -14,19 +15,16 @@
         WFO
     }{
         \begin{loglist}
-            \item Melanjutkan Task \#12809
-            \item Mendapat Task \#12934 (BUG): Tidak bisa menggunakan \textit{Date Picker widget}
-            di dalam \textit{Editable Table}
-            \item Mendapat Task \#12928 (IMPROVEMENT): Teks `Rp' di dalam \textit{Nominal Text
-                Input widget} tidak terpengaruh \textit{customizable font size}
+            \item Menyelesaikan Task \#12798 (\textit{NEW}): Halaman Marketplace B2B + Cart
+            (React) --- carry-over dari akhir Maret.
+            \item Mendapat Task \#12809 (\textit{IMPROVEMENT}): Beberapa widget di
+            \textit{editable table} belum mengikuti pergantian \textit{font size}.
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#12809) Merapihkan \textit{styling} dan kode yang tidak penting dalam \textit{file} yang diubah
+            \item (\#12798) Melakukan finalisasi layar Marketplace B2B: merapikan \textit{routing}, \textit{styling}, dan mengajukan \textit{merge request}.
+            \item (\#12809) Memperbaiki \textit{blank widget} \texttt{TextField} dan ukuran \texttt{CircularProgressIndicator} agar responsif terhadap \texttt{TableFontUtils}.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
 
     \logentry{2.}
@@ -36,230 +34,449 @@
         WFO
     }{
         \begin{loglist}
-            \item Melanjutkan Task \#12934 dan \#12928
+            \item Mendapat Task \#12928 (\textit{IMPROVEMENT}): Rupiah di harga satuan tidak
+            mengikuti perubahan \textit{font size} tabel.
+            \item Mendapat Task \#12934 (\textit{BUG}): Tidak bisa input tanggal kedaluwarsa
+            (\texttt{DatePicker} tidak responsif di dalam tabel).
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#12928) Memodifikasi \textit{file} \texttt{text\_form.dart} agar bisa mendeteksi
-            \texttt{if (widget.isForEditTable == true)}. % cktex 36
-            \item (\#12934) Memodifikasi \textit{logic} \texttt{date\_field.dart} dan \texttt{date\_picker.dart} agar bisa \textit{build} \texttt{selectableDayPredicate} dengan benar
-
+            \item (\#12928) Menambahkan \textit{dynamic styling} pada prefix 'Rp' agar mengikuti \textit{state} \texttt{TableFontUtils} yang aktif.
+            \item (\#12934) Memperbaiki \textit{null handling} pada widget \texttt{DateField} di konteks \textit{editable table} dengan menambahkan \textit{ternary operator} untuk mengonversi nilai kosong menjadi \texttt{null} sebelum diproses.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
 
     % =============================================================
-    % Minggu Ke-13  (6 April - 12 April 2026)
-    % ============================================================= 
+    % Minggu Ke-14 (6 April - 12 April 2026)
+    % =============================================================
+
     \logentry{3.}
     {
         Senin \linebreak 6 Apr 2026 \linebreak
-        08:04--17:54 \linebreak % chktex 8
+        08:04--17:14 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item Mendapat Task \#13137 (IMPROVEMENT): Ukuran tombol \textit{Delete} pada
-            \textit{ListBased widget} tidak \textit{responsive} dengan \textit{customizable
-                font size}
+            \item Mendapat Task \#13137 (\textit{IMPROVEMENT}): Tombol \textit{delete} di dalam
+            tabel tidak menyesuaikan ukuran saat \textit{font size} diubah.
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#13137) Memodifikasi \texttt{table.dart, button\_widgets.dart} dan
-            \texttt{delete\_button.dart} untuk memperbaiki \textit{styling} yang
-            \textit{error}
+            \item (\#13137) Menganalisis penyebab tombol \textit{delete} tidak responsif: ditemukan bahwa \textit{padding} dan \textit{height} tidak memperbarui \textit{state} dengan benar saat \texttt{TableFontUtils} berubah.
+            \item (\#13137) Mulai mengimplementasikan perbaikan dengan membungkus tombol menggunakan \texttt{ValueListenableBuilder} agar selalu sinkron dengan \textit{state} terkini.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
 
     \logentry{4.}
     {
         Selasa \linebreak 7 Apr 2026 \linebreak
-        07:57--17:xx \linebreak % chktex 8
+        07:57--17:06 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item Melanjutkan Task \#13137
+            \item Melanjutkan dan menyelesaikan Task \#13137.
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#13137) Mengecek penggunaan \textit{delete button} dalam \textit{ListBased widget} di layar-layar lain untuk memastikan \textit{styling} konsisten
+            \item (\#13137) Memfinalisasi perbaikan \texttt{ValueListenableBuilder} pada tombol \textit{delete}; memperbaiki \textit{inkwell hover styling} dan \texttt{SizedBox.expand} pada \texttt{DataCellExpanded}.
+            \item Mengajukan \textit{merge request} Task \#13137 untuk direview Mentor.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
 
     \logentry{5.}
     {
         Rabu \linebreak 8 Apr 2026 \linebreak
-        08:06--xx:xx \linebreak % chktex 8
+        08:06--17:11 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item Mendapat Task \#13328 (BUG): \textit{Multi Dropdown} tidak bisa \textit{scroll}
-            sampai bawah ketika menggunakan \textit{mobile device}
-            \item Mendapat Task \#13240 (IMPROVEMENT): Tambah fitur ambil gambar pakai kamera
-            dalam \textit{Multiple Upload widget}
+            \item Mendapat Task \#13228 (\textit{BUG}): Dropdown di Canvasser mentok/tidak bisa
+            di-scroll sampai bawah saat dibuka di perangkat \textit{mobile}.
+            \item Mendapat Task \#13240 (\textit{IMPROVEMENT}): Widget upload gambar
+            (\texttt{ImageField}) bisa mengambil foto langsung dari kamera.
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#13328) Memodifikasi \texttt{custom\_dropdown.dart} dan mengganti
-            \texttt{SingleChildScrollView + Column} dengan \texttt{Container} karena sudah
-            ada \textit{scrollbar} di dalam \texttt{ListView.builder}
+            \item (\#13228) Menganalisis penyebab masalah: ditemukan adanya beberapa \textit{scrollbar} yang bertumpuk di dalam widget \texttt{MultiDropdown}.
+            \item (\#13240) Mempelajari dokumentasi API kamera Flutter (\texttt{camera} package) dan merancang struktur widget \texttt{CapturePhotoScreen}.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
 
     \logentry{6.}
     {
         Kamis \linebreak 9 Apr 2026 \linebreak
-        xx:xx--xx:xx \linebreak % chktex 8
+        08:04--17:11 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item Melanjutkan Task \#13228 dan \#13240
+            \item Menyelesaikan Task \#13228.
+            \item Melanjutkan Task \#13240.
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#13228) Memastikan layar lain yang menggunakan \textit{Multi Dropdown widget} sudah fungsional dan konsisten
-            \item (\#13240) Membuat \textit{widget} baru bernama \textit{Capture Photo Screen} yang berfungsi untuk mengambil gambar menggunakan kamera dari perangkat yang digunakan \textit{user} (\textit{webcam}/kamera)
+            \item (\#13228) Menghapus \texttt{SingleChildScrollView} dan \texttt{Column} yang bermasalah, menggantikannya dengan \texttt{Container} biasa karena \texttt{ListView.builder} di dalamnya sudah memiliki \textit{scrollbar} sendiri. Mengajukan \textit{merge request}.
+            \item (\#13240) Membangun struktur awal widget \texttt{CapturePhotoScreen} beserta manajemen \textit{state} untuk mengelola \textit{stream} kamera dan toggle antara kamera depan dan belakang.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
 
+    % =============================================================
+    % Minggu Ke-15 (13 April - 19 April 2026)
+    % =============================================================
+
     \logentry{7.}
-    {
-        Jumat \linebreak 10 Apr 2026
-    }{Izin tidak masuk kerja karena sakit.}{}
-    % =============================================================
-    % Minggu Ke-14  (13 April - 19 April 2026)
-    % =============================================================
-    \logentry{8.}
     {
         Senin \linebreak 13 Apr 2026 \linebreak
         08:04--17:06 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item Melanjutkan Task \#13240
+            \item Menyelesaikan Task \#13240.
         \end{loglist}
     }{
         \begin{logwork}
-            \item %
+            \item (\#13240) Mengintegrasikan widget \texttt{CapturePhotoScreen} ke dalam \texttt{ImageField}: menambahkan opsi pilihan antara \textit{upload} dari file atau ambil foto langsung menggunakan kamera.
+            \item (\#13240) Melakukan pengujian mandiri pada berbagai kondisi (kamera tidak tersedia, izin ditolak, ukuran file besar) dan mengajukan \textit{merge request}.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
-    % =============================================================
-    % CURRENT DAY
-    % =============================================================
-    \logentry{9.}
+
+    \logentry{8.}
     {
         Selasa \linebreak 14 Apr 2026 \linebreak
         08:02--17:15 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item Tidak ada Task baru
+            \item Melakukan \textit{review} hasil Task \#13240 bersama tim QA dan koordinasi
+            persiapan task berikutnya.
         \end{loglist}
     }{
         \begin{logwork}
-            \item %
+            \item Berkoordinasi dengan tim QA untuk \textit{testing} Task \#13240 di environment
+            \textit{staging}.
+            \item Mempelajari dan menganalisis laporan bug terkait pengurutan kolom tanggal pada
+            tabel (persiapan Task \#13508).
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
 
-    \logentry{10.}
+    \logentry{9.}
     {
         Rabu \linebreak 15 Apr 2026 \linebreak
         07:40--17:11 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item %
+            \item Melanjutkan persiapan Task \#13508 (\textit{BUG}): Bug fix urutan kolom tanggal
+            (asc, desc).
         \end{loglist}
     }{
         \begin{logwork}
-            \item %
+            \item Melakukan reproduksi bug pengurutan kolom tanggal secara lokal untuk memahami
+            \textit{root cause} sebelum mulai perbaikan.
+            \item Mempelajari implementasi pengurutan tabel yang sudah ada dan merancang
+            pendekatan perbaikan yang tidak akan merusak tipe data lain.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
+    }
+
+    \logevaluate{Dokumentasi Hasil Pekerjaan: Widget CapturePhotoScreen dan ImageField dengan fitur Ambil Foto}{
+        \noindent\includegraphics[width=\linewidth]{3.4-capturephotoscreen.png}
+    }
+
+    \logentry{10.}
+    {
+        Kamis \linebreak 16 Apr 2026 \linebreak
+        07:55--17:17 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#13508 (\textit{BUG}): Bug fix urutan kolom tanggal (asc, desc)
+            pada tabel.
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13508) Mengimplementasikan perbaikan logika pengurutan: menambahkan \textit{sort handler} untuk tipe data \texttt{date}, \texttt{date-range}, dan \texttt{datetime}.
+            \item (\#13508) Memperbaiki fungsi perbandingan data agar menggunakan metode yang tepat sesuai tipe data kolom.
+        \end{logwork}
     }
 
     \logentry{11.}
     {
-        Kamis \linebreak 16 Apr 2026 \linebreak
-        xx:xx--xx:xx \linebreak % chktex 8
+        Jumat \linebreak 17 Apr 2026 \linebreak
+        08:11--17:20 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item Mendapat Task #13508 (BUG): \textit{Fix Sorting} Tabel untuk kolom tanggal
-            karena tidak urut berdasarkan tanggal
+            \item Melanjutkan Task \#13508.
+            \item Mendapat Task \#13549 (\textit{IMPROVEMENT}): Text widget \textit{custom
+                margin} dan \textit{padding} dari \textit{backend} (sebelumnya hanya bisa
+            dikonfigurasi dari \textit{frontend}).
         \end{loglist}
     }{
         \begin{logwork}
-            \item (\#13508) Mendeteksi kesalahan dari \textit{back-end} karena tipe data yang dipakai adalah \textit{`String'} yang seharusnya adalah \textit{`Date'} (kebanyakan tabel seperti ini)
+            \item (\#13508) Melakukan pengujian pengurutan pada berbagai kombinasi data dan memperbaiki \textit{edge case} yang ditemukan.
+            \item (\#13549) Mulai menganalisis struktur JSON SDUI yang ada dan merancang penambahan parameter \texttt{margin} dan \texttt{padding} yang bisa dikirim dari \textit{backend}.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
     }
+
+    % =============================================================
+    % Minggu Ke-16 (20 April - 26 April 2026)
+    % =============================================================
 
     \logentry{12.}
     {
-        Jumat \linebreak 17 Apr 2026 \linebreak
-        xx:xx--xx:xx \linebreak % chktex 8
+        Senin \linebreak 20 Apr 2026 \linebreak
+        08:13--17:15 \linebreak % chktex 8
         WFO
     }{
         \begin{loglist}
-            \item Mendapat Task \#13549 (IMPROVEMENT): \textit{Widget Text Custom} bisa
-            \textit{styling padding} dan \textit{spacing} dari \textit{Back-End} \end{loglist}
-    }{
-        \begin{logwork}
-            \item %
-        \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
-    }
-    % =============================================================
-    % Minggu Ke-15 (20 April - 26 April 2026)
-    % =============================================================
-
-    % =============================================================
-    % Minggu Ke-16  (27 April - 3 Mei 2026)
-    % =============================================================
-
-    % =============================================================
-    % TEMPLATE
-    \logentry{x.}
-    {
-        x \linebreak Apr 2026 \linebreak
-        xx:xx--xx:xx \linebreak % chktex 8
-        WFO
-    }{
-        \begin{loglist}
-            \item %
+            \item Menyelesaikan Task \#13508.
+            \item Mendapat Task \#13563 (\textit{BUG}): Ikon Konsultasi tidak mengikuti ukuran
+            font.
+            \item Mendapat Task \#13590 (\textit{NEW}): Komponen Sidebar untuk
+            \texttt{psychotest-management-app}.
+            \item Memulai Task \#13410 (\textit{NEW}): Hubungkan \textit{backend} Stok Opname
+            Dinamis (IMMEDIATE, STAGING).
         \end{loglist}
     }{
         \begin{logwork}
-            \item %
+            \item (\#13508) Memfinalisasi perbaikan pengurutan kolom tanggal dan mengajukan \textit{merge request}.
+            \item (\#13563) Memperbaiki ikon Konsultasi agar mengikuti sistem ukuran font yang aktif (single-day task).
+            \item (\#13590) Membuat struktur awal komponen Sidebar untuk \texttt{psychotest-management-app}.
+            \item (\#13410) Mulai menganalisis arsitektur koneksi \textit{backend}: mempelajari endpoint Stok Opname yang tersedia dan merencanakan integrasi dengan halaman React.
         \end{logwork}
-        \begin{logdetail}
-            %
-        \end{logdetail}
+    }
+
+    \logentry{13.}
+    {
+        Selasa \linebreak 21 Apr 2026 \linebreak
+        07:40--17:15 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#13597 (\textit{IMPROVEMENT}): Perbaikan posisi simbol
+            \textit{required} (*) pada \texttt{TextField}.
+            \item Melanjutkan Task \#13549, \#13590, dan \#13410.
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13597) Menghapus komponen \texttt{Expanded} pada widget \textit{upload button} agar simbol asterisk tampil tepat di sebelah label teks (single-day task).
+            \item (\#13549) Mengimplementasikan parsing parameter \texttt{margin} dan \texttt{padding} dari JSON SDUI ke widget \texttt{Text} dan \texttt{Section}.
+            \item (\#13590) Melanjutkan pembangunan komponen Sidebar dengan navigasi dan styling.
+            \item (\#13410) Mulai menghubungkan halaman React Riwayat Stok dengan API: implementasi \textit{fetch data}, \textit{pagination}, dan tampilan tabel dinamis.
+        \end{logwork}
+    }
+
+    \logentry{14.}
+    {
+        Rabu \linebreak 22 Apr 2026 \linebreak
+        08:04--17:23 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#13549, \#13590, \#13410.
+            \item Mendapat Task \#13612 (\textit{IMPROVEMENT}): Sorting kolom tanggal (lanjutan
+            dari \#13508).
+            \item Mendapat Task \#13635 (\textit{IMPROVEMENT}): Alert widget saat muncul
+            posisinya jangan paling bawah.
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13549) Melanjutkan implementasi \textit{custom margin \& padding} pada widget-widget di dalam \texttt{Section}.
+            \item (\#13590) Melanjutkan dan merapikan komponen Sidebar; penambahan \textit{routing} dan \textit{state}.
+            \item (\#13612) Mulai mengerjakan perbaikan lanjutan untuk pengurutan kolom tanggal yang masih memiliki edge case.
+            \item (\#13635) Mengangkat posisi \textit{snackbar/alert} agar tidak tertutup elemen di bawah layar.
+            \item (\#13410) Melanjutkan koneksi \textit{backend}: menyesuaikan format \textit{response} API dengan kebutuhan komponen tabel React.
+        \end{logwork}
+    }
+
+    \logentry{15.}
+    {
+        Kamis \linebreak 23 Apr 2026 \linebreak
+        08:12--17:14 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#13590.
+            \item Melanjutkan Task \#13549, \#13612, \#13635, dan \#13410.
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13590) Memfinalisasi komponen Sidebar \texttt{psychotest-management-app} dan mengajukan \textit{merge request}.
+            \item (\#13549) Melanjutkan penyempurnaan fitur \textit{custom padding} pada berbagai tipe widget.
+            \item (\#13612) Menambahkan \textit{null handling} untuk tipe \texttt{date}, \texttt{date-range}, dan \texttt{datetime} pada fungsi \textit{sort}.
+            \item (\#13635) Merapikan logika \textit{positioning} \textit{snackbar/alert} untuk berbagai kondisi tampilan.
+            \item (\#13410) Memulai pekerjaan di sisi Toraja: menyesuaikan endpoint \texttt{GetRiwayatStock} untuk mendukung tampilan \textit{iframe} baru yang digunakan React.
+        \end{logwork}
+    }
+
+    \logentry{16.}
+    {
+        Jumat \linebreak 24 Apr 2026 \linebreak
+        07:58--17:13 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#12566 (\textit{USER STORY}): Kolom keterangan saat buat Stok
+            Opname bisa di-input (di staging).
+            \item Menyelesaikan Task \#13549, \#13612, dan \#13635.
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#12566) Menambahkan kolom input keterangan pada form pembuatan Stok Opname di environment \textit{staging} (single-day task).
+            \item (\#13549) Melakukan \textit{commit} final: \texttt{feat(section \& widget extra padding bottom \#13549)} --- fitur \textit{custom padding} sepenuhnya berfungsi.
+            \item (\#13612) Melakukan \textit{commit} final: \texttt{fix(table sort \#13612)} --- pengurutan tanggal dengan \textit{null handling} selesai.
+            \item (\#13635) Melakukan \textit{commit} final: \texttt{styling(snackbar \#13635)} --- posisi \textit{alert} dipindahkan ke posisi yang lebih sesuai.
+        \end{logwork}
+    }
+
+    \logevaluate{Dokumentasi Hasil Pekerjaan: Komponen Sidebar untuk Psychotest Management App}{
+        \noindent\includegraphics[width=\linewidth]{3.4-psychotest-sidebar.png}
+    }
+
+    % =============================================================
+    % Minggu Ke-17 (27 April - 30 April 2026)
+    % =============================================================
+
+    \logentry{17.}
+    {
+        Senin \linebreak 27 Apr 2026 \linebreak
+        08:10--17:14 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#13701 (\textit{IMPROVEMENT}): Fix spacing \texttt{TextField}.
+            \item Melanjutkan Task \#13410.
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13701) Memperbaiki \textit{spacing} yang tidak konsisten pada widget \texttt{TextField} di beberapa layar (single-day task).
+            \item (\#13410) Memperbaiki bug \textit{rerendering error} pada komponen \textit{list based}; mengimplementasikan pengambilan data Stok Opname dari API (\texttt{GET}); menambahkan \textit{routing} dari Riwayat Stok ke halaman Details Rincian dan Stok Opname. Di sisi Toraja, melakukan \textit{merge branch master} dan memperbaiki nilai default \texttt{with\_padding\_bottom} di packages.
+        \end{logwork}
+    }
+
+    \logentry{18.}
+    {
+        Selasa \linebreak 28 Apr 2026 \linebreak
+        08:07--17:19 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#13410 (IMMEDIATE).
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13410) Di sisi React: melanjutkan \textit{alignment} Stok Opname untuk operasi \texttt{POST} data \& menyesuaikan dengan \textit{filter} di \textit{backend}; mengimplementasikan \textit{pagination} dan \textit{filtering} berbasis \textit{backend} pada \textit{list based}.
+            \item (\#13410) Di sisi Toraja: menambahkan \textit{routing} dari Riwayat Stok ke Stok Opname; melakukan beberapa kali \textit{merge branch master} ke branch 13410 untuk menjaga kode tetap \textit{up-to-date}.
+        \end{logwork}
+    }
+
+    \logentry{19.}
+    {
+        Rabu \linebreak 29 Apr 2026 \linebreak
+        08:06--17:19 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#13816 (\textit{BUG}): Fitur sort kolom tabel hanya berfungsi
+            terhadap data angka dan tanggal.
+            \item Memulai Task \#13848 (\textit{IMPROVEMENT}): React-Toraja new routing for split
+            screen.
+            \item Menyelesaikan Task \#13410.
+            \item Memulai Task \#14000 (\textit{NEW}): Riwayat stok align ke BE.
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#13816) Memperbaiki \textit{typo} pada perbandingan data di dalam \texttt{table.dart} yang menyebabkan data tidak tampil dengan benar untuk beberapa tipe kolom (single-day task).
+            \item (\#13410) Memfinalisasi seluruh pekerjaan \textit{alignment} Stok Opname dan mengajukan \textit{merge request}.
+            \item (\#13848) Mulai menganalisis mekanisme komunikasi antara React (\textit{iframe}) dan Toraja untuk navigasi \textit{split screen}.
+            \item (\#14000) Mulai mengerjakan \textit{alignment} layar Riwayat Stok dengan data dari \textit{backend}.
+        \end{logwork}
+    }
+
+    \logentry{20.}
+    {
+        Kamis \linebreak 30 Apr 2026 \linebreak
+        08:07--17:13 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#14000 dan memulai Task \#13286, \#13592, \#13999.
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#14000) Melanjutkan \textit{alignment} Riwayat Stok: menyambungkan komponen tabel dengan endpoint API dan mengatur \textit{pagination}.
+            \item (\#13286 + \#13592) Memulai pembangunan halaman \texttt{laporan-stok-opname} dan \texttt{dashboard-inventaris} di React beserta struktur data dan \textit{resizable split screen panel}.
+            \item (\#13999) Memulai proses \textit{alignment} Dashboard Inventaris (laporan pembelian \& stok opname) ke \textit{backend} Toraja.
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Evaluasi Bulanan
+    % =============================================================
+
+    \logevaluate{Analisis dan Pembahasan}{
+        April 2026 merupakan bulan dengan variasi pekerjaan yang paling beragam selama periode magang. Di awal bulan, pekerjaan difokuskan pada penyelesaian beberapa \textit{improvement} dan \textit{bug fix} Flutter yang merupakan carry-over dari Maret (\#12809, \#12928, \#12934), kemudian dilanjutkan dengan serangkaian task baru (\#13137, \#13228, \#13240, \#13508, \#13549, \#13563, \#13590, \#13597, \#13612, \#13635, \#13701, \#13816).
+
+        Perkembangan paling signifikan terjadi di pertengahan hingga akhir April ketika
+        Task \#13410 dikerjakan. Task ini menandai dimulainya pekerjaan
+        \textit{full-stack} secara aktif: tidak hanya mengembangkan tampilan di React,
+        tetapi juga terlibat langsung dalam penyesuaian \textit{endpoint} di Toraja
+        (Django/Python). Koordinasi dengan tim \textit{Backend} menjadi jauh lebih
+        intensif di periode ini. }
+
+    \logevaluate{Capaian yang Telah Diselesaikan}{
+        \begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+            \item Menyelesaikan Task \#12798: finalisasi Marketplace B2B + Cart React.
+            \item Menyelesaikan Task \#12809: perbaikan \textit{blank widget} dan ukuran
+                  indikator di \textit{editable table}.
+            \item Menyelesaikan Task \#12928: prefix 'Rp' responsif terhadap \textit{font size}
+                  tabel.
+            \item Menyelesaikan Task \#12934: \texttt{DatePicker} berfungsi kembali di dalam
+                  \textit{editable table}.
+            \item Menyelesaikan Task \#13137: tombol \textit{delete} responsif melalui
+                  \texttt{ValueListenableBuilder}.
+            \item Menyelesaikan Task \#13228: \texttt{MultiDropdown} Canvasser bisa di-scroll di
+                  perangkat \textit{mobile}.
+            \item Menyelesaikan Task \#13240: widget \texttt{CapturePhotoScreen} berhasil
+                  diintegrasikan ke \texttt{ImageField}.
+            \item Menyelesaikan Task \#13508: pengurutan kolom tanggal (asc/desc) berfungsi
+                  dengan benar.
+            \item Menyelesaikan Task \#13549: \texttt{Text} widget dan \texttt{Section} bisa
+                  menerima konfigurasi \textit{margin} \& \textit{padding} dari \textit{backend}.
+            \item Menyelesaikan Task \#13563: ikon Konsultasi responsif terhadap ukuran font.
+            \item Menyelesaikan Task \#13590: komponen Sidebar \texttt{psychotest-management-app}
+                  selesai.
+            \item Menyelesaikan Task \#13597: posisi simbol \textit{required} (*) pada
+                  \texttt{TextField} diperbaiki.
+            \item Menyelesaikan Task \#13612: pengurutan kolom tanggal dengan \textit{null
+                      handling} yang lengkap.
+            \item Menyelesaikan Task \#13635: posisi \textit{snackbar/alert} dipindahkan ke
+                  lokasi yang lebih tepat.
+            \item Menyelesaikan Task \#12566: kolom keterangan pada form Stok Opname bisa
+                  di-input.
+            \item Menyelesaikan Task \#13701: perbaikan \textit{spacing} \texttt{TextField}.
+            \item Menyelesaikan Task \#13816: perbaikan logika perbandingan data pada fungsi
+                  \textit{sort}.
+            \item Menyelesaikan Task \#13410: \textit{alignment} Riwayat Stok dan Stok Opname ke
+                  \textit{backend} Toraja (full-stack).
+        \end{itemize}
+    }
+
+    \logevaluate{Capaian yang Belum Diselesaikan}{
+        \begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+            \item Task \#13848 (React-Toraja routing for split screen) sudah dimulai namun belum
+                  selesai karena memerlukan koordinasi lebih lanjut dengan tim \textit{Backend}
+                  terkait implementasi komunikasi \textit{iframe}.
+            \item Task \#14000, \#13286, \#13592, dan \#13999 juga sudah dimulai dan akan
+                  dilanjutkan di bulan Mei.
+        \end{itemize}
+    }
+
+    \logevaluate{Kendala}{
+        Task \#13410 yang bersifat \textit{IMMEDIATE} memerlukan waktu adaptasi terhadap struktur \textit{backend} Toraja yang belum pernah disentuh sebelumnya. Memahami cara routing, model, dan view bekerja di Django/Python tanpa dokumentasi yang lengkap menjadi tantangan utama.
+    }
+
+    \logevaluate{Solusi}{
+        Melakukan \textit{code reading} secara aktif pada kode Toraja yang sudah ada dan melakukan koordinasi intensif dengan tim \textit{Backend} untuk mendapatkan penjelasan langsung mengenai struktur dan pola yang digunakan.
     }
 
 \end{logtable}
