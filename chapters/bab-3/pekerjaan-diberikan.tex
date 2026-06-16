@@ -1,10 +1,10 @@
 \section{Pekerjaan yang Diberikan oleh Perusahaan}
-
 \subsection{Latihan Membuat \textit{Widget} menggunakan Prinsip SDUI}
 
 Tugas pertama diberikan oleh mentor sebagai latihan pengembangan
-\textit{widget} berbasis JSON.\@Proses pengerjaan dilakukan secara
-\textit{local} dengan membuat halaman baru khusus untuk latihan (tidak
+\textit{widget} berbasis JSON, dikerjakan pada 28--30 Januari 2026 sebagai
+bagian dari minggu pertama pelaksanaan magang.\@Proses pengerjaan dilakukan
+secara \textit{local} dengan membuat halaman baru khusus untuk latihan (tidak
 \textit{push} ke \textit{repository} agar kode tetap bersih). Tersedia
 dokumentasi khusus \textit{Front-End} yang dipelajari untuk memahami struktur
 dan implementasi pembuatan \textit{widget}.
@@ -39,11 +39,12 @@ dikembangkan beberapa jenis \textit{widget} seperti \textit{Text, TextField,
 \subsection{Migrasi Beberapa \textit{Widget} ke Repository FE Terbaru}
 
 Setelah memahami penggunaan JSON untuk membangun UI dengan Flutter, diberikan
-tugas \#13228 untuk migrasi beberapa \textit{widget} dari \textit{repository}
+tugas \#11858 untuk migrasi beberapa \textit{widget} dari \textit{repository}
 sebelumnya (Flutter v3.16.9) ke repository terbaru (Flutter v3.38.5). Selain
 itu, diterapkan struktur \textit{Model-View-Controller} (MVC) untuk
 meningkatkan keterbacaan (readability) serta skalabilitas (scalability) kode
-pada \textit{widget} yang dikembangkan.
+pada \textit{widget} yang dikembangkan. Task ini dikerjakan pada 28 Januari --
+2 Februari 2026 dengan durasi pengerjaan 4 hari dan bobot 5 poin KPI.
 
 Migrasi dilakukan terhadap berbagai \textit{widget}, antara lain
 \textit{AntrianTV, TextField, AddImageCamera, Map, Card, CodeSnippet, Calendar,
@@ -60,10 +61,15 @@ Migrasi dilakukan terhadap berbagai \textit{widget}, antara lain
 \subsection{\textit{Widget Improvements and Bug Fix} di Flutter}
 
 Sebagian besar pekerjaan di sisi Flutter berupa perbaikan dan peningkatan
-fungsionalitas \textit{widget} yang sudah ada.
+fungsionalitas \textit{widget} yang sudah ada. Setiap pekerjaan disertai
+informasi ID \textit{task} pada OpenProject beserta durasi pengerjaan dan bobot
+poin KPI yang diperoleh. Pengelompokan pada subbab ini disusun berdasarkan tema
+pekerjaan (Flutter), sehingga urutannya tidak selalu mencerminkan urutan
+kronologis tanggal pengerjaan.
 
 \begin{enumerate}
-    \item \textit{MultipleChoice/Checkbox} bisa diklik di area teks (\#10074) \\ Sebelumnya, \textit{widget
+    \item \textit{MultipleChoice/Checkbox} bisa diklik di area teks (\#10074
+          --- 1 hari, 1 poin) \\ Sebelumnya, \textit{widget
               MultipleChoice} hanya bisa dipilih dengan mengklik kotaknya saja. Berbeda
           dengan \textit{SingleChoice} yang area teksnya sudah bisa diklik. Perbaikan
           dilakukan dengan menambahkan komponen \textit{InkWell} di area teks agar
@@ -74,7 +80,7 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Widget MultipleChoice}}
           \end{figure}
 
-    \item \textit{Accordion} bisa diimplementasikan di \textit{TemplateForm} (\#10120) \\
+    \item \textit{Accordion} bisa diimplementasikan di \textit{TemplateForm} (\#10120 --- 3 hari, 8 poin) \\
           \textit{Widget Accordion} sebenarnya sudah berjalan di beberapa layar, namun belum bisa digunakan pada layar yang menggunakan \textit{TemplateForm}. Solusinya adalah menambahkan \textit{parser} khusus untuk \textit{Accordion} beserta modelnya di dalam \texttt{template\_form}.dart.
           \begin{figure}[H]
               \centering
@@ -87,7 +93,7 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Widget Accordion} dalam \textit{TemplateForm} dalam kondisi terbuka}
           \end{figure}
 
-    \item \textit{MultiDropdown} bisa \textit{flexible} (\textit{searchable}) (\#10319) \\
+    \item \textit{MultiDropdown} bisa \textit{flexible} (\textit{searchable}) (\#10319 --- 3 hari, 3 poin) \\
           Tugas ini awalnya ditugaskan ke \textit{Front-End Supervisor}, namun kemudian dialihkan. Modifikasi dilakukan pada mekanisme \textit{text handling} agar \textit{FlexibleDropdown} bisa menerima lebih dari satu pilihan sekaligus dan memperbarui \textit{state}-nya dengan benar.
           \begin{figure}[H]
               \centering
@@ -95,7 +101,7 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Widget Multidropdown} yang \textit{Flexible}}
           \end{figure}
 
-    \item \textit{Line spacing popup AI Scribe} diperbesar 1.5x (\#10735) \\
+    \item \textit{Line spacing popup AI Scribe} diperbesar 1.5x (\#10735 --- 3 hari, 1 poin) \\
           Juga dialihkan dari \textit{supervisor}. Perubahannya cukup mudah, dengan mengubah \textit{textStyle} dengan ukuran 1.5x pada teks hasil \textit{output} di \textit{popup AI Scribe}.
           \begin{figure}[H]
               \centering
@@ -103,7 +109,7 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Popup AI Scribe}}
           \end{figure}
 
-    \item \textit{Bug} teks terpotong di layar Antrean Layanan (HealthyOne) dan Master Distributor (Canvasser)  (\#11050 \& \#11059) \\
+    \item \textit{Bug} teks terpotong di layar Antrean Layanan (HealthyOne) dan Master Distributor (Canvasser) (\#11050 \& \#11059 --- masing-masing 1 hari, 1 poin) \\
           Dua \textit{bug} ini saling berkaitan. Nama distributor dan teks \textit{Subjective}/Keluhan pada layar Antrean Layanan terpotong karena kurangnya ruang vertikal pada \textit{TabView}. Keduanya diselesaikan dengan menambahkan \textit{padding top} pada komponen tersebut.
           \begin{figure}[H]
               \centering
@@ -111,8 +117,8 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Widget TextField} yang sudah ditambahkan \textit{padding TabView}}
           \end{figure}
 
-    \item \textit{Font size} tabel bisa dikustomisasi (\#11091) \\
-          Ini adalah tugas dengan cakupan paling luas di antara semua pekerjaan Flutter. Permintaannya adalah agar ukuran \textit{font} di dalam tabel, termasuk \textit{editable table} dan seluruh \textit{widget} di dalamnya bisa disesuaikan antara dua ukuran: kecil (ukuran \textit{default}) dan besar. Penyelesaiannya dimulai dengan membuat \texttt{TableFontUtils.dart} sebagai pusat \textit{utils} pengontrol ukuran \textit{font}, yang kemudian diintegrasikan satu per satu ke seluruh widget di dalam tabel: \textit{TextField, IconButton, RaisedButton, SingleDropdown, MultiDropdown, QuantityPicker,} hingga \textit{SingleChoice}. Total pengerjaan memakan waktu delapan hari.
+    \item \textit{Font size} tabel bisa dikustomisasi (\#11091 --- 8 poin) \\
+          Ini adalah tugas dengan cakupan paling luas di antara semua pekerjaan Flutter. Permintaannya adalah agar ukuran \textit{font} di dalam tabel, termasuk \textit{editable table} dan seluruh \textit{widget} di dalamnya bisa disesuaikan antara dua ukuran: kecil (ukuran \textit{default}) dan besar. Penyelesaiannya dimulai dengan membuat \texttt{TableFontUtils.dart} sebagai pusat \textit{utils} pengontrol ukuran \textit{font}, yang kemudian diintegrasikan satu per satu ke seluruh widget di dalam tabel: \textit{TextField, IconButton, RaisedButton, SingleDropdown, MultiDropdown, QuantityPicker,} hingga \textit{SingleChoice}. Total pengerjaan memakan waktu delapan hari (4--13 Februari 2026), dan menjadi dasar bagi sejumlah \textit{task} lanjutan (\#12809, \#13563, \#13597, \#14127, \#14263) yang dijabarkan pada item-item berikutnya.
           \begin{figure}[H]
               \centering
               \includegraphics[width=8cm]{3.4-fontsizetable-small.png}
@@ -125,18 +131,18 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Widget ListBased} dengan \textit{font size} terbesar}
           \end{figure}
 
-    \item Halaman lebih panjang agar tidak tertutup FAB (\#11708) \\ Beberapa konten di
-          halaman tertutup oleh \textit{Floating Action Button} (FAB). Solusinya adalah
-          menambahkan detektor pada \texttt{section\_parser.dart} yang secara otomatis
-          menambahkan \textit{extra bottom padding} jika halaman tersebut memiliki FAB
-          Button.
+    \item Halaman lebih panjang agar tidak tertutup FAB (\#11708 --- 2 hari, 3 poin) \\
+          Beberapa konten di halaman tertutup oleh \textit{Floating Action Button} (FAB).
+          Solusinya adalah menambahkan detektor pada \texttt{section\_parser.dart} yang
+          secara otomatis menambahkan \textit{extra bottom padding} jika halaman tersebut
+          memiliki FAB Button.
           \begin{figure}[H]
               \centering
               \includegraphics[width=8cm]{3.4-fab-bottompadding.png}
               \caption{Layar yang memiliki \textit{FAB} dengan \textit{extra bottom padding}}
           \end{figure}
 
-    \item \textit{Bug dropdown} tidak bisa dipilih setelah \textit{search} di Canvasser (\#11797) \\
+    \item \textit{Bug dropdown} tidak bisa dipilih setelah \textit{search} di Canvasser (\#11797 --- 1 hari, 3 poin) \\
           Setelah \textit{user} melakukan \textit{search} di \textit{dropdown}, opsi tidak bisa dipilih. Penyebabnya adalah \textit{indexing} yang tidak terlindungi sebelum digunakan, sehingga bisa \textit{out of bound}. Perbaikan dilakukan dengan menambahkan validasi \textit{index} di \texttt{table.dart}.
           \begin{figure}[H]
               \centering
@@ -144,7 +150,7 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Dropdown} yang tidak bisa dipilih}
           \end{figure}
 
-    \item \textit{Button} Tolak Outlet tidak rapi di Canvasser (\#12071) \\
+    \item \textit{Button} Tolak Outlet tidak rapi di Canvasser (\#12071 --- 3 hari, poin belum tercatat) \\
           Dari tiga tombol yang ditampilkan dalam satu \textit{card}, satu di antaranya tidak sejajar dengan dua lainnya. Perbaikan dilakukan melalui modifikasi \texttt{raised\_button.dart} dan \texttt{card\_generator\_ext.dart} untuk merapikan \textit{alignment} tombol.
           \begin{figure}[H]
               \centering
@@ -152,13 +158,13 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{Tombol-tombol yang berantakan}
           \end{figure}
 
-    \item \textit{Dropdown} di \textit{editable table} tidak langsung \textit{update height} (\#12108) \\
+    \item \textit{Dropdown} di \textit{editable table} tidak langsung \textit{update height} (\#12108 --- 2 hari, 2 poin) \\
           Ketika \textit{user} mengetik di \textit{dropdown} dan hasil pencarian dari \textit{back-end} sudah muncul, tinggi \textit{dropdown} tidak ikut menyesuaikan dan tetap pendek seperti saat data kosong. Perbaikan dilakukan pada \texttt{single\_dropdown.dart} agar \textit{state height} diperbarui secara instan begitu data berhasil diambil, tanpa perlu menutup dan membuka dropdown kembali.
 
-    \item \textit{Icon Button} terlalu kecil (\#12160) \\
+    \item \textit{Icon Button} terlalu kecil (\#12160 --- 1 hari, 1 poin) \\
           Tugas ini dibuat secara mandiri setelah ditemukan masalah saat mengerjakan tugas lain. Widget \textit{IconButton} tidak memiliki ukuran \textit{default}, sehingga ukurannya mengikuti ukuran \textit{child}-nya dan terlihat terlalu kecil. Solusinya adalah menambahkan nilai \textit{default} 48px untuk \textit{height} dan \textit{width} di \texttt{icon\_button.dart}.
 
-    \item \textit{Bug overflow} saat data tidak ditemukan di \textit{dropdown} (\#12284) \\
+    \item \textit{Bug overflow} saat data tidak ditemukan di \textit{dropdown} (\#12284 --- 2 hari, 1 poin) \\
           Saat pencarian di \textit{dropdown} tidak menghasilkan data, \textit{widget} mengalami \textit{box overflow}. Penyebabnya adalah penggunaan komponen \textit{Flexible} di dalam \texttt{single\_dropdown.dart} yang tidak kompatibel dengan konteks \textit{layout}-nya. Solusinya adalah menghapus komponen \textit{Flexible} tersebut.
           \begin{figure}[H]
               \centering
@@ -167,10 +173,10 @@ fungsionalitas \textit{widget} yang sudah ada.
           \end{figure}
 
     \item Beberapa \textit{widget} tidak mengikuti perubahan \textit{font size} tabel
-          (\#12809) \\ Sebagai kelanjutan dari Task \#11091, ditemukan bahwa beberapa
-          \textit{widget} di dalam \textit{editable table} masih belum mengikuti
-          perubahan ukuran \textit{font}, khususnya \textit{TextField} yang tidak bisa
-          di-\textit{edit}. Perbaikan dilakukan pada \texttt{table.dart,
+          (\#12809 --- 2 hari, 2 poin) \\ Sebagai kelanjutan dari Task \#11091, ditemukan
+          bahwa beberapa \textit{widget} di dalam \textit{editable table} masih belum
+          mengikuti perubahan ukuran \textit{font}, khususnya \textit{TextField} yang
+          tidak bisa di-\textit{edit}. Perbaikan dilakukan pada \texttt{table.dart,
               blank\_widget.dart,} dan \texttt{text.dart} dengan menambahkan parameter
           \textit{isForEditTable} agar \textit{font} bisa mendeteksi ukuran yang
           diperlukan.
@@ -180,7 +186,7 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Text} yang belum mengikuti \textit{update font size}}
           \end{figure}
 
-    \item \textit{Prefix} `Rp' tidak mengikuti perubahan \textit{font size} (\#12928) \\
+    \item \textit{Prefix} `Rp' tidak mengikuti perubahan \textit{font size} (\#12928 --- 2 hari, 1 poin) \\
           \textit{Prefix} `Rp' pada input nominal memiliki \textit{styling} tersendiri yang terpisah dari teks pada umumnya, sehingga tidak ter-\textit{update} saat ukuran \textit{font} tabel diubah. Penyelesaiannya adalah menambahkan \textit{dynamic styling} pada \textit{prefix} agar mengikuti \textit{state font size} yang aktif.
           \begin{figure}[H]
               \centering
@@ -188,7 +194,7 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Prefix} `Rp' yang belum mengikuti \textit{update font size}}
           \end{figure}
 
-    \item \textit{DatePicker} tidak bisa digunakan di dalam tabel (\#12934) \\
+    \item \textit{DatePicker} tidak bisa digunakan di dalam tabel (\#12934 --- 2 hari, 3 poin) \\
           \textit{DatePicker} pada layar Penerimaan Stok tidak berfungsi saat digunakan di dalam tabel. Penyebabnya adalah \textit{null handling} di \textit{widget DateField} tidak diimplementasikan dengan baik untuk konteks \textit{editable table}. Perbaikan dilakukan dengan menambahkan \textit{ternary operator} untuk mengonversi nilai kosong menjadi \textit{null} sebelum diproses.
           \begin{figure}[H]
               \centering
@@ -196,7 +202,7 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Widget DatePicker} yang tidak bisa diklik}
           \end{figure}
 
-    \item \textit{Delete button} tidak mengikuti perubahan \textit{font size} (\#13137) \\
+    \item \textit{Delete button} tidak mengikuti perubahan \textit{font size} (\#13137 --- 2 hari, 1 poin) \\
           Tombol \textit{delete} di dalam tabel tidak menyesuaikan ukurannya saat \textit{font size} diubah karena \textit{padding} dan \textit{height}-nya tidak memperbarui \textit{state} dengan baik. Solusinya adalah membungkus tombol dengan \textit{ValueListenableBuilder} agar selalu sinkron dengan \textit{state} terkini.
           \begin{figure}[H]
               \centering
@@ -204,10 +210,10 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Widget DeleteButton} yang belum mengikuti \textit{update font size}}
           \end{figure}
 
-    \item \textit{MultiDropdown} mentok saat di perangkat \textit{mobile} di Canvasser (\#13228) \\
+    \item \textit{MultiDropdown} mentok saat di perangkat \textit{mobile} di Canvasser (\#13228 --- 2 hari, 2 poin) \\
           Beberapa \textit{dropdown} di Canvasser tidak bisa di-\textit{scroll} sampai bawah ketika dibuka di perangkat \textit{mobile}. Setelah dianalisis, ditemukan adanya beberapa \textit{scrollbar} yang bertumpuk di dalam \textit{widget MultiDropdown}, sehingga saling menghalangi. Solusinya adalah menghapus \textit{SingleChildScrollView} dan \textit{Column} yang bermasalah, menggantinya dengan \textit{Container} biasa karena \textit{ListView.builder} di dalamnya sudah memiliki \textit{scrollbar} sendiri.
 
-    \item \textit{Widget ImageField} (\textit{upload} gambar)  bisa mengambil foto dari kamera (\#13240) \\
+    \item \textit{Widget ImageField} (\textit{upload} gambar) bisa mengambil foto dari kamera (\#13240 --- 4 hari, 5 poin) \\
           Sebelumnya, \textit{widget} ini hanya mendukung \textit{upload} dari \textit{file}. \textit{Improvement} ini menambahkan opsi untuk mengambil foto langsung dari kamera perangkat. Implementasinya dengan membuat \textit{widget} baru \textit{`CapturePhotoScreen'} yang mengakses kamera (\textit{webcam}, kamera depan, maupun belakang), kemudian mengintegrasikannya ke dalam \textit{widget ImageField} sehingga \textit{user} bisa memilih antara \textit{upload} dari \textit{file} atau ambil foto langsung.
           \begin{figure}[H]
               \centering
@@ -221,16 +227,222 @@ fungsionalitas \textit{widget} yang sudah ada.
               \caption{\textit{Widget ImageField} dengan fitur Ambil Foto}
           \end{figure}
 
+    \item Bug fix urutan kolom tanggal (\#13508 --- 3 hari, 3 poin) \\ Kolom bertipe
+          tanggal pada tabel tidak bisa diurutkan secara ascending maupun descending.
+          Ketika tombol sort ditekankan, data tidak berubah urutan sama sekali.
+          Penyebabnya adalah logika perbandingan pada fungsi sort belum menangani tipe
+          data \textit{date}, \textit{date-range}, dan \textit{date-time} --- hanya tipe
+          angka dan string yang sudah ditangani.
+
+          Perbaikan dilakukan dengan menambahkan \textit{sort handler} khusus untuk
+          ketiga tipe tanggal tersebut, menggunakan perbandingan berbasis
+          \textit{DateTime} untuk menghasilkan urutan yang akurat. Selain itu,
+          ditambahkan pula \textit{null handling} agar baris dengan nilai tanggal kosong
+          tidak menyebabkan error saat proses pengurutan berjalan.
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=8cm]{3.58-sort-tanggal.png}
+          %       \caption{Widget tabel setelah perbaikan pengurutan kolom tanggal}
+          %   \end{figure}
+
+    \item Text widget custom margin dan padding dari backend (\#13549 --- 8 poin) \\
+          Sebelumnya, konfigurasi \textit{margin} dan \textit{padding} pada widget
+          \textit{Text} dan \textit{Section} hanya bisa dilakukan secara statis di sisi
+          \textit{frontend}. Tidak ada parameter yang bisa dikirim dari \textit{backend}
+          melalui JSON SDUI untuk mengatur jarak antar elemen secara dinamis.
+
+          Improvement ini menambahkan dukungan parameter \textit{margin} dan
+          \textit{padding} pada model SDUI dari widget \textit{Text}, \textit{TextField},
+          dan \textit{Section}, sehingga tim \textit{backend} bisa mengatur tata letak
+          komponen langsung dari konfigurasi JSON tanpa perlu mengubah kode
+          \textit{frontend}. Nilai default tetap dipertahankan agar layar yang tidak
+          mengirim parameter ini tidak mengalami perubahan tampilan.
+
+          Pengerjaan task ini memakan waktu empat hari (17--22 April 2026) karena cakupan
+          widget yang terdampak cukup luas --- setiap tipe widget perlu ditangani secara
+          terpisah sesuai dengan struktur model yang dimilikinya. Task ini merupakan
+          salah satu task dengan bobot poin tertinggi (8 poin) selama periode magang.
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=8cm]{3.59-custom-padding.png}
+          %       \caption{Contoh tampilan widget Text dengan custom padding dari backend}
+          %   \end{figure}
+
+    \item Icon Konsultasi tidak mengikuti ukuran font (\#13563 --- 1 poin) \\ Ikon yang
+          mewakili fitur Konsultasi di beberapa layar tidak menyesuaikan ukurannya ketika
+          nilai \textit{font size} aktif diubah melalui kontrol \textit{TableFontUtils}.
+          Sementara teks dan elemen lain di sekitarnya sudah responsif, ikon tersebut
+          tetap berukuran tetap.
+
+          Perbaikan dilakukan dengan menghubungkan ukuran ikon ke \textit{state}
+          \textit{TableFontUtils} yang sama dengan komponen lainnya, sehingga ikon ikut
+          berubah ukuran secara konsisten ketika nilai \textit{font size} diperbarui.
+          Task ini diselesaikan dalam satu hari karena lokasi perbaikan sudah dapat
+          diidentifikasi dengan cepat.
+
+    \item Improvement posisi simbol required (*) pada TextField (\#13597 --- 1 poin) \\
+          Pada widget \textit{TextField} yang memiliki komponen \textit{upload button},
+          simbol asterisk (*) sebagai penanda \textit{field required} tidak tampil di
+          posisi yang benar. Asterisk muncul terpisah dari label teks karena komponen
+          \textit{Expanded} di sekitar tombol upload menggeser posisinya.
+
+          Perbaikan dilakukan dengan menghapus komponen \textit{Expanded} tersebut,
+          sehingga asterisk kembali tampil tepat di sebelah label teks seperti yang
+          diharapkan. Task ini diselesaikan dalam satu hari karena perubahannya bersifat
+          \textit{local} pada satu komponen.
+
+    \item Sorting kolom tanggal --- perbaikan lanjutan (\#13612 --- 3 hari, 2 poin) \\
+          Sebagai kelanjutan dari Task \#13508, ditemukan bahwa beberapa edge case pada
+          pengurutan kolom tanggal masih belum tertangani dengan benar. Ketika nilai
+          tanggal pada baris tertentu kosong (\textit{null}), proses sort menghasilkan
+          error karena tidak ada \textit{null handling} yang memadai di beberapa titik
+          logika.
+
+          Perbaikan dilakukan dengan menambahkan validasi \textit{null} sebelum proses
+          perbandingan tanggal dijalankan, serta memastikan baris dengan nilai kosong
+          selalu ditempatkan di posisi terakhir --- baik saat sort ascending maupun
+          descending.
+
+    \item Alert widget --- perbaikan posisi tampilan (\#13635 --- 3 hari, 1 poin) \\
+          Widget \textit{alert} atau \textit{snackbar} yang muncul sebagai notifikasi
+          sering kali tertutup oleh elemen lain di bagian bawah layar, seperti
+          \textit{navigation bar} atau tombol aksi. Posisi kemunculannya terlalu rendah
+          sehingga tidak selalu terlihat oleh pengguna.
+
+          Perbaikan dilakukan dengan mengangkat posisi tampilan \textit{snackbar} agar
+          selalu muncul di atas elemen navigasi bawah. Selain itu, ditambahkan offset
+          vertikal yang memperhitungkan tinggi komponen di bawahnya secara dinamis.
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=8cm]{3.60-alert-position.png}
+          %       \caption{Posisi alert/snackbar setelah perbaikan}
+          %   \end{figure}
+
+    \item Fix spacing TextField (\#13701 --- 1 hari, 1 poin) \\ Beberapa widget
+          \textit{TextField} di berbagai layar memiliki jarak (\textit{spacing}) antar
+          elemen yang tidak konsisten --- ada yang terlalu rapat dan ada yang terlalu
+          renggang dibandingkan desain. Penyebabnya adalah nilai \textit{padding} yang
+          berbeda-beda di setiap instansi widget karena belum ada standar yang diterapkan
+          secara terpusat.
+
+          Perbaikan dilakukan dengan menyeragamkan nilai \textit{spacing} pada widget
+          \textit{TextField} menggunakan konstanta terpusat, sehingga semua instansi
+          memiliki jarak yang konsisten tanpa perlu mengubah setiap layar secara
+          individual.
+
+    \item Fitur sort tabel hanya berfungsi pada data angka dan tanggal (\#13816 --- 1
+          hari, 2 poin) \\ Ditemukan adanya \textit{typo} pada logika perbandingan data
+          di dalam \texttt{table.dart} yang menyebabkan fungsi sort tidak bekerja untuk
+          tipe data string. Variabel yang dibandingkan menggunakan nama field yang salah
+          sehingga hasil perbandingan selalu bernilai sama, membuat urutan data tidak
+          berubah.
+
+          Perbaikan dilakukan dengan memperbaiki nama variabel yang salah ketik tersebut.
+          Setelah perbaikan, fungsi sort kini berfungsi dengan benar untuk semua tipe
+          data yang didukung.
+
+    \item Adjustment font size tabel --- widget tambahan (\#14127 --- poin belum
+          tercatat) \\ Sebagai kelanjutan dari sistem \textit{TableFontUtils} yang
+          dibangun pada Task \#11091, ditemukan beberapa widget di dalam \textit{editable
+              table} yang masih belum mengikuti perubahan ukuran font secara konsisten.
+          Widget-widget ini tidak terdaftar dalam sistem pengontrol ukuran font yang
+          sudah ada.
+
+          Perbaikan dilakukan dengan mengidentifikasi semua widget yang belum
+          terintegrasi, kemudian menghubungkannya ke \textit{TableFontUtils} menggunakan
+          pola yang sama dengan widget-widget yang sudah diimplementasikan sebelumnya.
+          Pengerjaan memakan waktu empat hari (20--25 Mei 2026) karena jumlah widget yang
+          perlu diperiksa cukup banyak.
+
+    \item Handle ukuran field input saat edit tabel (\#14263 --- 3 poin) \\ Ditemukan
+          ketidakkonsistenan tinggi widget dan ukuran ikon pada beberapa komponen Flutter
+          di dalam \textit{editable table} yang tidak tertangani oleh sistem
+          \textit{TableFontUtils} sebelumnya. Komponen yang terdampak antara lain
+          \textit{TextForm, TimePicker, SingleDropdown,} dan \textit{MultiDropdown} ---
+          yang masing-masing memiliki logika \textit{sizing} tersendiri yang tidak
+          terhubung ke sistem \textit{TableFontUtils}.
+
+          Penyelesaiannya dimulai dengan menganalisis pola ketidakkonsistenan pada setiap
+          komponen secara terpisah, kemudian mengimplementasikan penyesuaian
+          \textit{height, iconSize,} dan ukuran teks agar konsisten dengan
+          \textit{TableFontUtils} yang aktif. Pengerjaan memakan waktu empat hari (18--21
+          Mei 2026) karena setiap komponen perlu ditangani secara independen sesuai
+          strukturnya masing-masing.
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=8cm]{3.61-textfield-size.png}
+          %       \caption{Widget TextField setelah perbaikan ukuran pada editable table}
+          %   \end{figure}
+
+    \item Data hilang setelah filter Group By di Pembuatan Konten AI (\#13670 --- 4 hari,
+          1 poin) \\ Pada layar Pembuatan Konten AI, data yang tampil di
+          \textit{ListBased} menghilang setelah pengguna mengaktifkan filter
+          \textit{Group By}. Penyebabnya adalah fitur \textit{group by} belum didukung
+          oleh tipe tampilan \textit{card-vertical} pada \textit{ListBased}, sehingga
+          ketika \textit{group by} diaktifkan dalam mode tampilan tersebut, komponen
+          mencoba melakukan render dengan struktur data yang tidak kompatibel.
+
+          Perbaikan dilakukan dengan menonaktifkan opsi \textit{group by} secara otomatis
+          ketika \textit{ListBased} berada dalam mode tampilan \textit{card-vertical},
+          sehingga pengguna tidak dapat mengaktifkan kombinasi yang belum didukung.
+
+    \item Pesan validasi field birthdate Data Pasien tertimpa (\#14699 --- 1 hari, 1
+          poin) \\ Pada layar Data Pasien, pesan validasi untuk field tanggal lahir
+          (\textit{birthdate}) tertimpa oleh widget lain yang berada di sekitarnya karena
+          komponen pesan error tidak memiliki batasan lebar yang memadai. Selain itu,
+          simbol \textit{required} (*) pada \textit{text-form} ditampilkan dengan warna
+          yang tidak sesuai dalam beberapa kondisi.
+
+          Perbaikan dilakukan dengan membungkus komponen pesan error menggunakan
+          \textit{Flexible} agar ukurannya menyesuaikan ruang yang tersedia dan tidak
+          menimpa elemen lain, serta memperbaiki logika pewarnaan simbol
+          \textit{required} di widget \textit{text-form}.
+
+    \item Dropdown tidak lengkap menampilkan data di Riwayat Pengobatan (\#14858 --- 2
+          hari, poin belum tercatat) \\ Widget \textit{search-chip} pada layar Riwayat
+          Pengobatan tidak menampilkan semua data yang tersedia. Ketika daftar item cukup
+          panjang, bagian bawah \textit{dropdown} terpotong dan tidak bisa
+          di-\textit{scroll}. Penyebabnya adalah properti \textit{prototypeItem} yang
+          mengunci tinggi komponen ke nilai tetap berdasarkan satu item contoh, sehingga
+          komponen tidak bisa melakukan ekspansi tinggi secara dinamis.
+
+          Perbaikan dilakukan dengan menghapus properti \textit{prototypeItem}, sehingga
+          tinggi komponen \textit{search-chip} bisa menyesuaikan diri secara dinamis
+          sesuai jumlah item yang ditampilkan.
+
+    \item Diagnosis Sekunder hilang setelah interaksi AI Scribe (\#14374 --- poin belum
+          tercatat) \\ Pada layar konsultasi, data Diagnosis Sekunder yang sudah diisi
+          oleh dokter menghilang setelah pengguna berinteraksi dengan fitur AI Scribe.
+          Penyebabnya adalah \textit{items provider} pada widget \textit{search\_chip}
+          tidak menangani kondisi di mana AI Scribe melakukan \textit{update state} pada
+          komponen secara bersamaan --- ketika AI Scribe memperbarui \textit{state},
+          nilai \textit{items provider} direset ke kondisi awal sehingga data yang sudah
+          ada ikut terhapus.
+
+          Perbaikan dilakukan dengan menambahkan mekanisme penjagaan pada \textit{items
+              provider} agar tidak direset saat AI Scribe melakukan \textit{update},
+          melainkan hanya diperbarui ketika ada perubahan eksplisit dari pengguna.
+          Pengerjaan memakan waktu tujuh hari (27 Mei -- 4 Juni 2026) karena reproduksi
+          bug ini memerlukan interaksi spesifik antara dua fitur yang berbeda.
+
 \end{enumerate}
 
-% \subsection{Perbaikan Beberapa \textit{Bug} Terkait \textit{Widgets}} Lorem ipsum
+Poin KPI yang diperoleh dari seluruh \textit{task} pada subbab ini, ditambah
+dengan pengerjaan di sisi React pada subbab berikutnya, direkap secara bulanan
+pada Subbab 3.3.5.
+
 \subsection{Pembuatan Layar-layar HealthyOne di React}
 Berbeda dengan pekerjaan di Flutter yang didominasi oleh perbaikan dan
 peningkatan \textit{widget}, pengembangan di React lebih berfokus pada
-pembuatan layar baru untuk aplikasi HealthyOne.
+pembuatan layar baru untuk aplikasi HealthyOne. Pengembangan layar Data Pasien
+dan Item Cabang dilakukan pada \textit{repository}
+\texttt{healthyone-medic-fe}, sedangkan modul-modul manajemen stok (Penerimaan
+Stok, Stok Opname, Perpindahan Stok, Riwayat Stok, Pengemasan dan Pengeluaran,
+Riwayat Belanja, Dashboard Inventaris, dan DataView) serta Marketplace B2B
+dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
 
 \begin{enumerate}
-    \item Data Pasien
+    \item Data Pasien (\#12200, \#12202, \#12203 --- 16--20 Februari 2026, total 10 poin)
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{screen-healthyone-flutter-datapasien.png}
@@ -251,7 +463,7 @@ pembuatan layar baru untuk aplikasi HealthyOne.
               \caption{Tampilan layar Data Pasien di React}%
           \end{figure}
 
-    \item Item Cabang
+    \item Item Cabang (\#12127, \#12116 --- awal Maret 2026, total 6 poin)
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-itemcabang-flutter.png}
@@ -266,7 +478,9 @@ pembuatan layar baru untuk aplikasi HealthyOne.
                     Rekomendasi Belanja (Defecta), Stok Opname, Penjualan Terbesar, dan Riwayat
                     Kedaluwarsa. Subtab Obat Racik memiliki logika tersendiri karena tidak
                     menggunakan mekanisme filtering yang sama. Setiap subtab juga mendukung operasi
-                    Tambah, View, dan Edit produk.
+                    Tambah, View, dan Edit produk. Konfigurasi tampilan Stok Opname dan Rekomendasi
+                    Belanja pada tab ini masing-masing dikerjakan melalui Task \#12343 dan \#12344
+                    (1 hari, 2 poin masing-masing, 11 Maret 2026).
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=10cm]{3.4-itemcabang-react-produk.png}
@@ -307,14 +521,17 @@ pembuatan layar baru untuk aplikasi HealthyOne.
           Modul ini terdiri dari tiga layar: layar utama Penerimaan Stok, layar View
           Penerimaan, dan layar Tambah Penerimaan. Selain ketiga layar tersebut, dibuat
           pula komponen Jenis Penerimaan Stok yang digunakan sebagai bagian dari alur
-          input data penerimaan.
+          input data penerimaan. Pengembangan modul ini tercakup dalam Task \#12576
+          (modifikasi FE manajemen inventaris, 10 hari, 8 poin, 18--31 Maret 2026)
+          bersama modul Stok Opname, Perpindahan Stok, Riwayat Stok, dan Riwayat Belanja
+          pada item-item berikutnya.
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-penerimaanstok-react.png}
               \caption{Tampilan layar Penerimaan Stok di React}%
           \end{figure}
 
-    \item Stok Opname
+    \item Stok Opname (\#12117 --- 6 hari, 8 poin)
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-stokopname-flutter.png}
@@ -322,13 +539,25 @@ pembuatan layar baru untuk aplikasi HealthyOne.
           \end{figure}
 
           Layar Stok Opname pada dasarnya merupakan layar Riwayat Stok yang dirender
-          ulang dengan parameter query isForStokOpname=true, disertai tambahan tombol
-          Buat Stok Opname di bagian antarmukanya.
+          ulang dengan parameter query \texttt{isForStokOpname=true}, disertai tambahan
+          tombol Buat Stok Opname di bagian antarmukanya.
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-stokopname-react.png}
               \caption{Tampilan layar Stok Opname di React}%
           \end{figure}
+
+          Pengembangan modul ini dilanjutkan dengan proses \textit{alignment} ke
+          \textit{backend} Toraja (Task \#13410, 8 hari, 8 poin) yang menghubungkan
+          antarmuka React dengan API. Selama fase pengujian di \textit{environment
+              staging}, dilakukan serangkaian penyempurnaan dan perbaikan \textit{bug} yang
+          meliputi:
+          \begin{itemize}
+              \item \textbf{Perbaikan Sistem Seleksi dan Pagination (\#14201 \& \#14281)}: Memperbaiki bug di mana seleksi produk hilang saat berpindah halaman (\textit{pagination}). Perbaikan dilakukan dengan menyimpan baris terpilih ke dalam \textit{state} \texttt{allLoadedRows} lintas halaman. Masalah konflik \textit{state} seleksi produk ketika membuka dua halaman Stok Opname secara bersamaan juga diselesaikan dengan mengisolasi \textit{state} \texttt{selectedIds} pada masing-masing komponen.
+              \item \textbf{Validasi Form dan Pesan Error (\#14282 \& \#14128)}: Menambahkan validasi pop-up untuk mencegah pengguna menekan tombol \textit{submit} tanpa memilih produk terlebih dahulu, serta mengganti pesan error bawaan menjadi komponen \textit{Alert} terstandarisasi.
+              \item \textbf{Konsistensi Kontrol Input dan Dropdown (\#14131, \#14129, \& \#14486)}: Menonaktifkan dropdown Unit Pelayanan karena nilainya sudah ditentukan otomatis dari sesi pengguna. Menghilangkan \textit{overlap} scrollbar pada \textit{QuantityPicker} dengan mengubah pengaturan \texttt{zIndex}, serta memperbaiki bug konversi kuantitas unit terkecil pada komponen \textit{pilih-nomor-lot} di dalam \texttt{useEffect}.
+              \item \textbf{Penyelarasan Tipe Data dan Sorting (\#14133, \#14125, \#14176, \& \#14130)}: Menyeragamkan format tanggal menjadi standar Indonesia (\texttt{dd MMM yyyy}), memperbaiki ketidaksesuaian penamaan kolom pada payload API, menonaktifkan kontrol \textit{sorting widget} untuk kolom yang belum mendukung pengurutan berbasis \textit{backend}, serta menambahkan penanganan khusus untuk tombol Stok Opname pada kategori produk lain-lain.
+          \end{itemize}
 
     \item Perpindahan Stok
           \begin{figure}[H]
@@ -339,7 +568,8 @@ pembuatan layar baru untuk aplikasi HealthyOne.
 
           Serupa dengan Stok Opname, layar ini juga memanfaatkan kembali komponen Riwayat
           Stok dengan query yang sesuai, ditambah tombol Ajukan Perpindahan Stok dan
-          komponen notifikasi sebagai pembeda fungsionalnya.
+          komponen notifikasi sebagai pembeda fungsionalnya. Pengembangan layar ini juga
+          tercakup dalam Task \#12576.
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-perpindahanstok-react.png}
@@ -355,14 +585,15 @@ pembuatan layar baru untuk aplikasi HealthyOne.
 
           Terdiri dari dua layar: layar utama Riwayat Stok dan layar Lihat Detail
           Penerimaan Stok. Layar ini juga menjadi basis yang digunakan kembali oleh modul
-          Stok Opname dan Perpindahan Stok.
+          Stok Opname dan Perpindahan Stok. Pengembangan layar ini juga tercakup dalam
+          Task \#12576.
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-riwayatstok-react.png}
               \caption{Tampilan layar Riwayat Stok di React}%
           \end{figure}
 
-    \item Pengemasan dan Pengeluaran
+    \item Pengemasan dan Pengeluaran (\#12130 --- 1 hari, 2 poin)
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-pengemasanpengeluaran-flutter.png}
@@ -372,7 +603,7 @@ pembuatan layar baru untuk aplikasi HealthyOne.
           Modul ini mengelola alur pemrosesan pesanan dari awal hingga selesai. Terdapat
           enam tab utama yang merepresentasikan status pesanan: Pesanan Baru, Disiapkan,
           Siap Dikirim, Dalam Pengiriman, Dibatalkan, dan Pesanan Selesai. Masing-masing
-          tab memiliki subtab berdasarkan jenis pesanan—Online dan/atau Offline—sesuai
+          tab memiliki subtab berdasarkan jenis pesanan (Online dan/atau Offline) sesuai
           dengan alur distribusi yang relevan untuk setiap status.
           \begin{figure}[H]
               \centering
@@ -389,14 +620,15 @@ pembuatan layar baru untuk aplikasi HealthyOne.
 
           Modul ini terdiri dari tiga layar: layar utama Riwayat Belanja, layar Tambah
           Pesanan dengan form input, dan layar Lihat Pesanan untuk melihat detail
-          transaksi yang sudah ada.
+          transaksi yang sudah ada. Pengembangan layar ini juga tercakup dalam Task
+          \#12576.
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-riwayatbelanja-react.png}
               \caption{Tampilan layar Riwayat Belanja di React}%
           \end{figure}
 
-    \item Riwayat Belanja Marketplace B2B
+    \item Riwayat Belanja Marketplace B2B (\#12579 --- 4 hari, 3 poin, 23--26 Maret 2026)
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-riwayatbelanjab2b-flutter.png}
@@ -412,7 +644,7 @@ pembuatan layar baru untuk aplikasi HealthyOne.
               \caption{Tampilan layar Riwayat Belanja B2B di React}%
           \end{figure}
 
-    \item Marketplace B2B
+    \item Marketplace B2B (\#12798 --- 3 hari, 3 poin, 30 Maret -- 1 April 2026)
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-marketplaceb2b-flutter.png}
@@ -429,169 +661,226 @@ pembuatan layar baru untuk aplikasi HealthyOne.
               \includegraphics[width=10cm]{3.4-marketplaceb2b-react.png}
               \caption{Tampilan layar Marketplace B2B di React}%
           \end{figure}
+
+    \item Sidebar psychotest-management-app (\#13590 --- 4 hari, 5 poin, 20--23 April
+          2026) \\ Sebagai \textit{additional task} di luar repositori HealthyOne utama,
+          turut dikerjakan pembangunan komponen Sidebar untuk aplikasi
+          \textit{psychotest-management-app} --- sebuah aplikasi internal perusahaan yang
+          digunakan untuk manajemen tes psikologi calon karyawan. Komponen Sidebar ini
+          mencakup navigasi antar halaman, tampilan informasi pengguna yang sedang login,
+          dan \textit{routing} ke modul-modul utama aplikasi.
+
+    \item Kolom keterangan pada form Stok Opname (\#12566 --- 24 April 2026) \\ Pada form
+          pembuatan Stok Opname, ditambahkan kolom input \textit{keterangan} yang
+          memungkinkan pengguna memberikan catatan atau penjelasan tambahan saat membuat
+          entri Stok Opname baru. Penambahan ini dilakukan langsung di environment
+          \textit{staging} karena bersifat penyesuaian kecil pada form yang sudah ada.
+
+    \item Layar Detail Klinik Canvasser (\#14481 --- 4 hari, 5 poin, 19--22 Mei 2026) \\
+          Layar Detail Klinik merupakan layar baru yang dibangun untuk aplikasi Canvasser
+          di sisi React. Layar ini menampilkan informasi lengkap mengenai satu klinik
+          mitra, termasuk data identitas klinik, daftar produk yang tersedia, daftar
+          layanan, dan tombol-tombol aksi yang relevan untuk tenaga lapangan.
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=10cm]{3.62-detail-klinik.png}
+          %       \caption{Tampilan layar Detail Klinik Canvasser di React}
+          %   \end{figure}
+
+    \item Dashboard Inventaris --- Laporan Stok Opname dan Laporan Pembelian (\#13286,
+          \#13592, \#13999, \#14234 --- total 18 poin, akhir April--Mei 2026) \\
+          Dashboard Inventaris merupakan modul baru yang menjadi pusat pelaporan untuk
+          pengelolaan inventaris klinik. Modul ini terdiri dari dua sub-modul utama yang
+          dapat ditampilkan secara berdampingan melalui panel \textit{resizable split
+              screen}:
+
+          \textbf{(a) Laporan Stok Opname} menampilkan data historis seluruh aktivitas Stok Opname yang pernah dilakukan di klinik, dengan dukungan \textit{filtering} berdasarkan rentang tanggal, nama produk, status, dan berbagai parameter lainnya. Data ditampilkan menggunakan komponen \textit{DataView} (lihat item 15) yang mendukung pengurutan, pengelompokan, dan ekspor data.
+
+          \textbf{(b) Laporan Pembelian} menampilkan riwayat transaksi pembelian inventaris klinik beserta statusnya. Layar ini dilengkapi dengan tombol Bayar yang memungkinkan admin klinik memproses pembayaran langsung dari halaman yang sama tanpa harus berpindah halaman.
+
+          Selain dua sub-modul tersebut, Dashboard Inventaris juga mendukung fitur
+          \textit{filtering} antarmuka yang fleksibel: pengguna dapat menyaring data
+          berdasarkan beberapa kriteria sekaligus, termasuk filter lintas kolom yang
+          dikombinasikan dengan \textit{group by} lebih dari satu kolom (Task \#14234, 6
+          hari, 11--18 Mei 2026).
+
+          Selama fase pengembangan dan migrasi modul ini, diselesaikan beberapa perbaikan
+          fungsionalitas:
+          \begin{itemize}
+              \item \textbf{Penanganan Navigasi Aksi Pembayaran (\#14627)}: Mengubah perilaku tombol Bayar pada Laporan Pembelian agar pengguna tetap berada di halaman Dashboard Inventaris setelah pembayaran berhasil diproses, alih-alih dialihkan ke halaman baru.
+              \item \textbf{Optimasi Validitas Data Tabel (\#14572)}: Mengatasi masalah hilangnya data tabel pada Laporan Pembelian akibat pemanggilan ulang API (\textit{re-fetch}) yang dipicu perubahan \textit{state} internal. Struktur pemeriksaan \texttt{laporanType} diperbaiki untuk menstabilkan data.
+              \item \textbf{Perbaikan UI Pasca-Migrasi (\#14646)}: Memperbaiki masalah \textit{overflow wrap} tampilan \textit{CardView} yang terlalu sempit pada layar \textit{mobile}, serta memperbaiki bug pada penghapusan \textit{filter chips}.
+          \end{itemize}
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=10cm]{3.63-stok-opname.png}
+          %       \caption{Dashboard Inventaris tampilan Laporan Stok Opname}
+          %   \end{figure}
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=10cm]{3.64-laporan-pembelian.png}
+          %       \caption{Dashboard Inventaris tampilan Laporan Pembelian}
+          %   \end{figure}
+
+    \item Komponen DataView (\#14855 --- 23 hari, 30 April--1 Juni 2026) \\ DataView
+          merupakan komponen generik baru yang dibangun dari awal sebagai pengganti
+          \textit{ListBased} yang sudah ada, dengan \textit{library} \textbf{AG Grid}
+          sebagai basis implementasinya. Pembangunan komponen ini dipicu oleh
+          meningkatnya kebutuhan akan tabel yang mendukung berbagai mode tampilan,
+          interaksi tingkat lanjut, dan konfigurasi yang fleksibel dari setiap halaman
+          pemakainya. Task ini merupakan \textit{task} dengan durasi pengerjaan terlama
+          selama periode magang yang dilaporkan.
+
+          Fitur-fitur utama yang dimiliki \textit{DataView} antara lain:
+          \begin{itemize}
+              \item \textbf{TableView dan CardView} yang dapat dipilih secara dinamis oleh pengguna.
+              \item \textbf{Backend filtering} dengan berbagai tipe: \textit{text search, single select, multi select,} dan \textit{date range}.
+              \item \textbf{Backend group by} dengan dukungan pengelompokan berdasarkan lebih dari satu kolom sekaligus.
+              \item \textbf{Visible columns}: pengguna dapat menyembunyikan atau menampilkan kolom tertentu sesuai kebutuhan.
+              \item \textbf{Selectable rows} untuk keperluan aksi massal.
+              \item \textbf{Export CSV dan XLSX} langsung dari antarmuka tabel.
+              \item \textbf{Custom render components} yang mengikuti \textit{font size provider} aktif.
+              \item \textbf{Auto-formatting kolom} melalui fungsi \texttt{generateColumnDef} yang otomatis mendeteksi tipe data dan menerapkan format yang sesuai (\texttt{Rp} untuk kolom \textit{currency}, format tanggal Indonesia untuk kolom \textit{date}).
+          \end{itemize}
+
+          Pembangunan komponen \textit{DataView} mencakup penyelesaian beberapa sub-task
+          penting:
+          \begin{itemize}
+              \item \textbf{Ekspor Data Terintegrasi (\#14696)}: Mengimplementasikan fitur ekspor data ke format CSV dan XLSX langsung dari sisi \textit{client}. Proses ekspor dilengkapi fungsi validasi \texttt{hasActiveFilters} untuk menjamin keselarasan data yang diunduh dengan filter aktif di layar, serta menonaktifkan pewarnaan baris selang-seling saat penulisan file Excel.
+              \item \textbf{Pengelompokan Multi-Kolom (\#14697 \& \#14740)}: Mengembangkan fitur pengelompokan data (\textit{group-by}) berbasis beberapa kolom secara bersamaan. Logika pengurutan pada kolom \texttt{jumlah\_data} saat pengelompokan aktif diperbaiki agar tidak menghasilkan kesalahan urutan.
+              \item \textbf{Format Data Otomatis (\#14965)}: Menyempurnaan fungsi \texttt{generateColumnDef} dengan deteksi otomatis tipe data untuk memformat angka nominal langsung dengan simbol mata uang rupiah (\texttt{Rp}) serta kolom tanggal dengan format lokal Indonesia.
+              \item \textbf{Kompatibilitas Library Komponen (\#14579)}: Memperbaiki masalah \textit{state checkbox} pada \textit{FilterMenu} yang tidak langsung diperbarui ketika diklik akibat perubahan versi pustaka Mantine UI yang digunakan di proyek.
+          \end{itemize}
+
+          Setelah komponen selesai dibangun, dilakukan migrasi bertahap dari
+          \textit{ListBased} ke \textit{DataView} pada seluruh halaman yang
+          menggunakannya, yaitu \textit{laporan-stok-opname, laporan-pembelian,
+              dashboard-inventaris,} dan \textit{pilih-nomor-lot}. Proses migrasi ini
+          dikerjakan melalui Task \#14586 (4 hari, 5 poin, 25--28 Mei 2026).
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=10cm]{3.65-dataview-table.png}
+          %       \caption{Komponen DataView dalam tampilan TableView}
+          %   \end{figure}
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=10cm]{3.66-dataview-card.png}
+          %       \caption{Komponen DataView dalam tampilan CardView dengan filter aktif}
+          %   \end{figure}
+
+    \item Landing Page Stock Management (28 Mei -- 8 Juni 2026) \\ Sebelum landing page
+          ini dibuat, pengguna yang mengakses aplikasi \textit{Stock Management} langsung
+          diarahkan secara otomatis ke halaman tertentu tanpa diberi pilihan. Hal ini
+          kurang fleksibel karena berbagai modul (Riwayat Stok, Stok Opname, Dashboard
+          Inventaris, dan lainnya) memiliki kebutuhan akses yang berbeda-beda tergantung
+          peran pengguna.
+
+          Landing page yang dibuat menampilkan semua modul yang tersedia dalam satu
+          halaman beranda, lengkap dengan \textit{routing} ke masing-masing modul.
+          Bersamaan dengan pembuatan landing page ini, seluruh file \textit{ListBased}
+          lama yang sudah tidak digunakan dihapus dari repositori sebagai bagian dari
+          \textit{cleanup} pasca-migrasi ke \textit{DataView}.
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=10cm]{3.67-landing-page.png}
+          %       \caption{Tampilan Landing Page Stock Management}
+          %   \end{figure}
+
 \end{enumerate}
 
-\subsection{\textit{Alignment Front-End} ke \textit{Back-End}}
+\subsection{Alignment Front-End ke Back-End}
 
-Mulai pertengahan April 2026, Tim FE ditugaskan untuk menghubungkan layar-layar
-React yang telah dibuat dengan API dari \textit{Back-End} agar data dapat
-ditampilkan secara dinamis. Pada tahap ini, pekerjaan tidak hanya berada di
-sisi \textit{Front-End}, tetapi juga melibatkan penyesuaian di sisi
-\textit{Back-End}, terutama dalam penyediaan \textit{endpoint} yang sesuai
-dengan kebutuhan tampilan.
+Mulai pertengahan April 2026 (ditandai dengan Task \#13410, 20--29 April 2026),
+Tim FE ditugaskan untuk menghubungkan layar-layar React yang telah dibuat
+dengan API dari Back-End agar data dapat ditampilkan secara dinamis. Seiring
+berjalannya pekerjaan ini, peran Front-End berkembang menjadi Full-Stack,
+karena pekerjaan tidak lagi hanya berada di sisi React, tetapi juga melibatkan
+pembuatan dan penyesuaian \textit{endpoint} di sisi Back-End (Toraja).
 
-Di sisi React, dikembangkan beberapa layer pendukung seperti \textit{services,
-    hooks, mapper, helper,} dan \textit{utils} untuk menangani proses \textit{fetch
-    data}, pengolahan response, hingga distribusi data ke \textit{component}.
-Sementara itu, di sisi Toraja, dibuat API untuk menampilkan halaman React
-melalui \textit{iframe}, serta API yang digunakan oleh React untuk mengambil
-data dari \textit{database}.
+Pada tahap awal proses \textit{alignment}, ditemukan kendala dalam menyiapkan
+\textit{local development environment} Toraja, terutama terkait ketidaksesuaian
+versi Python dan beberapa \textit{dependency} yang dibutuhkan. Kendala ini
+diselesaikan dengan bantuan tim Back-End dan menjadi dasar saran perbaikan
+dokumentasi \textit{setup environment} yang disampaikan pada Subbab 5.2.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{3.4-alignment-1.png}
-    \caption{Layar React yang Sudah Terkoneksi dengan \textit{Back-End}}
-\end{figure}
+Di sisi React, dikembangkan beberapa \textit{layer} pendukung seperti
+\textit{services, hooks, mapper, helper,} dan \textit{utils} untuk menangani
+proses \textit{fetch data}, pengolahan \textit{response}, hingga distribusi
+data ke komponen. Sementara itu, di sisi Toraja, dibuat dan disesuaikan
+berbagai API untuk menampilkan halaman React melalui \textit{iframe}, serta API
+yang digunakan oleh React untuk mengambil data dari database.
 
 \begin{enumerate}
-    \item Riwayat Stok \\ Halaman React ditampilkan melalui API
-          \textit{GetRiwayatStokView} menggunakan \textit{iframe widget}. Setelah halaman
-          dimuat, data riwayat stok diambil melalui API
-          \textit{GetStockHistoryTableData}, kemudian ditampilkan dalam bentuk tabel pada
-          halaman tersebut.
+    \item \textbf{Riwayat Stok} (Task \#14000 --- 5 hari, 2 poin, 29 April--5 Mei 2026) \\
+          Halaman React ditampilkan melalui API \texttt{GetRiwayatStokView} menggunakan \textit{iframe widget}. Setelah halaman dimuat, data riwayat stok diambil melalui API \texttt{GetStockHistoryTableData}, kemudian ditampilkan dalam bentuk tabel pada halaman tersebut.
 
-    \item Stok Opname \\ Prosesnya serupa dengan Riwayat Stok. Halaman React ditampilkan
-          melalui API \textit{GetPilihNomorLotView} menggunakan \textit{iframe widget}.
-          Untuk pengambilan data, digunakan API \textit{GetDynamicStockOpnameView} yang
-          dikembangkan oleh Tim \textit{Back-End}, sehingga data dapat dimuat dan
-          ditampilkan sesuai kebutuhan.
+    \item \textbf{Stok Opname} (Task \#13410 --- 8 hari, 8 poin, 20--29 April 2026) \\
+          Prosesnya serupa dengan Riwayat Stok. Halaman React ditampilkan melalui API \texttt{GetPilihNomorLotView} menggunakan \textit{iframe widget}. Untuk pengambilan data, digunakan API \texttt{GetDynamicStockOpnameView} yang dikembangkan oleh Tim Back-End, sehingga data dapat dimuat dan ditampilkan sesuai kebutuhan. Selain itu, dikembangkan pula mekanisme navigasi \textit{split screen} antara React dan Toraja melalui fungsi \texttt{redirectSplitScreen} (Task \#13848, 29 April 2026), yang memungkinkan halaman React mengirim sinyal navigasi ke Toraja melalui \textit{iframe} tanpa menyebabkan reload halaman keseluruhan. Pada saat laporan ini ditulis, Task \#13848 masih berstatus belum selesai.
+
+    \item \textbf{Dashboard Inventaris --- Manajemen Inventaris Medis} (Task \#13999 --- 5 hari, 8 poin, 30 April--6 Mei 2026) \\
+          Di antara seluruh pekerjaan \textit{alignment} yang dilakukan, Dashboard Inventaris menjadi yang paling menandai pergeseran peran dari Front-End menjadi Full-Stack secara penuh.
+
+          Berbeda dengan Riwayat Stok dan Stok Opname yang hanya memerlukan penyesuaian
+          ringan di sisi Backend, \textit{alignment} Dashboard Inventaris melibatkan
+          pembuatan dan modifikasi endpoint di Toraja secara lebih aktif. Di sisi React,
+          dikembangkan \textit{layer services, hooks,} dan \textit{mapper} untuk
+          menangani komunikasi antara komponen dan API, mulai dari proses \textit{fetch}
+          data hingga pengolahan \textit{response} yang diterima. Di sisi Toraja, dibuat
+          beberapa endpoint baru --- termasuk untuk \texttt{laporan-stok-opname} dan
+          \texttt{laporan-pembelian} --- yang dikonfigurasi untuk menyediakan data sesuai
+          kebutuhan tampilan.
+
+          Proses ini menuntut koordinasi dengan tim Backend yang cukup intensif, karena
+          beberapa endpoint perlu dibangun dari awal atau dimodifikasi agar sesuai dengan
+          kebutuhan data di sisi tampilan. Keterlibatan aktif di sisi Toraja pada fase
+          ini menjadi awal dari transisi peran Tim Front-End menuju Full-Stack,
+          sebagaimana yang disebutkan dalam rencana pengembangan tim di Subbab 3.2.
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=10cm]{3.68-dashboard-connected.png}
+          %       \caption{Dashboard Inventaris yang sudah terkoneksi dengan Back-End}
+          %   \end{figure}
+
+    \item \textbf{Riwayat Belanja dan Details Belanja} (Task \#14857 dan \#15085 --- mulai 3 dan 8 Juni 2026, masih berjalan) \\
+          Sebagai kelanjutan dari proses \textit{alignment} yang sedang berjalan, pekerjaan berikutnya adalah menghubungkan halaman Riwayat Belanja dan Details Belanja React dengan endpoint Toraja yang sesuai. Proses ini sudah dimulai pada 3 dan 8 Juni 2026 dan masih berlangsung hingga saat laporan ini ditulis. Pola \textit{alignment} yang diterapkan mengikuti pendekatan yang sama dengan modul-modul sebelumnya: halaman React ditampilkan melalui \textit{iframe} di Toraja, dan data diambil melalui endpoint yang dibuat atau disesuaikan oleh Tim Back-End.
+
+    \item \textbf{Perbaikan Bug dan Integrasi Repository Lintas Fungsi} (Task \#14553 \& \#14271) \\
+          Selain menghubungkan modul React, peran \textit{Full-Stack} juga diimplementasikan dalam perbaikan logika bisnis di repositori \textit{back-end} lainnya:
+          \begin{itemize}
+              \item \textbf{Reparasi Penampilan Data Canvasser (\#14553)}: Melakukan pembenahan pada \textit{repository} \texttt{healthcare-productdetection} di modul \texttt{pssp\_program/request\_pssp/data\_process.py}. Bug berupa warna latar belakang kolom teks yang berubah menjadi abu-abu saat berisi karakter \texttt{'-'} diselesaikan dengan menghapus flag \texttt{is\_currency} pada kolom alasan pengajuan PSSP.
+              \item \textbf{Perbaikan Duplikasi Data Supplier (\#14271)}: Menyelesaikan masalah \textit{double entry} saat proses penyimpanan detail data supplier pada dokumen PSSP barang di sistem \textit{back-end} utama.
+          \end{itemize}
 \end{enumerate}
 
-\subsection{Perkiraan Pekerjaan yang Akan Dilanjutkan Selanjutnya}
+\subsection{Perkiraan Pekerjaan yang Akan Dilanjutkan}
 
-Ke depan, pekerjaan masih akan berfokus pada migrasi HealthyOne dan Canvasser
-ke React, terutama untuk memastikan integrasi dengan \textit{Back-End} berjalan
-stabil dan minim \textit{bug}.
+Ke depan, pekerjaan utama masih berpusat pada migrasi dan \textit{alignment}
+HealthyOne serta Canvasser ke React. Beberapa modul yang belum selesai
+di-\textit{align} ke Back-End --- termasuk Riwayat Belanja, Details Belanja,
+dan Penerimaan Stok --- akan menjadi prioritas berikutnya segera setelah
+laporan ini selesai disusun. Proses \textit{alignment} ini dikerjakan secara
+\textit{full-stack}, artinya pengerjaan tidak terbatas pada sisi tampilan React
+saja, tetapi juga mencakup pembuatan dan penyesuaian endpoint di Toraja.
 
-Selain itu, \textit{Project Manager} juga telah menyampaikan rencana
-pengembangan proyek baru bernama \textit{Principal Suite}. Informasi terkait
-proyek ini masih bersifat \textit{confidential}, sehingga belum dapat
-dijelaskan secara rinci.
+Selain itu, masih terdapat satu task lama yang belum terselesaikan, yaitu Task
+\#13636 (\textit{saat print, jangan diarahkan ke new tab}), yang pengerjaannya
+sempat tertunda karena adanya prioritas task lain yang lebih mendesak.
 
-Namun, Tim \textit{Front-End} direncanakan akan terlibat secara
+Di sisi Flutter, masih ada potensi perbaikan lanjutan terkait konsistensi
+sistem \textit{TableFontUtils} yang mungkin ditemukan seiring dengan pengujian
+lebih lanjut oleh tim QA.
+
+Project Manager juga telah menyampaikan rencana pengembangan proyek baru
+bernama \textbf{Principal Suite}. Informasi terkait proyek ini masih bersifat
+\textit{confidential}, sehingga belum dapat dijelaskan secara rinci dalam
+laporan ini. Namun, Tim Front-End direncanakan akan terlibat secara
 \textit{full-stack} dalam proyek tersebut dengan \textit{tech stack} yang
-berbeda dari proyek sebelumnya. Pengerjaan proyek ini akan dimulai setelah
-proses migrasi sistem yang sedang berjalan sudah cukup stabil.
+berbeda dari proyek-proyek sebelumnya. Pengerjaan proyek ini akan dimulai
+setelah proses migrasi sistem yang sedang berjalan sudah cukup stabil.
 
-% \textbf{\subsection{Principle Suite}}
-% Proyek ini baru dibentuk
-% Techstack yang dipakai
-% \subsection{Pengenalan Environment Project di Hospinet}
-% Sebelum mulai mengerjakan task pengembangan, mahasiswa terlebih dahulu
-% mempelajari environment project yang digunakan pada platform Hospinet. Tahap
-% ini penting agar mahasiswa memahami arsitektur dasar aplikasi, alur navigasi,
-% struktur data, serta mekanisme komunikasi antara front-end dan back-end.
-% Beberapa materi pengenalan yang dipelajari meliputi dynamic routing, button
-% render flow, serta format request dan response dalam pertukaran data berbasis
-% JSON.
-
-% \subsection{Tipe-tipe Task}
-% \subsubsection{Data Pasien}
-% \subsubsection{Item Cabang}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=10cm]{screen-healthyone-flutter-itemcabang.png}
-%     \caption{Tampilan layar Item Cabang di React}%
-%     \label{fig:datapasienflutter}
-% \end{figure}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=10cm]{screen-healthyone-react-itemcabang.png}
-%     \caption{Tampilan layar Item Cabang di React}%
-%     \label{fig:datapasienreact}
-% \end{figure}
-% \subsubsection{Penerimaan Stok}
-% \subsubsection{Stok Opname}
-% \subsubsection{Riwayat Stok}
-% \subsubsection{Pengemasan dan Pengeluaran}
-% \subsubsection{Riwayat Belanja}
-% % % Contoh Penggunaan Text Box untuk memasukkan kode program
-% % \begin{lstlisting}
-% % function login() {
-% %   console.log("Hello World");
-% % }
-% % \end{lstlisting}
-
-% \subsection{Pengenalan \textit{Environment} Project di Hospinet}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=7cm]{flow-sdui.png}
-%     \caption{\textit{Flow Dynamic Routing}~\cite{backendcanva}}%
-%     \label{fig:flowdynamicrouting}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=7cm]{flow-render.png}
-%     \caption{\textit{Flow Button Render}~\cite{backendcanva}}%
-%     \label{fig:flowbuttonrender}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=7cm]{snippet-response-get.png}
-%     \caption{\textit{Response JSON GET}~\cite{backendcanva}}%
-%     \label{fig:responseJSONGET}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=7cm]{snippet-request-post.png}
-%     \caption{\textit{Request JSON POST}~\cite{backendcanva}}%
-%     \label{fig:requestJSONPOST}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=7cm]{snippet-response-post.png}
-%     \caption{\textit{Response JSON POST}~\cite{backendcanva}}%
-%     \label{fig:responseJSONPOST}
-% \end{figure}
-% \subsection{Tipe Task IMPROVEMENT}
-% \subsection{Tipe Task NEW}
-% \subsection{Tipe Task BUG}
-% \subsection{Tipe Task USER STORY}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=10cm]{Figma Canvasser.png}
-%     \caption{Tampilan Figma untuk Proyek Canvasser}%
-%     \label{fig:figmacanvasser}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=10cm]{Figma HealthyOne.png}
-%     \caption{Tampilan Figma untuk Proyek HealthyOne}%
-%     \label{fig:figmahealthyone}
-% \end{figure}
-
-% \subsection{Migrasi HealthyOne dari Flutter ke React}
-
-% Selama proses development, penulis membuat navigation buatan mandiri untuk
-% memudahkan pindah-pindah page.
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=10cm]{screen-home.png}
-%     \caption{Tampilan Home untuk Development Pribadi}%
-%     \label{fig:devhome}
-% \end{figure}
-
-% % Template gambar
-% % \begin{figure}
-% %     \begin{center}
-% %         \includegraphics[]{}
-% %         \caption{}
-% %         \label{fig:}
-% %     \end{center}
-% % \end{figure}
+Sebagai catatan tambahan, pemberian poin KPI untuk sejumlah \textit{task} yang
+dijabarkan pada subbab-subbab sebelumnya (\#12071, \#14127, \#14858, dan
+\#14374) masih dalam proses validasi oleh mentor pada saat laporan ini disusun,
+sehingga belum tercantum pada rekapitulasi poin bulanan di Subbab 3.3.5.
+Pembaruan rekapitulasi tersebut akan disampaikan pada laporan magang periode
+selanjutnya.

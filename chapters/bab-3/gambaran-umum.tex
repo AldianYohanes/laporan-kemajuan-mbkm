@@ -2,7 +2,8 @@
 Selama pelaksanaan magang di PT Inti Utama Solusindo, terdapat beberapa sistem
 dan alat kerja yang digunakan sehari-hari. Bagian ini menjelaskan alur kerja
 secara umum, mulai dari orientasi awal hingga mekanisme pengelolaan tugas dan
-evaluasi kinerja.
+evaluasi kinerja, serta menjelaskan pekerjaan yang dikerjakan selama periode 12
+Januari -- 9 Juni 2026.
 
 \subsection{Orientasi Karyawan Baru}
 Hari pertama magang diisi dengan kegiatan Orientasi Karyawan Baru (OKB) yang
@@ -15,8 +16,8 @@ pekerjaan.
 
 \subsection{Pengenalan Produk dan Environment}
 Dalam proses pengenalan, dijelaskan bahwa saat ini PT Inti Utama Solusindo
-sedang gencar melakukan \textit{development} untuk dua aplikasi yang ada
-diberada dalam ekosistem Hospinet, di antaranya HealthyOne dan Canvasser.
+sedang gencar melakukan \textit{development} untuk dua aplikasi yang berada
+dalam ekosistem Hospinet, yaitu HealthyOne dan Canvasser.
 
 \begin{figure}[H]
       \centering
@@ -53,68 +54,67 @@ memiliki assignee, sehingga produktivitas kerja tetap terjaga.
 \end{figure}
 
 \subsection{Siklus Task OpenProject}
-\begin{enumerate}
+\begin{enumerate}[label=\alph*.]
       \item Perencanaan dan persetujuan
-            \begin{itemize}[noitemsep, topsep=0pt]
-                  \item \textbf{MJ Planning:} digunakan untuk menandai bahwa task masih berada pada tahap
-                        perencanaan awal oleh tim terkait
-                  \item \textbf{UI/UX Design:} dipakai saat rancangan tampilan dan alur penggunaan mulai disusun
-                        sebagai dasar pengembangan task.
-                  \item \textbf{PB Approved:} menandai bahwa task telah memperoleh persetujuan untuk masuk ke
-                        tahap pengerjaan.
-            \end{itemize}
-      \item Pengerjaan oleh developer \begin{itemize}[noitemsep, topsep=0pt]
-                  \item \textbf{IT To Do:} digunakan saat task sudah masuk ke daftar kerja developer, tetapi
-                        belum mulai dikerjakan.
-                  \item \textbf{IT On Progress:} dipakai ketika task sedang dikerjakan oleh developer
-                  \item \textbf{IT Completed - Not Deployed:} menandai bahwa proses pengerjaan telah selesai,
-                        tetapi hasilnya belum di-deploy.
-            \end{itemize}
-      \item Pengujian QA pada environment development/staging
-            \begin{itemize}[noitemsep, topsep=0pt]
-                  \item \textbf{QA To Do:} dipakai ketika task sudah masuk ke antrian pengujian oleh tim QA.
-                  \item \textbf{QA In Testing Dev:} digunakan saat task sedang diuji pada environment
-                        development.
-                  \item \textbf{QA Ready for Staging:} menandai bahwa task telah siap dipindahkan ke environment
-                        staging untuk pengujian lanjutan.
-                  \item \textbf{Staging Deployed:} dipakai setelah hasil task berhasil di-deploy ke environment
-                        staging.
-                  \item \textbf{QA In Testing Staging:} digunakan saat task menjalani pengujian lanjutan pada
-                        environment staging.
-                  \item \textbf{QA Ready for Promote:} menandai bahwa task telah lolos pengujian di staging dan
-                        siap dipromosikan ke production.
-            \end{itemize}
-      \item Promote ke production dan validasi akhir
-            \begin{itemize}[noitemsep, topsep=0pt]
-                  \item \textbf{QA Promoted:} dipakai setelah task berhasil dipindahkan dari staging ke
-                        production.
-                  \item \textbf{QA Failed Production:} dipakai ketika pada production masih ditemukan kendala
-                        atau hasilnya belum sesuai harapan.
-                  \item \textbf{QA Pass Production:} dipakai ketika task berjalan dengan baik pada production
-                        sesuai hasil yang diharapkan.
-                  \item \textbf{QA Non Issue:} digunakan ketika validasi di production tidak menemukan kendala
-                        pada task tersebut.
-                  \item \textbf{QA Done:} menandai bahwa seluruh proses pengujian dan validasi task telah
-                        selesai.
-            \end{itemize}
-      \item Kemungkinan pembatalan
-            \begin{itemize}[noitemsep, topsep=0pt]
-                  \item \textbf{MJ Cancelled:} dipakai ketika task dibatalkan dan tidak dilanjutkan ke proses
-                        berikutnya.
-            \end{itemize}
+            \begin{enumerate}[label=\arabic*), noitemsep, topsep=0pt]
+                  \item \textbf{MJ Planning:} digunakan untuk menandai bahwa task masih berada pada tahap perencanaan awal oleh tim terkait.
+                  \item \textbf{UI/UX Design:} dipakai saat rancangan tampilan dan alur penggunaan mulai disusun sebagai dasar pengembangan task.
+                  \item \textbf{PB Approved:} menandai bahwa task telah memperoleh persetujuan untuk masuk ke tahap pengerjaan.
+            \end{enumerate}
 
+      \item Pengerjaan oleh developer
+            \begin{enumerate}[label=\arabic*), noitemsep, topsep=0pt]
+                  \item \textbf{IT To Do:} digunakan saat task sudah masuk ke daftar kerja developer, tetapi belum mulai dikerjakan.
+                  \item \textbf{IT On Progress:} dipakai ketika task sedang dikerjakan oleh developer.
+                  \item \textbf{IT Completed - Not Deployed:} menandai bahwa proses pengerjaan telah selesai, tetapi hasilnya belum di-deploy.
+            \end{enumerate}
+
+      \item Pengujian QA pada environment development/staging
+            \begin{enumerate}[label=\arabic*), noitemsep, topsep=0pt]
+                  \item \textbf{QA To Do:} dipakai ketika task sudah masuk ke antrian pengujian oleh tim QA.
+                  \item \textbf{QA In Testing Dev:} digunakan saat task sedang diuji pada environment development.
+                  \item \textbf{QA Ready for Staging:} menandai bahwa task telah siap dipindahkan ke environment staging untuk pengujian lanjutan.
+                  \item \textbf{Staging Deployed:} dipakai setelah hasil task berhasil di-deploy ke environment staging.
+                  \item \textbf{QA In Testing Staging:} digunakan saat task menjalani pengujian lanjutan pada environment staging.
+                  \item \textbf{QA Ready for Promote:} menandai bahwa task telah lolos pengujian di staging dan siap dipromosikan ke production.
+            \end{enumerate}
+
+      \item Promote ke production dan validasi akhir
+            \begin{enumerate}[label=\arabic*), noitemsep, topsep=0pt]
+                  \item \textbf{QA Promoted:} dipakai setelah task berhasil dipindahkan dari staging ke production.
+                  \item \textbf{QA Failed Production:} dipakai ketika pada production masih ditemukan kendala atau hasilnya belum sesuai harapan.
+                  \item \textbf{QA Pass Production:} dipakai ketika task berjalan dengan baik pada production sesuai hasil yang diharapkan.
+                  \item \textbf{QA Non Issue:} digunakan ketika validasi di production tidak menemukan kendala pada task tersebut.
+                  \item \textbf{QA Done:} menandai bahwa seluruh proses pengujian dan validasi task telah selesai.
+            \end{enumerate}
+
+      \item Kemungkinan pembatalan
+            \begin{enumerate}[label=\arabic*), noitemsep, topsep=0pt]
+                  \item \textbf{MJ Cancelled:} dipakai ketika task dibatalkan dan tidak dilanjutkan ke proses berikutnya.
+            \end{enumerate}
 \end{enumerate}
+
 \subsection{Sistem KPI}
 Untuk mendukung pengukuran produktivitas kerja, perusahaan menerapkan sistem
 Key Performance Indicator (KPI) berbasis poin pada setiap task. Bobot poin yang
-diberikan berkisar antara 5 hingga 30 poin, tergantung pada tingkat
-kompleksitas dan beban kerja yang dibutuhkan. Dalam sistem ini, mahasiswa
-magang ditargetkan untuk mencapai minimal 35 poin, sedangkan karyawan memiliki
-target minimal 50 poin. Pencapaian KPI menjadi salah satu indikator evaluasi
-performa selama periode kerja. Apabila target minimum tidak tercapai, hal
-tersebut dapat memengaruhi penilaian kinerja magang. Sebaliknya, pencapaian
-yang melampaui target dapat dikonversikan ke dalam bentuk insentif tambahan
-sesuai kebijakan perusahaan.
+diberikan berkisar antara 1 hingga 8 poin pada task yang dikerjakan selama
+periode magang ini, tergantung pada tingkat kompleksitas dan beban kerja yang
+dibutuhkan. Dalam sistem ini, mahasiswa magang ditargetkan untuk mencapai
+minimal 35 poin per bulan, sedangkan karyawan memiliki target minimal 50 poin.
+Pencapaian KPI menjadi salah satu indikator evaluasi performa selama periode
+kerja. Apabila target minimum tidak tercapai, hal tersebut dapat memengaruhi
+penilaian kinerja magang. Sebaliknya, pencapaian yang melampaui target dapat
+dikonversikan ke dalam bentuk insentif tambahan sesuai kebijakan perusahaan.
+
+Berdasarkan rekapitulasi poin pada OpenProject, pencapaian KPI bulanan selama
+periode magang adalah sebagai berikut: Januari 2026 sebesar 23 poin, Februari
+2026 sebesar 43 poin, Maret 2026 sebesar 36 poin, April 2026 sebesar 43 poin,
+dan Mei 2026 sebesar 27 poin. Target minimum 35 poin bagi mahasiswa magang
+tercapai pada bulan Februari, Maret, dan April 2026, sedangkan bulan Januari
+dan Mei berada di bawah target -- pada bulan Januari karena masih dalam tahap
+orientasi dan latihan, dan pada bulan Mei karena sebagian besar waktu dialokasikan
+untuk pengerjaan komponen DataView (Task \#14855) yang berdurasi 23 hari serta
+beberapa task yang poinnya belum tercatat pada saat laporan ini disusun.
 
 \subsection{GitLab}
 Selain OpenProject, perusahaan menggunakan GitLab untuk manajemen repository
@@ -135,7 +135,14 @@ merge request.
 Setelah suatu task selesai dikerjakan, mahasiswa melakukan push perubahan ke
 branch terkait, kemudian mengajukan merge request agar code dapat ditinjau
 sebelum digabungkan ke branch utama, yaitu master. Proses ini membantu menjaga
-konsistensi, keamanan, dan kualitas code dalam pengembangan aplikasi.
+konsistensi, keamanan, dan kualitas code dalam pengembangan aplikasi. Selama
+periode magang, perubahan code dilakukan pada beberapa repository, yaitu
+\textit{healthcare-intelligence-app} dan \textit{healthcare-intelligence-appv2}
+(Flutter, HealthyOne mobile), \textit{healthyone-medic-fe} (React, modul Data
+Pasien dan Item Cabang), \textit{healthy-one-stock-management-fe} (React, modul
+manajemen stok dan Marketplace B2B), \textit{healthcare-intelligence}
+(Canvasser), \textit{healthcare-productdetection}, \textit{packages}, dan
+\textit{psychotest-management-app}.
 \begin{figure}[H]
       \centering
       \includegraphics[width=10cm]{screen-gitlab-mr.png}
@@ -145,13 +152,13 @@ konsistensi, keamanan, dan kualitas code dalam pengembangan aplikasi.
 \begin{figure}[H]
       \centering
       \includegraphics[width=10cm]{screen-openproject-taskassigned.png}
-      \caption{Tampilan Daftar \textit{Task} yang Diberikan kepada Penulis}
+      \caption{Tampilan Daftar \textit{Task} yang Diberikan kepada Mahasiswa Magang}
 \end{figure}
 
 \subsection{Objective Alignment}
 Sebagai bagian dari penyesuaian terhadap sistem kerja perusahaan, mahasiswa
 juga mengikuti kegiatan Objective Alignment yang dilaksanakan pada 4 Maret 2026
-pukul 16.00–17.30 WIB di Ruang Auditorium. Kegiatan ini bertujuan untuk
+pukul 16.00--17.30 WIB di Ruang Auditorium. Kegiatan ini bertujuan untuk
 menyelaraskan pemahaman seluruh anggota tim terhadap target kerja, prioritas
 pengembangan, serta arah pencapaian yang ingin diwujudkan oleh divisi terkait.
 Keikutsertaan mahasiswa dalam kegiatan ini memberikan pemahaman bahwa
@@ -163,4 +170,3 @@ sejalan dengan kebutuhan bisnis dan tujuan organisasi.
       \includegraphics[width=10cm]{event-objectivealignment.png}
       \caption{Kegiatan \textit{Objective Alignment}}
 \end{figure}
-
