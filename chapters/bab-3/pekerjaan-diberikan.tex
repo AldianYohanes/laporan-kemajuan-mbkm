@@ -2,11 +2,11 @@
 \subsection{Latihan Membuat \textit{Widget} menggunakan Prinsip SDUI}
 
 Tugas pertama diberikan oleh mentor sebagai latihan pengembangan
-\textit{widget} berbasis JSON, dikerjakan pada 28--30 Januari 2026 sebagai
+\textit{widget} berbasis JSON, dikerjakan pada 12--13 Januari 2026 sebagai
 bagian dari minggu pertama pelaksanaan magang. Proses pengerjaan dilakukan
 secara \textit{local} dengan membuat halaman baru khusus untuk latihan (tidak
 \textit{push} ke \textit{repository} agar kode tetap bersih). Tersedia
-dokumentasi khusus \textit{Front-End} yang dipelajari untuk memahami struktur
+dokumentasi khusus \textit{front-end} yang dipelajari untuk memahami struktur
 dan implementasi pembuatan \textit{widget}.
 
 \begin{lstlisting}[caption=Contoh JSON untuk Membuat \textit{Widget TabView}, captionpos=b, xleftmargin=2cm, xrightmargin=2cm]
@@ -25,6 +25,7 @@ dan implementasi pembuatan \textit{widget}.
 };
 \end{lstlisting}
 
+\newpage
 Pada tahap awal terdapat kesulitan dalam memahami struktur tersebut, namun
 pemahaman meningkat seiring waktu. Melalui proses tersebut, berhasil
 dikembangkan beberapa jenis \textit{widget} seperti \textit{Text, TextField,
@@ -42,10 +43,10 @@ Setelah memahami penggunaan JSON untuk membangun UI dengan Flutter, diberikan
 tugas \#11858 untuk migrasi beberapa \textit{widget} dari \textit{repository}
 sebelumnya (Flutter v3.16.9) ke repository terbaru (Flutter v3.38.5). Selain
 itu, diterapkan struktur \textit{Model-View-Controller} (MVC) untuk
-meningkatkan keterbacaan (readability) serta skalabilitas (scalability) kode
-pada \textit{widget} yang dikembangkan. Task ini dikerjakan pada 28 Januari --
-2 Februari 2026 dengan durasi pengerjaan 4 hari dan bobot 5 poin KPI.
+meningkatkan keterbacaan (\textit{readability}) serta skalabilitas
+(\textit{scalability}) kode pada \textit{widget} yang dikembangkan.
 
+\newpage
 Migrasi dilakukan terhadap berbagai \textit{widget}, antara lain
 \textit{AntrianTV, TextField, AddImageCamera, Map, Card, CodeSnippet, Calendar,
     PieChart, ProgressChart, ProgressBar, BarChart}, dan komponen lainnya.
@@ -67,6 +68,7 @@ poin KPI yang diperoleh. Pengelompokan pada subbab ini disusun berdasarkan tema
 pekerjaan (Flutter), sehingga urutannya tidak selalu mencerminkan urutan
 kronologis tanggal pengerjaan.
 
+\newpage
 \begin{enumerate}
     \item \textit{MultipleChoice/Checkbox} bisa diklik di area teks (\#10074
           --- 1 hari, 1 poin) \\ Sebelumnya, \textit{widget
@@ -82,11 +84,6 @@ kronologis tanggal pengerjaan.
 
     \item \textit{Accordion} bisa diimplementasikan di \textit{TemplateForm} (\#10120 --- 3 hari, 8 poin) \\
           \textit{Widget Accordion} sebenarnya sudah berjalan di beberapa layar, namun belum bisa digunakan pada layar yang menggunakan \textit{TemplateForm}. Solusinya adalah menambahkan \textit{parser} khusus untuk \textit{Accordion} beserta modelnya di dalam \texttt{template\_form}.dart.
-          \begin{figure}[H]
-              \centering
-              \includegraphics[width=8cm]{3.4-accordion-closed.png}
-              \caption{\textit{Widget Accordion} dalam \textit{TemplateForm} dalam kondisi tertutup}
-          \end{figure}
           \begin{figure}[H]
               \centering
               \includegraphics[width=8cm]{3.4-accordion-opened.png}
@@ -125,12 +122,6 @@ kronologis tanggal pengerjaan.
               \caption{\textit{Widget ListBased} dengan \textit{font size} terkecil}
           \end{figure}
 
-          \begin{figure}[H]
-              \centering
-              \includegraphics[width=8cm]{3.4-fontsizetable-large.png}
-              \caption{\textit{Widget ListBased} dengan \textit{font size} terbesar}
-          \end{figure}
-
     \item Halaman lebih panjang agar tidak tertutup FAB (\#11708 --- 2 hari, 3 poin) \\
           Beberapa konten di halaman tertutup oleh \textit{Floating Action Button} (FAB).
           Solusinya adalah menambahkan detektor pada \texttt{section\_parser.dart} yang
@@ -141,7 +132,7 @@ kronologis tanggal pengerjaan.
               \includegraphics[width=8cm]{3.4-fab-bottompadding.png}
               \caption{Layar yang memiliki \textit{FAB} dengan \textit{extra bottom padding}}
           \end{figure}
-
+          \newpage
     \item \textit{Bug dropdown} tidak bisa dipilih setelah \textit{search} di Canvasser (\#11797 --- 1 hari, 3 poin) \\
           Setelah \textit{user} melakukan \textit{search} di \textit{dropdown}, opsi tidak bisa dipilih. Penyebabnya adalah \textit{indexing} yang tidak terlindungi sebelum digunakan, sehingga bisa \textit{out of bound}. Perbaikan dilakukan dengan menambahkan validasi \textit{index} di \texttt{table.dart}.
           \begin{figure}[H]
@@ -158,6 +149,7 @@ kronologis tanggal pengerjaan.
               \caption{Tombol-tombol yang berantakan}
           \end{figure}
 
+          \newpage
     \item \textit{Dropdown} di \textit{editable table} tidak langsung \textit{update height} (\#12108 --- 2 hari, 2 poin) \\
           Ketika \textit{user} mengetik di \textit{dropdown} dan hasil pencarian dari \textit{back-end} sudah muncul, tinggi \textit{dropdown} tidak ikut menyesuaikan dan tetap pendek seperti saat data kosong. Perbaikan dilakukan pada \texttt{single\_dropdown.dart} agar \textit{state height} diperbarui secara instan begitu data berhasil diambil, tanpa perlu menutup dan membuka dropdown kembali.
 
@@ -172,11 +164,11 @@ kronologis tanggal pengerjaan.
               \caption{\textit{Dropdown} yang \textit{error overflow}}
           \end{figure}
 
+          \newpage
     \item Beberapa \textit{widget} tidak mengikuti perubahan \textit{font size} tabel
-          (\#12809 --- 2 hari, 2 poin) \\ Sebagai kelanjutan dari Task \#11091, ditemukan
-          bahwa beberapa \textit{widget} di dalam \textit{editable table} masih belum
-          mengikuti perubahan ukuran \textit{font}, khususnya \textit{TextField} yang
-          tidak bisa di-\textit{edit}. Perbaikan dilakukan pada \texttt{table.dart,
+          (\#12809 --- 2 hari, 2 poin) \\ Ditemukan bahwa beberapa \textit{widget} di
+          dalam \textit{editable table} masih belum mengikuti perubahan ukuran
+          \textit{font}. Perbaikan dilakukan pada \texttt{table.dart,
               blank\_widget.dart,} dan \texttt{text.dart} dengan menambahkan parameter
           \textit{isForEditTable} agar \textit{font} bisa mendeteksi ukuran yang
           diperlukan.
@@ -195,7 +187,7 @@ kronologis tanggal pengerjaan.
           \end{figure}
 
     \item \textit{DatePicker} tidak bisa digunakan di dalam tabel (\#12934 --- 2 hari, 3 poin) \\
-          \textit{DatePicker} pada layar Penerimaan Stok tidak berfungsi saat digunakan di dalam tabel. Penyebabnya adalah \textit{null handling} di \textit{widget DateField} tidak diimplementasikan dengan baik untuk konteks \textit{editable table}. Perbaikan dilakukan dengan menambahkan \textit{ternary operator} untuk mengonversi nilai kosong menjadi \textit{null} sebelum diproses.
+          \textit{DatePicker} pada layar Penerimaan Stok tidak berfungsi saat digunakan di dalam tabel. Perbaikan dilakukan dengan menambahkan \textit{ternary operator} untuk mengonversi nilai kosong menjadi \textit{null} sebelum diproses.
           \begin{figure}[H]
               \centering
               \includegraphics[width=8cm]{3.4-datepicker-bug.png}
@@ -214,17 +206,13 @@ kronologis tanggal pengerjaan.
           Beberapa \textit{dropdown} di Canvasser tidak bisa di-\textit{scroll} sampai bawah ketika dibuka di perangkat \textit{mobile}. Setelah dianalisis, ditemukan adanya beberapa \textit{scrollbar} yang bertumpuk di dalam \textit{widget MultiDropdown}, sehingga saling menghalangi. Solusinya adalah menghapus \textit{SingleChildScrollView} dan \textit{Column} yang bermasalah, menggantinya dengan \textit{Container} biasa karena \textit{ListView.builder} di dalamnya sudah memiliki \textit{scrollbar} sendiri.
 
     \item \textit{Widget ImageField} (\textit{upload} gambar) bisa mengambil foto dari kamera (\#13240 --- 4 hari, 5 poin) \\
-          Sebelumnya, \textit{widget} ini hanya mendukung \textit{upload} dari \textit{file}. \textit{Improvement} ini menambahkan opsi untuk mengambil foto langsung dari kamera perangkat. Implementasinya dengan membuat \textit{widget} baru \textit{`CapturePhotoScreen'} yang mengakses kamera (\textit{webcam}, kamera depan, maupun belakang), kemudian mengintegrasikannya ke dalam \textit{widget ImageField} sehingga \textit{user} bisa memilih antara \textit{upload} dari \textit{file} atau ambil foto langsung.
+          Sebelumnya, \textit{widget} ini hanya mendukung \textit{upload} dari \textit{file}. \textit{Improvement} ini menambahkan opsi untuk mengambil foto langsung dari kamera perangkat.
+          \newpage
+          Implementasinya dengan membuat \textit{widget} baru \textit{`CapturePhotoScreen'} yang mengakses kamera (\textit{webcam}, kamera depan, maupun belakang), kemudian mengintegrasikannya ke dalam \textit{widget ImageField} sehingga \textit{user} bisa memilih antara \textit{upload} dari \textit{file} atau ambil foto langsung. Kamera akan menyesuaikan defaultnya ke kamera
           \begin{figure}[H]
               \centering
               \includegraphics[width=8cm]{3.4-capturephotoscreen.png}
               \caption{\textit{Widget CapturePhotoScreen} yang baru dibuat}
-          \end{figure}
-
-          \begin{figure}[H]
-              \centering
-              \includegraphics[width=8cm]{3.4-newimagefield.png}
-              \caption{\textit{Widget ImageField} dengan fitur Ambil Foto}
           \end{figure}
 
     \item Bug fix urutan kolom tanggal (\#13508 --- 3 hari, 3 poin) \\ Kolom bertipe
@@ -239,34 +227,25 @@ kronologis tanggal pengerjaan.
           \textit{DateTime} untuk menghasilkan urutan yang akurat. Selain itu,
           ditambahkan pula \textit{null handling} agar baris dengan nilai tanggal kosong
           tidak menyebabkan error saat proses pengurutan berjalan.
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=8cm]{3.58-sort-tanggal.png}
-          %       \caption{Widget tabel setelah perbaikan pengurutan kolom tanggal}
-          %   \end{figure}
 
-    \item Text widget custom margin dan padding dari backend (\#13549 --- 8 poin) \\
-          Sebelumnya, konfigurasi \textit{margin} dan \textit{padding} pada widget
-          \textit{Text} dan \textit{Section} hanya bisa dilakukan secara statis di sisi
-          \textit{frontend}. Tidak ada parameter yang bisa dikirim dari \textit{backend}
-          melalui JSON SDUI untuk mengatur jarak antar elemen secara dinamis.
+    \item Text widget custom margin dan padding dari \textit{back-end} (\#13549 --- 8
+          poin) \\ Sebelumnya, konfigurasi \textit{margin} dan \textit{padding} pada
+          widget \textit{Text} dan \textit{Section} hanya bisa dilakukan secara statis di
+          sisi \textit{front-end}. Tidak ada parameter yang bisa dikirim dari
+          \textit{back-end} melalui JSON SDUI untuk mengatur jarak antar elemen secara
+          dinamis.
 
           Improvement ini menambahkan dukungan parameter \textit{margin} dan
           \textit{padding} pada model SDUI dari widget \textit{Text}, \textit{TextField},
-          dan \textit{Section}, sehingga tim \textit{backend} bisa mengatur tata letak
+          dan \textit{Section}, sehingga tim \textit{back-end} bisa mengatur tata letak
           komponen langsung dari konfigurasi JSON tanpa perlu mengubah kode
-          \textit{frontend}. Nilai default tetap dipertahankan agar layar yang tidak
+          \textit{front-end}. Nilai default tetap dipertahankan agar layar yang tidak
           mengirim parameter ini tidak mengalami perubahan tampilan.
 
           Pengerjaan task ini memakan waktu empat hari (17--22 April 2026) karena cakupan
           widget yang terdampak cukup luas --- setiap tipe widget perlu ditangani secara
           terpisah sesuai dengan struktur model yang dimilikinya. Task ini merupakan
           salah satu task dengan bobot poin tertinggi (8 poin) selama periode magang.
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=8cm]{3.59-custom-padding.png}
-          %       \caption{Contoh tampilan widget Text dengan custom padding dari backend}
-          %   \end{figure}
 
     \item Icon Konsultasi tidak mengikuti ukuran font (\#13563 --- 1 poin) \\ Ikon yang
           mewakili fitur Konsultasi di beberapa layar tidak menyesuaikan ukurannya ketika
@@ -303,20 +282,15 @@ kronologis tanggal pengerjaan.
           selalu ditempatkan di posisi terakhir --- baik saat sort ascending maupun
           descending.
 
-    \item Alert widget --- perbaikan posisi tampilan (\#13635 --- 3 hari, 1 poin) \\
-          Widget \textit{alert} atau \textit{snackbar} yang muncul sebagai notifikasi
-          sering kali tertutup oleh elemen lain di bagian bawah layar, seperti
+    \item Perbaikan posisi tampilan Alert widget (\#13635 --- 3 hari, 1 poin) \\ Widget
+          \textit{alert} atau \textit{snackbar} yang muncul sebagai notifikasi sering
+          kali tertutup oleh elemen lain di bagian bawah layar, seperti
           \textit{navigation bar} atau tombol aksi. Posisi kemunculannya terlalu rendah
           sehingga tidak selalu terlihat oleh pengguna.
 
           Perbaikan dilakukan dengan mengangkat posisi tampilan \textit{snackbar} agar
           selalu muncul di atas elemen navigasi bawah. Selain itu, ditambahkan offset
           vertikal yang memperhitungkan tinggi komponen di bawahnya secara dinamis.
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=8cm]{3.60-alert-position.png}
-          %       \caption{Posisi alert/snackbar setelah perbaikan}
-          %   \end{figure}
 
     \item Fix spacing TextField (\#13701 --- 1 hari, 1 poin) \\ Beberapa widget
           \textit{TextField} di berbagai layar memiliki jarak (\textit{spacing}) antar
@@ -368,11 +342,6 @@ kronologis tanggal pengerjaan.
           \textit{TableFontUtils} yang aktif. Pengerjaan memakan waktu empat hari (18--21
           Mei 2026) karena setiap komponen perlu ditangani secara independen sesuai
           strukturnya masing-masing.
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=8cm]{3.61-textfield-size.png}
-          %       \caption{Widget TextField setelah perbaikan ukuran pada editable table}
-          %   \end{figure}
 
     \item Data hilang setelah filter Group By di Pembuatan Konten AI (\#13670 --- 4 hari,
           1 poin) \\ Pada layar Pembuatan Konten AI, data yang tampil di
@@ -426,10 +395,6 @@ kronologis tanggal pengerjaan.
           bug ini memerlukan interaksi spesifik antara dua fitur yang berbeda.
 
 \end{enumerate}
-
-Poin KPI yang diperoleh dari seluruh \textit{task} pada subbab ini, ditambah
-dengan pengerjaan di sisi React pada subbab berikutnya, direkap secara bulanan
-pada Subbab 3.3.5.
 
 \subsection{Pembuatan Layar-layar HealthyOne di React}
 Berbeda dengan pekerjaan di Flutter yang didominasi oleh perbaikan dan
@@ -511,6 +476,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
                     \end{figure}
           \end{enumerate}
 
+          \newpage
     \item Penerimaan Stok
           \begin{figure}[H]
               \centering
@@ -531,6 +497,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
               \caption{Tampilan layar Penerimaan Stok di React}%
           \end{figure}
 
+          \newpage
     \item Stok Opname (\#12117 --- 6 hari, 8 poin)
           \begin{figure}[H]
               \centering
@@ -548,7 +515,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
           \end{figure}
 
           Pengembangan modul ini dilanjutkan dengan proses \textit{alignment} ke
-          \textit{backend} Toraja (Task \#13410, 8 hari, 8 poin) yang menghubungkan
+          \textit{back-end} Toraja (Task \#13410, 8 hari, 8 poin) yang menghubungkan
           antarmuka React dengan API. Selama fase pengujian di \textit{environment
               staging}, dilakukan serangkaian penyempurnaan dan perbaikan \textit{bug} yang
           meliputi:
@@ -556,7 +523,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
               \item \textbf{Perbaikan Sistem Seleksi dan Pagination (\#14201 \& \#14281)}: Memperbaiki bug di mana seleksi produk hilang saat berpindah halaman (\textit{pagination}). Perbaikan dilakukan dengan menyimpan baris terpilih ke dalam \textit{state} \texttt{allLoadedRows} lintas halaman. Masalah konflik \textit{state} seleksi produk ketika membuka dua halaman Stok Opname secara bersamaan juga diselesaikan dengan mengisolasi \textit{state} \texttt{selectedIds} pada masing-masing komponen.
               \item \textbf{Validasi Form dan Pesan Error (\#14282 \& \#14128)}: Menambahkan validasi pop-up untuk mencegah pengguna menekan tombol \textit{submit} tanpa memilih produk terlebih dahulu, serta mengganti pesan error bawaan menjadi komponen \textit{Alert} terstandarisasi.
               \item \textbf{Konsistensi Kontrol Input dan Dropdown (\#14131, \#14129, \& \#14486)}: Menonaktifkan dropdown Unit Pelayanan karena nilainya sudah ditentukan otomatis dari sesi pengguna. Menghilangkan \textit{overlap} scrollbar pada \textit{QuantityPicker} dengan mengubah pengaturan \texttt{zIndex}, serta memperbaiki bug konversi kuantitas unit terkecil pada komponen \textit{pilih-nomor-lot} di dalam \texttt{useEffect}.
-              \item \textbf{Penyelarasan Tipe Data dan Sorting (\#14133, \#14125, \#14176, \& \#14130)}: Menyeragamkan format tanggal menjadi standar Indonesia (\texttt{dd MMM yyyy}), memperbaiki ketidaksesuaian penamaan kolom pada payload API, menonaktifkan kontrol \textit{sorting widget} untuk kolom yang belum mendukung pengurutan berbasis \textit{backend}, serta menambahkan penanganan khusus untuk tombol Stok Opname pada kategori produk lain-lain.
+              \item \textbf{Penyelarasan Tipe Data dan Sorting (\#14133, \#14125, \#14176, \& \#14130)}: Menyeragamkan format tanggal menjadi standar Indonesia (\texttt{dd MMM yyyy}), memperbaiki ketidaksesuaian penamaan kolom pada payload API, menonaktifkan kontrol \textit{sorting widget} untuk kolom yang belum mendukung pengurutan berbasis \textit{back-end}, serta menambahkan penanganan khusus untuk tombol Stok Opname pada kategori produk lain-lain.
           \end{itemize}
 
     \item Perpindahan Stok
@@ -583,6 +550,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
               \caption{Tampilan layar Riwayat Stok di Flutter}%
           \end{figure}
 
+          \newpage
           Terdiri dari dua layar: layar utama Riwayat Stok dan layar Lihat Detail
           Penerimaan Stok. Layar ini juga menjadi basis yang digunakan kembali oleh modul
           Stok Opname dan Perpindahan Stok. Pengembangan layar ini juga tercakup dalam
@@ -618,6 +586,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
               \caption{Tampilan layar Riwayat Belanja di Flutter}%
           \end{figure}
 
+          \newpage
           Modul ini terdiri dari tiga layar: layar utama Riwayat Belanja, layar Tambah
           Pesanan dengan form input, dan layar Lihat Pesanan untuk melihat detail
           transaksi yang sudah ada. Pengembangan layar ini juga tercakup dalam Task
@@ -635,6 +604,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
               \caption{Tampilan layar Riwayat Belanja B2B di Flutter}%
           \end{figure}
 
+          \newpage
           Layar ini menampilkan riwayat transaksi B2B yang dibagi menjadi dua tab: Belum
           Lunas dan Sudah Lunas. Masing-masing tab memiliki layar Detail Belanja untuk
           melihat informasi transaksi secara lengkap.
@@ -653,7 +623,10 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
 
           Modul terakhir yang dikerjakan adalah Marketplace B2B, yang terdiri dari lima
           layar: layar utama Marketplace, layar Healthy Coin, layar Produk Kesehatan,
-          layar Cart, dan layar Detail Produk. Modul ini juga dilengkapi beberapa fitur
+          layar Cart, dan layar Detail Produk.
+
+          \newpage
+          Modul ini juga dilengkapi beberapa fitur
           tambahan, yaitu upload tanda tangan untuk pengajuan File SP, serta pemilihan
           alamat pengiriman, jenis ekspedisi, dan metode pembayaran dalam alur checkout.
           \begin{figure}[H]
@@ -673,19 +646,21 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
     \item Kolom keterangan pada form Stok Opname (\#12566 --- 24 April 2026) \\ Pada form
           pembuatan Stok Opname, ditambahkan kolom input \textit{keterangan} yang
           memungkinkan pengguna memberikan catatan atau penjelasan tambahan saat membuat
-          entri Stok Opname baru. Penambahan ini dilakukan langsung di environment
-          \textit{staging} karena bersifat penyesuaian kecil pada form yang sudah ada.
+          entri Stok Opname baru. Penambahan ini dilakukan langsung di
+          \textit{environment staging} karena bersifat penyesuaian kecil pada form yang
+          sudah ada.
 
+          \newpage
     \item Layar Detail Klinik Canvasser (\#14481 --- 4 hari, 5 poin, 19--22 Mei 2026) \\
           Layar Detail Klinik merupakan layar baru yang dibangun untuk aplikasi Canvasser
           di sisi React. Layar ini menampilkan informasi lengkap mengenai satu klinik
           mitra, termasuk data identitas klinik, daftar produk yang tersedia, daftar
           layanan, dan tombol-tombol aksi yang relevan untuk tenaga lapangan.
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=10cm]{3.62-detail-klinik.png}
-          %       \caption{Tampilan layar Detail Klinik Canvasser di React}
-          %   \end{figure}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-canvasser-detailklinik.png}
+              \caption{Tampilan layar Detail Klinik Canvasser di React}
+          \end{figure}
 
     \item Dashboard Inventaris --- Laporan Stok Opname dan Laporan Pembelian (\#13286,
           \#13592, \#13999, \#14234 --- total 18 poin, akhir April--Mei 2026) \\
@@ -704,23 +679,19 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
           dikombinasikan dengan \textit{group by} lebih dari satu kolom (Task \#14234, 6
           hari, 11--18 Mei 2026).
 
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-laporan-stok-opname.jpeg}
+              \caption{Dashboard Inventaris tampilan Laporan Stok Opname}
+          \end{figure}
+
           Selama fase pengembangan dan migrasi modul ini, diselesaikan beberapa perbaikan
           fungsionalitas:
           \begin{itemize}
-              \item \textbf{Penanganan Navigasi Aksi Pembayaran (\#14627)}: Mengubah perilaku tombol Bayar pada Laporan Pembelian agar pengguna tetap berada di halaman Dashboard Inventaris setelah pembayaran berhasil diproses, alih-alih dialihkan ke halaman baru.
+              \item \textbf{Navigasi Aksi Pembayaran (\#14627)}: Mengubah \textit{routing} tombol Bayar pada Laporan Pembelian agar pengguna tetap berada di halaman Dashboard Inventaris setelah pembayaran berhasil diproses, (bukan dialihkan ke halaman baru).
               \item \textbf{Optimasi Validitas Data Tabel (\#14572)}: Mengatasi masalah hilangnya data tabel pada Laporan Pembelian akibat pemanggilan ulang API (\textit{re-fetch}) yang dipicu perubahan \textit{state} internal. Struktur pemeriksaan \texttt{laporanType} diperbaiki untuk menstabilkan data.
               \item \textbf{Perbaikan UI Pasca-Migrasi (\#14646)}: Memperbaiki masalah \textit{overflow wrap} tampilan \textit{CardView} yang terlalu sempit pada layar \textit{mobile}, serta memperbaiki bug pada penghapusan \textit{filter chips}.
           \end{itemize}
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=10cm]{3.63-stok-opname.png}
-          %       \caption{Dashboard Inventaris tampilan Laporan Stok Opname}
-          %   \end{figure}
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=10cm]{3.64-laporan-pembelian.png}
-          %       \caption{Dashboard Inventaris tampilan Laporan Pembelian}
-          %   \end{figure}
 
     \item Komponen DataView (\#14855 --- 23 hari, 30 April--1 Juni 2026) \\ DataView
           merupakan komponen generik baru yang dibangun dari awal sebagai pengganti
@@ -734,8 +705,8 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
           Fitur-fitur utama yang dimiliki \textit{DataView} antara lain:
           \begin{itemize}
               \item \textbf{TableView dan CardView} yang dapat dipilih secara dinamis oleh pengguna.
-              \item \textbf{Backend filtering} dengan berbagai tipe: \textit{text search, single select, multi select,} dan \textit{date range}.
-              \item \textbf{Backend group by} dengan dukungan pengelompokan berdasarkan lebih dari satu kolom sekaligus.
+              \item \textbf{\textit{back-end} filtering} dengan berbagai tipe: \textit{text search, single select, multi select,} dan \textit{date range}.
+              \item \textbf{\textit{back-end} group by} dengan dukungan pengelompokan berdasarkan lebih dari satu kolom sekaligus.
               \item \textbf{Visible columns}: pengguna dapat menyembunyikan atau menampilkan kolom tertentu sesuai kebutuhan.
               \item \textbf{Selectable rows} untuk keperluan aksi massal.
               \item \textbf{Export CSV dan XLSX} langsung dari antarmuka tabel.
@@ -752,23 +723,25 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
               \item \textbf{Kompatibilitas Library Komponen (\#14579)}: Memperbaiki masalah \textit{state checkbox} pada \textit{FilterMenu} yang tidak langsung diperbarui ketika diklik akibat perubahan versi pustaka Mantine UI yang digunakan di proyek.
           \end{itemize}
 
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-dataview-component.png}
+              \caption{Komponen DataView dalam tampilan TableView}
+          \end{figure}
+
           Setelah komponen selesai dibangun, dilakukan migrasi bertahap dari
           \textit{ListBased} ke \textit{DataView} pada seluruh halaman yang
           menggunakannya, yaitu \textit{laporan-stok-opname, laporan-pembelian,
               dashboard-inventaris,} dan \textit{pilih-nomor-lot}. Proses migrasi ini
           dikerjakan melalui Task \#14586 (4 hari, 5 poin, 25--28 Mei 2026).
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=10cm]{3.65-dataview-table.png}
-          %       \caption{Komponen DataView dalam tampilan TableView}
-          %   \end{figure}
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=10cm]{3.66-dataview-card.png}
-          %       \caption{Komponen DataView dalam tampilan CardView dengan filter aktif}
-          %   \end{figure}
 
-    \item Landing Page Stock Management (28 Mei -- 8 Juni 2026) \\ Sebelum landing page
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-dataview-component-card.png}
+              \caption{Komponen DataView dalam tampilan CardView}
+          \end{figure}
+
+    \item \textit{Landing Page Stock Management} (28 Mei -- 8 Juni 2026) \\ Sebelum \textit{landing page}
           ini dibuat, pengguna yang mengakses aplikasi \textit{Stock Management} langsung
           diarahkan secara otomatis ke halaman tertentu tanpa diberi pilihan. Hal ini
           kurang fleksibel karena berbagai modul (Riwayat Stok, Stok Opname, Dashboard
@@ -780,28 +753,30 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
           Bersamaan dengan pembuatan landing page ini, seluruh file \textit{ListBased}
           lama yang sudah tidak digunakan dihapus dari repositori sebagai bagian dari
           \textit{cleanup} pasca-migrasi ke \textit{DataView}.
-          %   \begin{figure}[H]
-          %       \centering
-          %       \includegraphics[width=10cm]{3.67-landing-page.png}
-          %       \caption{Tampilan Landing Page Stock Management}
-          %   \end{figure}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=10cm]{3.4-landing-page.png}
+              \caption{Tampilan Landing Page Stock Management}
+          \end{figure}
 
 \end{enumerate}
 
-\subsection{Alignment Front-End ke Back-End}
+\subsection{Alignment \textit{front-end} ke \textit{back-end}}
 
 Mulai pertengahan April 2026 (ditandai dengan Task \#13410, 20--29 April 2026),
 Tim FE ditugaskan untuk menghubungkan layar-layar React yang telah dibuat
-dengan API dari Back-End agar data dapat ditampilkan secara dinamis. Seiring
-berjalannya pekerjaan ini, peran Front-End berkembang menjadi Full-Stack,
-karena pekerjaan tidak lagi hanya berada di sisi React, tetapi juga melibatkan
-pembuatan dan penyesuaian \textit{endpoint} di sisi Back-End (Toraja).
+dengan API dari \textit{back-end} agar data dapat ditampilkan secara dinamis.
+Seiring berjalannya pekerjaan ini, peran \textit{front-end} berkembang menjadi
+Full-Stack, karena pekerjaan tidak lagi hanya berada di sisi React, tetapi juga
+melibatkan pembuatan dan penyesuaian \textit{endpoint} di sisi
+\textit{back-end} (Toraja).
 
 Pada tahap awal proses \textit{alignment}, ditemukan kendala dalam menyiapkan
 \textit{local development environment} Toraja, terutama terkait ketidaksesuaian
 versi Python dan beberapa \textit{dependency} yang dibutuhkan. Kendala ini
-diselesaikan dengan bantuan tim Back-End dan menjadi dasar saran perbaikan
-dokumentasi \textit{setup environment} yang disampaikan pada Subbab 5.2.
+diselesaikan dengan bantuan tim \textit{back-end} dan menjadi dasar saran
+perbaikan dokumentasi \textit{setup environment} yang disampaikan pada Subbab
+5.2.
 
 Di sisi React, dikembangkan beberapa \textit{layer} pendukung seperti
 \textit{services, hooks, mapper, helper,} dan \textit{utils} untuk menangani
@@ -815,65 +790,56 @@ yang digunakan oleh React untuk mengambil data dari database.
           Halaman React ditampilkan melalui API \texttt{GetRiwayatStokView} menggunakan \textit{iframe widget}. Setelah halaman dimuat, data riwayat stok diambil melalui API \texttt{GetStockHistoryTableData}, kemudian ditampilkan dalam bentuk tabel pada halaman tersebut.
 
     \item \textbf{Stok Opname} (Task \#13410 --- 8 hari, 8 poin, 20--29 April 2026) \\
-          Prosesnya serupa dengan Riwayat Stok. Halaman React ditampilkan melalui API \texttt{GetPilihNomorLotView} menggunakan \textit{iframe widget}. Untuk pengambilan data, digunakan API \texttt{GetDynamicStockOpnameView} yang dikembangkan oleh Tim Back-End, sehingga data dapat dimuat dan ditampilkan sesuai kebutuhan. Selain itu, dikembangkan pula mekanisme navigasi \textit{split screen} antara React dan Toraja melalui fungsi \texttt{redirectSplitScreen} (Task \#13848, 29 April 2026), yang memungkinkan halaman React mengirim sinyal navigasi ke Toraja melalui \textit{iframe} tanpa menyebabkan reload halaman keseluruhan. Pada saat laporan ini ditulis, Task \#13848 masih berstatus belum selesai.
+          Prosesnya serupa dengan Riwayat Stok. Halaman React ditampilkan melalui API \texttt{GetPilihNomorLotView} menggunakan \textit{iframe widget}. Untuk pengambilan data, digunakan API \texttt{GetDynamicStockOpnameView} yang dikembangkan oleh Tim \textit{back-end}, sehingga data dapat dimuat dan ditampilkan sesuai kebutuhan. Selain itu, dikembangkan pula mekanisme navigasi \textit{split screen} antara React dan Toraja melalui fungsi \texttt{redirectSplitScreen} (Task \#13848, 29 April 2026), yang memungkinkan halaman React mengirim sinyal navigasi ke Toraja melalui \textit{iframe} tanpa menyebabkan reload halaman keseluruhan. Pada saat laporan ini ditulis, Task \#13848 masih berstatus belum selesai.
 
     \item \textbf{Dashboard Inventaris --- Manajemen Inventaris Medis} (Task \#13999 --- 5 hari, 8 poin, 30 April--6 Mei 2026) \\
-          Di antara seluruh pekerjaan \textit{alignment} yang dilakukan, Dashboard Inventaris menjadi yang paling menandai pergeseran peran dari Front-End menjadi Full-Stack secara penuh.
+          Di antara seluruh pekerjaan \textit{alignment} yang dilakukan, Dashboard Inventaris menjadi yang paling menandai pergeseran peran dari \textit{front-end} menjadi Full-Stack secara penuh.
 
           Berbeda dengan Riwayat Stok dan Stok Opname yang hanya memerlukan penyesuaian
-          ringan di sisi Backend, \textit{alignment} Dashboard Inventaris melibatkan
-          pembuatan dan modifikasi endpoint di Toraja secara lebih aktif. Di sisi React,
-          dikembangkan \textit{layer services, hooks,} dan \textit{mapper} untuk
-          menangani komunikasi antara komponen dan API, mulai dari proses \textit{fetch}
-          data hingga pengolahan \textit{response} yang diterima. Di sisi Toraja, dibuat
-          beberapa endpoint baru --- termasuk untuk \texttt{laporan-stok-opname} dan
-          \texttt{laporan-pembelian} --- yang dikonfigurasi untuk menyediakan data sesuai
-          kebutuhan tampilan.
+          ringan di sisi \textit{back-end}, \textit{alignment} Dashboard Inventaris
+          melibatkan pembuatan dan modifikasi endpoint di Toraja secara lebih aktif. Di
+          sisi React, dikembangkan \textit{layer services, hooks,} dan \textit{mapper}
+          untuk menangani komunikasi antara komponen dan API, mulai dari proses
+          \textit{fetch} data hingga pengolahan \textit{response} yang diterima. Di sisi
+          Toraja, dibuat beberapa endpoint baru --- termasuk untuk
+          \texttt{laporan-stok-opname} dan \texttt{laporan-pembelian} --- yang
+          dikonfigurasi untuk menyediakan data sesuai kebutuhan tampilan.
 
-          Proses ini menuntut koordinasi dengan tim Backend yang cukup intensif, karena
-          beberapa endpoint perlu dibangun dari awal atau dimodifikasi agar sesuai dengan
-          kebutuhan data di sisi tampilan. Keterlibatan aktif di sisi Toraja pada fase
-          ini menjadi awal dari transisi peran Tim Front-End menuju Full-Stack,
-          sebagaimana yang disebutkan dalam rencana pengembangan tim di Subbab 3.2.
+          Proses ini menuntut koordinasi dengan tim \textit{back-end} yang cukup
+          intensif, karena beberapa endpoint perlu dibangun dari awal atau dimodifikasi
+          agar sesuai dengan kebutuhan data di sisi tampilan. Keterlibatan aktif di sisi
+          Toraja pada fase ini menjadi awal dari transisi peran Tim \textit{front-end}
+          menuju Full-Stack, sebagaimana yang disebutkan dalam rencana pengembangan tim
+          di Subbab 3.2.
           %   \begin{figure}[H]
           %       \centering
           %       \includegraphics[width=10cm]{3.68-dashboard-connected.png}
-          %       \caption{Dashboard Inventaris yang sudah terkoneksi dengan Back-End}
+          %       \caption{Dashboard Inventaris yang sudah terkoneksi dengan \textit{back-end}}
           %   \end{figure}
 
     \item \textbf{Riwayat Belanja dan Details Belanja} (Task \#14857 dan \#15085 --- mulai 3 dan 8 Juni 2026, masih berjalan) \\
-          Sebagai kelanjutan dari proses \textit{alignment} yang sedang berjalan, pekerjaan berikutnya adalah menghubungkan halaman Riwayat Belanja dan Details Belanja React dengan endpoint Toraja yang sesuai. Proses ini sudah dimulai pada 3 dan 8 Juni 2026 dan masih berlangsung hingga saat laporan ini ditulis. Pola \textit{alignment} yang diterapkan mengikuti pendekatan yang sama dengan modul-modul sebelumnya: halaman React ditampilkan melalui \textit{iframe} di Toraja, dan data diambil melalui endpoint yang dibuat atau disesuaikan oleh Tim Back-End.
+          Sebagai kelanjutan dari proses \textit{alignment} yang sedang berjalan, pekerjaan berikutnya adalah menghubungkan halaman Riwayat Belanja dan Details Belanja React dengan endpoint Toraja yang sesuai. Proses ini sudah dimulai pada 3 dan 8 Juni 2026 dan masih berlangsung hingga saat laporan ini ditulis. Pola \textit{alignment} yang diterapkan mengikuti pendekatan yang sama dengan modul-modul sebelumnya: halaman React ditampilkan melalui \textit{iframe} di Toraja, dan data diambil melalui endpoint yang dibuat atau disesuaikan oleh Tim \textit{back-end}.
 
-    \item \textbf{Perbaikan Bug dan Integrasi Repository Lintas Fungsi} (Task \#14553 \& \#14271) \\
-          Selain menghubungkan modul React, peran \textit{Full-Stack} juga diimplementasikan dalam perbaikan logika bisnis di repositori \textit{back-end} lainnya:
-          \begin{itemize}
-              \item \textbf{Reparasi Penampilan Data Canvasser (\#14553)}: Melakukan pembenahan pada \textit{repository} \texttt{healthcare-productdetection} di modul \texttt{pssp\_program/request\_pssp/data\_process.py}. Bug berupa warna latar belakang kolom teks yang berubah menjadi abu-abu saat berisi karakter \texttt{'-'} diselesaikan dengan menghapus flag \texttt{is\_currency} pada kolom alasan pengajuan PSSP.
-              \item \textbf{Perbaikan Duplikasi Data Supplier (\#14271)}: Menyelesaikan masalah \textit{double entry} saat proses penyimpanan detail data supplier pada dokumen PSSP barang di sistem \textit{back-end} utama.
-          \end{itemize}
 \end{enumerate}
 
 \subsection{Perkiraan Pekerjaan yang Akan Dilanjutkan}
 
 Ke depan, pekerjaan utama masih berpusat pada migrasi dan \textit{alignment}
 HealthyOne serta Canvasser ke React. Beberapa modul yang belum selesai
-di-\textit{align} ke Back-End --- termasuk Riwayat Belanja, Details Belanja,
-dan Penerimaan Stok --- akan menjadi prioritas berikutnya segera setelah
-laporan ini selesai disusun. Proses \textit{alignment} ini dikerjakan secara
-\textit{full-stack}, artinya pengerjaan tidak terbatas pada sisi tampilan React
-saja, tetapi juga mencakup pembuatan dan penyesuaian endpoint di Toraja.
-
-Selain itu, masih terdapat satu task lama yang belum terselesaikan, yaitu Task
-\#13636 (\textit{saat print, jangan diarahkan ke new tab}), yang pengerjaannya
-sempat tertunda karena adanya prioritas task lain yang lebih mendesak.
+di-\textit{align} ke \textit{back-end} pada \textit{subproject Stock
+    Management} akan menjadi prioritas segera setelah laporan ini selesai disusun.
+Proses \textit{alignment} ini dikerjakan secara \textit{full-stack}, artinya
+pengerjaan tidak terbatas pada sisi tampilan React saja, tetapi juga mencakup
+pembuatan dan penyesuaian endpoint di Toraja.
 
 Di sisi Flutter, masih ada potensi perbaikan lanjutan terkait konsistensi
-sistem \textit{TableFontUtils} yang mungkin ditemukan seiring dengan pengujian
-lebih lanjut oleh tim QA.
+sistem SDUI menggunakan Toraja.
 
 Project Manager juga telah menyampaikan rencana pengembangan proyek baru
 bernama \textbf{Principal Suite}. Informasi terkait proyek ini masih bersifat
 \textit{confidential}, sehingga belum dapat dijelaskan secara rinci dalam
-laporan ini. Namun, Tim Front-End direncanakan akan terlibat secara
+laporan ini. Namun, Tim \textit{front-end} direncanakan akan terlibat secara
 \textit{full-stack} dalam proyek tersebut dengan \textit{tech stack} yang
 berbeda dari proyek-proyek sebelumnya. Pengerjaan proyek ini akan dimulai
 setelah proses migrasi sistem yang sedang berjalan sudah cukup stabil.
+
