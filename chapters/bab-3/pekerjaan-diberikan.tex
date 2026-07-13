@@ -237,7 +237,7 @@ kronologis tanggal pengerjaan.
 
           Improvement ini menambahkan dukungan parameter \textit{margin} dan
           \textit{padding} pada model SDUI dari widget \textit{Text}, \textit{TextField},
-          dan \textit{Section}, sehingga tim \textit{back-end} bisa mengatur tata letak
+          dan \textit{Section}, sehingga Tim \textit{Back-End} bisa mengatur tata letak
           komponen langsung dari konfigurasi JSON tanpa perlu mengubah kode
           \textit{front-end}. Nilai default tetap dipertahankan agar layar yang tidak
           mengirim parameter ini tidak mengalami perubahan tampilan.
@@ -432,7 +432,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
           \begin{figure}[H]
               \centering
               \includegraphics[width=10cm]{3.4-itemcabang-flutter.png}
-              \caption{Tampilan layar Data Pasien di Flutter}%
+              \caption{Tampilan layar Item Cabang di Flutter}%
           \end{figure}
 
           Terdapat empat tab utama dengan isi masing-masing sebagai berikut:
@@ -449,7 +449,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=10cm]{3.4-itemcabang-react-produk.png}
-                        \caption{Tampilan layar Data Pasien bagian Produk di React}%
+                        \caption{Tampilan layar Item Cabang bagian Produk di React}%
                     \end{figure}
               \item Tab Layanan menampilkan empat subtab: Konsultasi, Gigi, Lainnya, dan Belum
                     Aktif. Masing-masing subtab menampilkan daftar layanan yang tersedia di unit
@@ -457,14 +457,14 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=10cm]{3.4-itemcabang-react-layanan.png}
-                        \caption{Tampilan layar Data Pasien bagian Layanan di React}%
+                        \caption{Tampilan layar Item Cabang bagian Layanan di React}%
                     \end{figure}
               \item Tab Tindakan menampilkan daftar tindakan yang tersedia di unit pelayanan,
                     dengan fitur Tambah Tindakan.
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=10cm]{3.4-itemcabang-react-tindakan.png}
-                        \caption{Tampilan layar Data Pasien bagian Tindakan di React}%
+                        \caption{Tampilan layar Item Cabang bagian Tindakan di React}%
                     \end{figure}
               \item Tab Paket menampilkan daftar paket (bundle) yang tersedia, dengan dukungan
                     operasi Tambah, Edit, dan Lihat Paket masing-masing dalam bentuk form
@@ -472,7 +472,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=10cm]{3.4-itemcabang-react-paket.png}
-                        \caption{Tampilan layar Data Pasien bagian Paket di React}%
+                        \caption{Tampilan layar Item Cabang bagian Paket di React}%
                     \end{figure}
           \end{enumerate}
 
@@ -519,12 +519,12 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
           antarmuka React dengan API. Selama fase pengujian di \textit{environment
               staging}, dilakukan serangkaian penyempurnaan dan perbaikan \textit{bug} yang
           meliputi:
-          \begin{itemize}
+          \begin{enumerate}
               \item \textbf{Perbaikan Sistem Seleksi dan Pagination (\#14201 \& \#14281)}: Memperbaiki bug di mana seleksi produk hilang saat berpindah halaman (\textit{pagination}). Perbaikan dilakukan dengan menyimpan baris terpilih ke dalam \textit{state} \texttt{allLoadedRows} lintas halaman. Masalah konflik \textit{state} seleksi produk ketika membuka dua halaman Stok Opname secara bersamaan juga diselesaikan dengan mengisolasi \textit{state} \texttt{selectedIds} pada masing-masing komponen.
               \item \textbf{Validasi Form dan Pesan Error (\#14282 \& \#14128)}: Menambahkan validasi pop-up untuk mencegah pengguna menekan tombol \textit{submit} tanpa memilih produk terlebih dahulu, serta mengganti pesan error bawaan menjadi komponen \textit{Alert} terstandarisasi.
               \item \textbf{Konsistensi Kontrol Input dan Dropdown (\#14131, \#14129, \& \#14486)}: Menonaktifkan dropdown Unit Pelayanan karena nilainya sudah ditentukan otomatis dari sesi pengguna. Menghilangkan \textit{overlap} scrollbar pada \textit{QuantityPicker} dengan mengubah pengaturan \texttt{zIndex}, serta memperbaiki bug konversi kuantitas unit terkecil pada komponen \textit{pilih-nomor-lot} di dalam \texttt{useEffect}.
               \item \textbf{Penyelarasan Tipe Data dan Sorting (\#14133, \#14125, \#14176, \& \#14130)}: Menyeragamkan format tanggal menjadi standar Indonesia (\texttt{dd MMM yyyy}), memperbaiki ketidaksesuaian penamaan kolom pada payload API, menonaktifkan kontrol \textit{sorting widget} untuk kolom yang belum mendukung pengurutan berbasis \textit{back-end}, serta menambahkan penanganan khusus untuk tombol Stok Opname pada kategori produk lain-lain.
-          \end{itemize}
+          \end{enumerate}
 
     \item Perpindahan Stok
           \begin{figure}[H]
@@ -687,11 +687,11 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
 
           Selama fase pengembangan dan migrasi modul ini, diselesaikan beberapa perbaikan
           fungsionalitas:
-          \begin{itemize}
+          \begin{enumerate}
               \item \textbf{Navigasi Aksi Pembayaran (\#14627)}: Mengubah \textit{routing} tombol Bayar pada Laporan Pembelian agar pengguna tetap berada di halaman Dashboard Inventaris setelah pembayaran berhasil diproses, (bukan dialihkan ke halaman baru).
               \item \textbf{Optimasi Validitas Data Tabel (\#14572)}: Mengatasi masalah hilangnya data tabel pada Laporan Pembelian akibat pemanggilan ulang API (\textit{re-fetch}) yang dipicu perubahan \textit{state} internal. Struktur pemeriksaan \texttt{laporanType} diperbaiki untuk menstabilkan data.
               \item \textbf{Perbaikan UI Pasca-Migrasi (\#14646)}: Memperbaiki masalah \textit{overflow wrap} tampilan \textit{CardView} yang terlalu sempit pada layar \textit{mobile}, serta memperbaiki bug pada penghapusan \textit{filter chips}.
-          \end{itemize}
+          \end{enumerate}
 
     \item Komponen DataView (\#14855 --- 23 hari, 30 April--1 Juni 2026) \\ DataView
           merupakan komponen generik baru yang dibangun dari awal sebagai pengganti
@@ -703,7 +703,7 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
           selama periode magang yang dilaporkan.
 
           Fitur-fitur utama yang dimiliki \textit{DataView} antara lain:
-          \begin{itemize}
+          \begin{enumerate}
               \item \textbf{TableView dan CardView} yang dapat dipilih secara dinamis oleh pengguna.
               \item \textbf{\textit{back-end} filtering} dengan berbagai tipe: \textit{text search, single select, multi select,} dan \textit{date range}.
               \item \textbf{\textit{back-end} group by} dengan dukungan pengelompokan berdasarkan lebih dari satu kolom sekaligus.
@@ -712,16 +712,16 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
               \item \textbf{Export CSV dan XLSX} langsung dari antarmuka tabel.
               \item \textbf{Custom render components} yang mengikuti \textit{font size provider} aktif.
               \item \textbf{Auto-formatting kolom} melalui fungsi \texttt{generateColumnDef} yang otomatis mendeteksi tipe data dan menerapkan format yang sesuai (\texttt{Rp} untuk kolom \textit{currency}, format tanggal Indonesia untuk kolom \textit{date}).
-          \end{itemize}
+          \end{enumerate}
 
           Pembangunan komponen \textit{DataView} mencakup penyelesaian beberapa sub-task
           penting:
-          \begin{itemize}
+          \begin{enumerate}
               \item \textbf{Ekspor Data Terintegrasi (\#14696)}: Mengimplementasikan fitur ekspor data ke format CSV dan XLSX langsung dari sisi \textit{client}. Proses ekspor dilengkapi fungsi validasi \texttt{hasActiveFilters} untuk menjamin keselarasan data yang diunduh dengan filter aktif di layar, serta menonaktifkan pewarnaan baris selang-seling saat penulisan file Excel.
               \item \textbf{Pengelompokan Multi-Kolom (\#14697 \& \#14740)}: Mengembangkan fitur pengelompokan data (\textit{group-by}) berbasis beberapa kolom secara bersamaan. Logika pengurutan pada kolom \texttt{jumlah\_data} saat pengelompokan aktif diperbaiki agar tidak menghasilkan kesalahan urutan.
               \item \textbf{Format Data Otomatis (\#14965)}: Menyempurnaan fungsi \texttt{generateColumnDef} dengan deteksi otomatis tipe data untuk memformat angka nominal langsung dengan simbol mata uang rupiah (\texttt{Rp}) serta kolom tanggal dengan format lokal Indonesia.
               \item \textbf{Kompatibilitas Library Komponen (\#14579)}: Memperbaiki masalah \textit{state checkbox} pada \textit{FilterMenu} yang tidak langsung diperbarui ketika diklik akibat perubahan versi pustaka Mantine UI yang digunakan di proyek.
-          \end{itemize}
+          \end{enumerate}
 
           \begin{figure}[H]
               \centering
@@ -764,17 +764,17 @@ dikembangkan pada \textit{repository} \texttt{healthy-one-stock-management-fe}.
 \subsection{Alignment \textit{front-end} ke \textit{back-end}}
 
 Mulai pertengahan April 2026 (ditandai dengan Task \#13410, 20--29 April 2026),
-Tim FE ditugaskan untuk menghubungkan layar-layar React yang telah dibuat
-dengan API dari \textit{back-end} agar data dapat ditampilkan secara dinamis.
-Seiring berjalannya pekerjaan ini, peran \textit{front-end} berkembang menjadi
-Full-Stack, karena pekerjaan tidak lagi hanya berada di sisi React, tetapi juga
-melibatkan pembuatan dan penyesuaian \textit{endpoint} di sisi
-\textit{back-end} (Toraja).
+Tim \textit{Front-End} ditugaskan untuk menghubungkan layar-layar React yang
+telah dibuat dengan API dari \textit{back-end} agar data dapat ditampilkan
+secara dinamis. Seiring berjalannya pekerjaan ini, peran \textit{front-end}
+berkembang menjadi Full-Stack, karena pekerjaan tidak lagi hanya berada di sisi
+React, tetapi juga melibatkan pembuatan dan penyesuaian \textit{endpoint} di
+sisi \textit{back-end} (Toraja).
 
 Pada tahap awal proses \textit{alignment}, ditemukan kendala dalam menyiapkan
 \textit{local development environment} Toraja, terutama terkait ketidaksesuaian
 versi Python dan beberapa \textit{dependency} yang dibutuhkan. Kendala ini
-diselesaikan dengan bantuan tim \textit{back-end} dan menjadi dasar saran
+diselesaikan dengan bantuan Tim \textit{Back-End} dan menjadi dasar saran
 perbaikan dokumentasi \textit{setup environment} yang disampaikan pada Subbab
 5.2.
 
@@ -790,7 +790,7 @@ yang digunakan oleh React untuk mengambil data dari database.
           Halaman React ditampilkan melalui API \texttt{GetRiwayatStokView} menggunakan \textit{iframe widget}. Setelah halaman dimuat, data riwayat stok diambil melalui API \texttt{GetStockHistoryTableData}, kemudian ditampilkan dalam bentuk tabel pada halaman tersebut.
 
     \item \textbf{Stok Opname} (Task \#13410 --- 8 hari, 8 poin, 20--29 April 2026) \\
-          Prosesnya serupa dengan Riwayat Stok. Halaman React ditampilkan melalui API \texttt{GetPilihNomorLotView} menggunakan \textit{iframe widget}. Untuk pengambilan data, digunakan API \texttt{GetDynamicStockOpnameView} yang dikembangkan oleh Tim \textit{back-end}, sehingga data dapat dimuat dan ditampilkan sesuai kebutuhan. Selain itu, dikembangkan pula mekanisme navigasi \textit{split screen} antara React dan Toraja melalui fungsi \texttt{redirectSplitScreen} (Task \#13848, 29 April 2026), yang memungkinkan halaman React mengirim sinyal navigasi ke Toraja melalui \textit{iframe} tanpa menyebabkan reload halaman keseluruhan. Pada saat laporan ini ditulis, Task \#13848 masih berstatus belum selesai.
+          Prosesnya serupa dengan Riwayat Stok. Halaman React ditampilkan melalui API \texttt{GetPilihNomorLotView} menggunakan \textit{iframe widget}. Untuk pengambilan data, digunakan API \texttt{GetDynamicStockOpnameView} yang dikembangkan oleh Tim \textit{Back-End}, sehingga data dapat dimuat dan ditampilkan sesuai kebutuhan. Selain itu, dikembangkan pula mekanisme navigasi \textit{split screen} antara React dan Toraja melalui fungsi \texttt{redirectSplitScreen} (Task \#13848, 29 April 2026), yang memungkinkan halaman React mengirim sinyal navigasi ke Toraja melalui \textit{iframe} tanpa menyebabkan reload halaman keseluruhan. Pada saat laporan ini ditulis, Task \#13848 masih berstatus belum selesai.
 
     \item \textbf{Dashboard Inventaris --- Manajemen Inventaris Medis} (Task \#13999 --- 5 hari, 8 poin, 30 April--6 Mei 2026) \\
           Di antara seluruh pekerjaan \textit{alignment} yang dilakukan, Dashboard Inventaris menjadi yang paling menandai pergeseran peran dari \textit{front-end} menjadi Full-Stack secara penuh.
@@ -805,10 +805,10 @@ yang digunakan oleh React untuk mengambil data dari database.
           \texttt{laporan-stok-opname} dan \texttt{laporan-pembelian} --- yang
           dikonfigurasi untuk menyediakan data sesuai kebutuhan tampilan.
 
-          Proses ini menuntut koordinasi dengan tim \textit{back-end} yang cukup
+          Proses ini menuntut koordinasi dengan Tim \textit{Back-End} yang cukup
           intensif, karena beberapa endpoint perlu dibangun dari awal atau dimodifikasi
           agar sesuai dengan kebutuhan data di sisi tampilan. Keterlibatan aktif di sisi
-          Toraja pada fase ini menjadi awal dari transisi peran Tim \textit{front-end}
+          Toraja pada fase ini menjadi awal dari transisi peran Tim \textit{Front-End}
           menuju Full-Stack, sebagaimana yang disebutkan dalam rencana pengembangan tim
           di Subbab 3.2.
           %   \begin{figure}[H]
@@ -817,20 +817,60 @@ yang digunakan oleh React untuk mengambil data dari database.
           %       \caption{Dashboard Inventaris yang sudah terkoneksi dengan \textit{back-end}}
           %   \end{figure}
 
-    \item \textbf{Riwayat Belanja dan Details Belanja} (Task \#14857 dan \#15085 --- mulai 3 dan 8 Juni 2026, masih berjalan) \\
-          Sebagai kelanjutan dari proses \textit{alignment} yang sedang berjalan, pekerjaan berikutnya adalah menghubungkan halaman Riwayat Belanja dan Details Belanja React dengan endpoint Toraja yang sesuai. Proses ini sudah dimulai pada 3 dan 8 Juni 2026 dan masih berlangsung hingga saat laporan ini ditulis. Pola \textit{alignment} yang diterapkan mengikuti pendekatan yang sama dengan modul-modul sebelumnya: halaman React ditampilkan melalui \textit{iframe} di Toraja, dan data diambil melalui endpoint yang dibuat atau disesuaikan oleh Tim \textit{back-end}.
+    \item \textbf{Riwayat Belanja dan Details Belanja} (Task \#14857 dan \#15085 --- mulai 3 dan 8 Juni, selesai 23 Juni 2026) \\
+          Sebagai kelanjutan dari proses \textit{alignment} yang sedang berjalan, dikembangkan
+          dan dihubungkan ke \textit{back-end} sekelompok halaman yang saling terkait dalam
+          modul \textit{Belanja}: Riwayat Belanja (\textit{List Belanja}), Details Belanja,
+          Receiving List, Details Rincian Receiving List, dan Riwayat Stok. Pola
+          \textit{alignment} yang diterapkan mengikuti pendekatan yang sama dengan
+          modul-modul sebelumnya: halaman React ditampilkan melalui \textit{iframe} di
+          Toraja, dan data diambil melalui \textit{endpoint} yang dibuat atau disesuaikan
+          oleh Tim \textit{Back-End}.
+
+          Untuk mendukung kebutuhan modul ini, dibangun pula beberapa komponen generik
+          baru yang dapat dipakai ulang di halaman lain:
+          \begin{enumerate}
+              \item \textbf{\textit{PdfViewer} dan \textit{PdfModal}}: menampilkan dokumen faktur/\textit{invoice} dalam bentuk PDF langsung di dalam \textit{modal}, dibangun menggunakan \textit{library} \texttt{react-pdf-viewer} dan \texttt{pdfjs-dist}.
+              \item \textbf{\textit{ErrorModal} dan \texttt{parseError} (\#15229)}: menyeragamkan cara menampilkan pesan \textit{error} dari \textit{back-end} yang memiliki berbagai bentuk struktur (\texttt{code}, \texttt{message}, maupun \texttt{detail} berupa \textit{string}, \textit{array}, atau \textit{object}/\texttt{Record}).
+              \item \textbf{\textit{InfiniteSelect} (\#15317)}: komponen \textit{dropdown select} dengan \textit{lazy loading} (\textit{infinite scroll}) menggunakan \textit{React Query}, digunakan pertama kali pada halaman Pilih Nomor Lot dan \textit{Create Distributor Modal} untuk menampilkan data dalam jumlah besar secara bertahap.
+          \end{enumerate}
+
+          Proses ini diselesaikan pada 23 Juni 2026 dan branch pengerjaannya digabungkan
+          (\textit{merge}) ke \textit{branch} \texttt{refactor-stock-management} pada
+          akhir bulan.
+
+    \item \textbf{Tambah Pesanan} (Task \#15407 --- 4 hari, 3 poin, 18--23 Juni 2026) \\
+          Halaman Tambah Pesanan (pembuatan pesanan belanja baru) dihubungkan ke
+          \textit{back-end} dengan tabel yang bersifat \textit{editable} dan terhubung ke
+          \textit{endpoint} POST. Pada proses ini juga ditambahkan kemampuan untuk membuat
+          penerimaan stok tanpa transaksi (\textit{create receiving stock without
+              transaction}) serta fitur tambah distributor baru langsung dari halaman yang
+          sama, memanfaatkan \textit{InfiniteSelect} dan \textit{Create Distributor Modal}
+          yang telah dibangun sebelumnya.
+
+    \item \textbf{Perpindahan Stok / \textit{Transfer Stock}} (Task \#15410 --- 6 hari, 5 poin, mulai 25 Juni 2026, masih berjalan) \\
+          Sebagai kelanjutan dari rangkaian \textit{alignment}, halaman Perpindahan Stok
+          (\textit{Transfer Stock}) mulai dihubungkan ke \textit{back-end} pada akhir Juni
+          2026 dan masih berlangsung hingga saat laporan ini ditulis. Pola \textit{alignment}
+          yang diterapkan tetap mengikuti pendekatan yang sama dengan modul-modul
+          sebelumnya.
 
 \end{enumerate}
 
 \subsection{Perkiraan Pekerjaan yang Akan Dilanjutkan}
 
 Ke depan, pekerjaan utama masih berpusat pada migrasi dan \textit{alignment}
-HealthyOne serta Canvasser ke React. Beberapa modul yang belum selesai
-di-\textit{align} ke \textit{back-end} pada \textit{subproject Stock
-    Management} akan menjadi prioritas segera setelah laporan ini selesai disusun.
-Proses \textit{alignment} ini dikerjakan secara \textit{full-stack}, artinya
-pengerjaan tidak terbatas pada sisi tampilan React saja, tetapi juga mencakup
-pembuatan dan penyesuaian endpoint di Toraja.
+HealthyOne serta Canvasser ke React. \textit{Alignment} Perpindahan Stok
+(\textit{Transfer Stock}, Task \#15410) yang telah dimulai pada akhir Juni akan
+menjadi prioritas untuk diselesaikan segera setelah laporan ini disusun,
+disusul beberapa \textit{task} lanjutan yang telah dicatat namun belum
+dikerjakan, antara lain penanganan kolom yang dicentang (\textit{checked
+    columns}) dan baris total penjualan pada \textit{DataView}, penyempurnaan
+\textit{modal editable table} pemilihan produk, serta penataan ulang
+(\textit{routing}) React yang lebih lanjut. Proses \textit{alignment} ini
+dikerjakan secara \textit{full-stack}, artinya pengerjaan tidak terbatas pada
+sisi tampilan React saja, tetapi juga mencakup pembuatan dan penyesuaian
+endpoint di Toraja.
 
 Di sisi Flutter, masih ada potensi perbaikan lanjutan terkait konsistensi
 sistem SDUI menggunakan Toraja.
@@ -838,8 +878,7 @@ sistem SDUI menggunakan Toraja.
 Project Manager juga telah menyampaikan rencana pengembangan proyek baru
 bernama \textbf{Principal Suite}. Informasi terkait proyek ini masih bersifat
 \textit{confidential}, sehingga belum dapat dijelaskan secara rinci dalam
-laporan ini. Namun, Tim \textit{front-end} direncanakan akan terlibat secara
+laporan ini. Namun, Tim \textit{Front-End} direncanakan akan terlibat secara
 \textit{full-stack} dalam proyek tersebut dengan \textit{tech stack} yang
 berbeda dari proyek-proyek sebelumnya. Pengerjaan proyek ini akan dimulai
 setelah proses migrasi sistem yang sedang berjalan sudah cukup stabil.
-

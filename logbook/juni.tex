@@ -1,5 +1,5 @@
 \renewcommand{\reportmonth}{Juni}
-\renewcommand{\signaturedate}{1 Juli 2026}
+\renewcommand{\signaturedate}{2 Juli 2026}
 \input{logbook/top.tex}
 \begin{logtable}
 
@@ -95,6 +95,401 @@
             \textit{routing} modul yang fleksibel (Riwayat Stok, Stok Opname, Dashboard
             Inventaris)
         \end{logwork}
+    }
+
+    \logentry{5.}
+    {
+        Selasa \linebreak 9 Jun 2026 \linebreak
+        08:14--17:20 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#14857 dan \#15085 (\textit{NEW}): membangun halaman Riwayat
+            Belanja (\textit{List Belanja}) dan Details Belanja
+            \item Membangun komponen \textit{PdfViewer} dan \textit{PdfModal} sebagai komponen
+            pendukung untuk menampilkan dokumen faktur
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#14857) Membangun struktur awal halaman Riwayat Belanja: \textit{coldef} tabel, \textit{response} \textit{schema}, \textit{hook}, \textit{service}, dan \textit{mapper} data
+            \item (\#15085) Membangun struktur awal halaman Details Belanja: \textit{skeleton} \textit{loading}, \textit{response} \textit{schema}, \textit{hook} \texttt{use-get-details-belanja-data}, dan \textit{service} untuk \textit{fetch} data
+            \item Membangun komponen \textit{PdfViewer} dan \textit{PdfModal} menggunakan
+            \textit{library} \texttt{react-pdf-viewer} dan \texttt{pdfjs-dist} untuk
+            menampilkan dokumen PDF (faktur pembelian) langsung di dalam \textit{modal}
+        \end{logwork}
+    }
+
+    \logentry{6.}
+    {
+        Rabu \linebreak 10 Jun 2026 \linebreak
+        08:12--17:19 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan pengembangan halaman Details Belanja dan Riwayat Belanja
+            \item Berkoordinasi dengan Tim \textit{Backend} terkait struktur \textit{endpoint}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#14857 \& \#15085) Menyusun daftar kebutuhan \textit{endpoint} untuk Details Belanja dan Riwayat Belanja (data faktur, status pembayaran, riwayat pengiriman) bersama Tim \textit{Backend}
+            \item Menguji tampilan awal \textit{PdfViewer} dengan beberapa contoh dokumen PDF
+            yang berbeda ukuran dan orientasi
+        \end{logwork}
+    }
+
+    \logentry{7.}
+    {
+        Kamis \linebreak 11 Jun 2026 \linebreak
+        07:58--17:18 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#15085: \textit{alignment} Details Belanja ke
+            \textit{backend}
+            \item \textit{Alignment} Receiving List dan Details Rincian Receiving List ke
+            \textit{backend}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15085) Mere\textit{factor} \textit{DetailsBelanja}: memecah komponen \texttt{AlasanPembatalanModal} dan \texttt{PembayaranModal} menjadi \textit{subcomponent} tersendiri, menyesuaikan \textit{schema} dan \textit{utils}
+            \item (\#15085) Melakukan \textit{alignment} Details Belanja ke \textit{endpoint backend}, menambahkan \textit{hook} \texttt{use-get-details-belanja-data}
+            \item \textit{Alignment} Receiving List ke \textit{backend}: \textit{coldef}, \textit{response} \textit{schema}, \textit{hook} \texttt{use-get-receiving-list-table-data}, \textit{service}, dan \textit{mapper}; membersihkan kode yang tidak lagi digunakan
+            \item Membangun dan meng-\textit{align} halaman Details Rincian Receiving List:
+            \textit{skeleton}, \texttt{FakturReceiving}, \texttt{InformasiPurchaseOrder},
+            \texttt{PenerimaanAccordion}, dan \texttt{RingkasanTransaksi}
+        \end{logwork}
+    }
+
+    \logentry{8.}
+    {
+        Jumat \linebreak 12 Jun 2026 \linebreak
+        08:14--17:16 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan perbaikan urutan data Penerimaan pada Details Rincian Receiving
+            List
+            \item Melanjutkan \textit{alignment} Riwayat Stok ke \textit{backend} mengikuti
+            struktur baru
+            \item Mendapat Task \#15229 (\textit{IMPROVEMENT}): pembuatan React \textit{Error
+                Parser} dan \textit{Error Modal}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item Membalik urutan tampilan \textit{accordion} Penerimaan pada Details Rincian
+            Receiving List agar data terbaru muncul di bagian atas
+            \item \textit{Alignment} ulang halaman Riwayat Stok: \textit{enum}, \textit{coldef}, \textit{response} \textit{schema}, \textit{hook}, \textit{service} riwayat, dan \textit{mapper} data mengikuti pola \textit{alignment} yang baru
+            \item (\#15229) Menganalisis variasi struktur \textit{error response} dari \textit{backend} (\texttt{code}, \texttt{message}, \texttt{detail}) untuk merancang \textit{parser} dan \textit{modal} \textit{error} yang seragam di seluruh halaman
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Minggu Ke-23 (15 Juni -- 21 Juni 2026)
+    % =============================================================
+
+    \logentry{9.}
+    {
+        Senin \linebreak 15 Jun 2026 \linebreak
+        08:07--17:15 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Merancang struktur komponen \textit{ErrorModal} dan fungsi \texttt{parseError}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15229) Merancang struktur komponen \textit{ErrorModal} yang dapat menangani berbagai bentuk \texttt{error.detail} (\textit{string}, \textit{array}, maupun \textit{object}/\texttt{Record})
+        \end{logwork}
+    }
+
+    \logentry{10.}
+    {
+        Rabu \linebreak 17 Jun 2026 \linebreak
+        08:07--17:19 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan pengembangan dan pengujian komponen \textit{ErrorModal}
+            \item Mempersiapkan Task InfiniteSelect dan \textit{editable table} \textit{DataView}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15229) Mengimplementasikan tampilan awal \textit{ErrorModal} dan menguji dengan beberapa skenario \textit{error} dari \textit{endpoint} yang sudah di-\textit{align}
+            \item (\#15229) Menguji \textit{ErrorModal} lebih lanjut pada berbagai halaman yang sudah terhubung ke \textit{backend}
+            \item Mempersiapkan rancangan komponen \textit{InfiniteSelect} (\textit{dropdown}
+            dengan \textit{lazy loading}) untuk kebutuhan pemilihan distributor pada Tambah
+            Pesanan dan Details Belanja
+        \end{logwork}
+    }
+
+    \logentry{11.}
+    {
+        Kamis \linebreak 18 Jun 2026 \linebreak
+        08:20--17:24 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#15407 (\textit{NEW}): \textit{Align BE Endpoint} ke halaman
+            Tambah Pesanan (Belanja)
+            \item Mendapat Task \#15317 (\textit{NEW}): React
+            \textit{InfiniteSelect}/\textit{Lazy Loader Dropdown}
+            \item Mendapat Task \#14965 (\textit{IMPROVEMENT}) lanjutan: \textit{DataView
+                editable table}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15407) Membangun struktur awal \textit{alignment} halaman Tambah Pesanan: \texttt{page.tsx}, \textit{response} \textit{schema}, \textit{hook} \texttt{use-tambah-pesanan-page-data}, \textit{service}, dan \textit{mapper}
+            \item (\#15317) Membangun komponen \textit{InfiniteSelect}: \textit{Select} dengan \textit{lazy loader} menggunakan \textit{React Query} untuk menampilkan data \textit{dropdown} secara bertahap (\textit{infinite scroll}), diterapkan pertama kali pada halaman Pilih Nomor Lot
+        \end{logwork}
+    }
+
+    \logentry{12.}
+    {
+        Jumat \linebreak 19 Jun 2026 \linebreak
+        08:07--17:31 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#15229 (React \textit{Error Parser} dan \textit{Error
+                Modal})
+            \item Melanjutkan Task \#14965: \textit{DataView editable table}
+            \item Melanjutkan Task \#15317: \textit{InfiniteSelect} dan \textit{Create
+                Distributor Modal}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15229) Memfinalisasi \textit{ErrorModal}: menambahkan penanganan untuk \texttt{error.detail} berupa \texttt{code}, \texttt{message}, dan \texttt{detail} dengan format yang lebih baik
+            \item (\#14965) Menambahkan fitur \textit{editable rows} pada \textit{DataView}: baris tabel dapat langsung diedit tanpa membuka \textit{modal} terpisah
+            \item (\#15317) Menyempurnakan \textit{InfiniteSelect} agar dapat menyimpan \textit{state} berupa \textit{object} (bukan hanya \textit{string}), diperlukan untuk kebutuhan \textit{Create Distributor Modal}
+            \item (\#15317) Membangun dan meng-\textit{align} \textit{Create Distributor Modal} menggunakan \textit{InfiniteSelect}; menghapus opsi input nomor telepon rumah (\textit{landline}) yang sudah tidak relevan; membatasi jumlah karakter input dan merapikan \textit{error handling}
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Minggu Ke-24 (22 Juni -- 28 Juni 2026)
+    % =============================================================
+
+    \logentry{13.}
+    {
+        Senin \linebreak 22 Jun 2026 \linebreak
+        08:05--17:15 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melanjutkan Task \#15407: \textit{alignment} Tambah Pesanan
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15407) Menentukan lebar kolom tabel, menambah dan menghapus \textit{field} wajib (\textit{required fields}), serta menambahkan \texttt{small\_unit\_name} pada \textit{label} pilihan varian produk
+            \item (\#15407) Membuat tabel Tambah Pesanan menjadi \textit{editable}, menghubungkan ke \textit{endpoint} POST, dan menambahkan fitur tambah distributor baru langsung dari halaman ini
+        \end{logwork}
+    }
+
+    \logentry{14.}
+    {
+        Selasa \linebreak 23 Jun 2026 \linebreak
+        08:07--17:27 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menyelesaikan Task \#14857 dan \#15085: Riwayat Stok, List Belanja, Details
+            Belanja, Receiving List, dan Pilih Nomor Lot
+            \item Menyelesaikan Task \#15407 (\textit{Align BE Endpoint} Tambah Pesanan)
+            \item Menyelesaikan Task \#15317 (\textit{InfiniteSelect})
+            \item Migrasi halaman Item Faskes (Daftar Produk Item Cabang)
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15407) Menyelesaikan \textit{alignment} Tambah Pesanan agar dapat membuat penerimaan stok tanpa transaksi (\textit{create receiving stock without transaction}); menambahkan \textit{loading state} pada tombol \textit{submit}
+            \item (\#14857) Menyempurnakan pemetaan \textit{reference}/\textit{activity type} pada Riwayat Stok serta merapikan perbaikan minor lainnya
+            \item (\#14857) Menyelesaikan \textit{alignment} List Belanja: menambahkan penanganan pembayaran dan pembatalan pesanan
+            \item (\#15085) Menyelesaikan \textit{alignment} Details Belanja: menambahkan penanganan pembayaran, pembatalan, serta \textit{upload} dan \textit{fetch} faktur
+            \item Menyelesaikan \textit{alignment} Pilih Nomor Lot ke \textit{endpoint backend}
+            yang baru dan Receiving List
+            \item Memigrasi halaman Item Faskes (Daftar Produk Item Cabang) beserta seluruh
+            subhalamannya (Layanan, Paket, Produk, Tindakan) ke struktur baru
+            \item Menambahkan dukungan tampilan gambar pada \textit{PdfModal}
+            \item Merapikan penanganan \textit{error} di berbagai halaman serta memperbaiki
+            \texttt{parseError} agar kompatibel dengan struktur \textit{error} dari
+            \textit{stock-v2}
+            \item Membersihkan variabel lingkungan (\texttt{.env.local}) yang tidak lagi
+            digunakan; memperbarui \textit{package} \textit{tanstack query} untuk kebutuhan
+            \textit{lazy loader} \textit{InfiniteSelect}; mere\textit{factor}
+            \textit{provider} aplikasi
+        \end{logwork}
+    }
+
+    \logentry{15.}
+    {
+        Rabu \linebreak 24 Jun 2026 \linebreak
+        08:05--17:25 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Menambahkan fitur \textit{auto select} pada \textit{InfiniteSelect}
+            \item Mendapat dan menyelesaikan Task \#15453 (\textit{IMPROVEMENT}): Flutter
+            \textit{Disable Page Wrapper Padding}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item Menambahkan fitur agar \textit{InfiniteSelect} otomatis memilih data pertama
+            saat pertama kali dimuat, mengurangi langkah manual pengguna saat hanya
+            tersedia satu pilihan
+            \item (\#15453) Menambahkan opsi untuk menonaktifkan \textit{padding} bawaan pada \textit{Page Wrapper} di Flutter, digunakan pada layar tertentu yang membutuhkan tampilan penuh tanpa jarak tambahan
+        \end{logwork}
+    }
+
+    \logentry{16.}
+    {
+        Kamis \linebreak 25 Jun 2026 \linebreak
+        08:08--17:15 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mengimpor modul \textit{Packing List} (Pengemasan dan Pengeluaran) ke
+            \textit{repository} baru
+            \item Membangun komponen \textit{DevToolkit} untuk membantu proses
+            \textit{development}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item Mengimpor halaman \textit{Packing List} beserta seluruh subkomponennya
+            (\textit{Cetak Resi, Detail Pesanan, Proses Kemas}, \textit{tab Dalam
+                Pengiriman} dan \textit{Dibatalkan} termasuk versi \textit{online}) dari
+            \textit{repository} lama
+            \item Membangun komponen \textit{DevToolkit}: alat bantu pengembang untuk mempermudah
+            proses \textit{debugging} dan pengujian selama \textit{development} berlangsung
+        \end{logwork}
+    }
+
+    \logentry{17.}
+    {
+        Jumat \linebreak 26 Jun 2026 \linebreak
+        08:09--18:49 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Melakukan berbagai penyesuaian UI dan \textit{styling} pada halaman-halaman
+            \textit{Stock Management}
+            \item Menambahkan \textit{top horizontal scrollbar} pada \textit{DataView} serta
+            menyesuaikan ukuran \textit{font}
+            \item Melanjutkan \textit{alignment} halaman Add Receiving List
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item Melakukan penyesuaian UI dan \textit{styling} pada Details Belanja, Details
+            Rincian Receiving List, List Belanja, Pilih Unit Gudang, Receiving List, dan
+            Tambah Pesanan
+            \item (\textit{DataView}) Menambahkan \textit{scrollbar} horizontal di bagian atas tabel agar navigasi lebih mudah pada tabel lebar; menyesuaikan seluruh ukuran \textit{font} dan elemen terkait; memperbarui \textit{styling scrollbar}
+            \item Merapikan \textit{styling} \textit{FooterButton} dan \textit{InfiniteSelect}
+            \item Memperbaiki tipe data \texttt{backToraja} dan \texttt{refreshToraja} pada
+            \textit{redirect utils} agar sesuai dengan Flutter \textit{message listener}
+            \item Melakukan \textit{alignment} halaman Add Receiving List ke \textit{backend}
+            \item (\#15229) Menambahkan penanganan tambahan pada \textit{ErrorModal} untuk struktur \texttt{error.detail} berupa \texttt{Record}
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Minggu Ke-25 (29 Juni -- 30 Juni 2026)
+    % =============================================================
+
+    \logentry{18.}
+    {
+        Senin \linebreak 29 Jun 2026 \linebreak
+        08:21--17:30 \linebreak % chktex 8
+        WFO
+    }{
+        \begin{loglist}
+            \item Mendapat Task \#15410 (\textit{NEW}): \textit{Align BE Endpoint} ke Perpindahan
+            Stok/\textit{Transfer Stock}
+        \end{loglist}
+    }{
+        \begin{logwork}
+            \item (\#15410) Membangun dan memulai \textit{alignment} halaman \textit{Transfer Stock}: \texttt{page.tsx}, \textit{TransferStock.tsx}, \textit{params}, \textit{response} \textit{schema}, \textit{coldef}, \textit{hook} \texttt{use-transfer-stock}, \textit{service}, serta \textit{subcomponent} \texttt{TransferStockReceipts} dan \texttt{TransferStockSubmissions}
+        \end{logwork}
+    }
+
+    % =============================================================
+    % Evaluasi Bulanan
+    % =============================================================
+    \logevaluate{Analisis dan Pembahasan}{
+        Di awal bulan, pekerjaan berfokus pada penyelesaian sisa \textit{task} bulan Mei
+        (\#14696, \#14740, \#14697) serta perbaikan \textit{bug} \textit{dropdown} pada
+        Riwayat Pengobatan (\#14858) dan penyempurnaan \textit{auto-detect} format data
+        pada \texttt{generateColumnDef} (\#14965).
+
+        Sejak minggu kedua, fokus utama beralih ke \textit{alignment} modul Riwayat
+        Belanja secara menyeluruh (Task \#14857 dan \#15085): halaman Riwayat Belanja,
+        Details Belanja, Receiving List, Details Rincian Receiving List, dan Riwayat
+        Stok dihubungkan ke \textit{endpoint backend} yang baru. Untuk mendukung
+        kebutuhan modul ini, dibangun beberapa komponen generik baru yaitu
+        \textit{PdfViewer}/\textit{PdfModal} (menampilkan faktur), \textit{ErrorModal}
+        beserta \texttt{parseError} (Task \#15229, menyeragamkan penanganan
+        \textit{error} dari \textit{backend}), dan \textit{InfiniteSelect} (Task
+        \#15317, \textit{dropdown} dengan \textit{lazy loading} untuk data dalam jumlah
+        besar seperti daftar distributor).
+
+        Pada minggu keempat, \textit{alignment} diperluas ke halaman Tambah Pesanan
+        (Task \#15407) dan migrasi halaman Item Faskes, ditandai dengan hari kerja yang
+        cukup panjang pada 26 Juni untuk menyelesaikan seluruh rangkaian \textit{task}
+        sebelum \textit{deadline}. Di sisa bulan, dilakukan penyempurnaan
+        UI/\textit{styling} lintas halaman, penyelesaian Task \#15453 (Flutter), impor
+        modul \textit{Packing List}, pembuatan komponen \textit{DevToolkit}, hingga
+        dimulainya \textit{task} berikutnya yaitu \textit{alignment} \textit{Transfer
+            Stock} (\#15410) yang akan dilanjutkan hingga awal Juli. \textit{Branch}
+        penyelesaian Task \#14857 juga digabungkan ke \textit{branch}
+        \texttt{refactor-stock-management} pada akhir bulan. }
+
+    \logevaluate{Capaian yang Telah Diselesaikan}{
+        \begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+            \item Menyelesaikan Task \#14696, \#14697, \#14740: fitur \textit{export} XLSX dan
+                  \textit{multiple group by} pada \textit{DataView} dan Dashboard Inventaris.
+            \item Menyelesaikan Task \#14858: perbaikan \textit{dropdown} Riwayat Pengobatan
+                  serta \textit{React-Toraja Back and Refresh Button function}.
+            \item Menyelesaikan Task \#14965: \textit{auto-detect} format data pada
+                  \texttt{generateColumnDef} dan fitur \textit{editable table} pada
+                  \textit{DataView}.
+            \item Menyelesaikan Task \#14857 dan \#15085: \textit{alignment} Riwayat Belanja,
+                  Details Belanja, Receiving List, Details Rincian Receiving List, dan Riwayat
+                  Stok ke \textit{backend}.
+            \item Menyelesaikan Task \#15229: komponen \textit{ErrorModal} dan
+                  \texttt{parseError}.
+            \item Menyelesaikan Task \#15317: komponen \textit{InfiniteSelect}/\textit{Lazy
+                      Loader Dropdown}, termasuk \textit{Create Distributor Modal}.
+            \item Menyelesaikan Task \#15407: \textit{alignment} halaman Tambah Pesanan.
+            \item Menyelesaikan Task \#15453: Flutter \textit{Disable Page Wrapper Padding}.
+            \item Membangun komponen \textit{PdfViewer}/\textit{PdfModal}, komponen
+                  \textit{DevToolkit}, dan mengimpor modul \textit{Packing List}.
+            \item Memigrasi halaman Item Faskes (Daftar Produk Item Cabang) ke struktur baru.
+            \item Memulai Task \#15410 (\textit{Transfer Stock}) yang akan dilanjutkan di Juli.
+        \end{itemize}
+    }
+
+    \logevaluate{Capaian yang Belum Diselesaikan}{
+        \begin{itemize}[noitemsep, topsep=2pt, leftmargin=12pt, label=\textbullet]
+            \item Task \#15410 (\textit{Align BE Endpoint Transfer Stock}) baru dimulai di akhir
+                  bulan dan akan dilanjutkan hingga awal Juli.
+        \end{itemize}
+    }
+
+    \logevaluate{Kendala}{
+        \textit{Alignment} beberapa halaman secara paralel (Riwayat Belanja, Details
+        Belanja, Receiving List, Tambah Pesanan) menuntut koordinasi yang cukup intensif
+        dengan Tim \textit{Backend} karena setiap halaman memiliki kebutuhan
+        \textit{endpoint} yang berbeda-beda namun saling terkait. Perbedaan struktur
+        \textit{error response} antar \textit{endpoint} juga sempat menyulitkan proses
+        penanganan \textit{error} di sisi \textit{front-end} sebelum \textit{ErrorModal}
+        dan \texttt{parseError} selesai dibuat.
+    }
+
+    \logevaluate{Solusi}{
+        Dibangun beberapa komponen generik (\textit{ErrorModal}, \textit{InfiniteSelect},
+        \textit{PdfViewer}) untuk menstandardisasi cara penanganan \textit{error} dan
+        pengambilan data lazim di seluruh halaman, sehingga tidak perlu ditangani secara
+        berulang di setiap modul. Proses \textit{alignment} juga dikerjakan per halaman
+        menggunakan \textit{branch} terpisah, yang kemudian digabungkan ke \textit{branch}
+        \texttt{refactor-stock-management} setelah dipastikan stabil, guna menjaga
+        kestabilan kode secara keseluruhan selama proses migrasi berlangsung.
     }
 
 \end{logtable}
